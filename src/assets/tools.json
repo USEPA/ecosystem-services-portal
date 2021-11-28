@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1,
+    "name": "Final Ecosystem Goods and Services (FEGS) Scoping Tool",
+    "short_name": "FEGS Scoping Tool",
+    "description": "One such tool is the Final Ecosystems Goods and Services (FEGS) Scoping Tool. This online resource provides a structured, transparent, and repeatable process for identifying and prioritizing stakeholders, the ways those stakeholders benefit from the environment, and the aspects of the environment necessary to realize those benefits.",
+    "url": "https://www.epa.gov/eco-research/final-ecosystem-goods-and-services-fegs-scoping-tool"
+  },
+  {
+    "id": 2,
+    "name": "Final Ecosystem Goods and Services (FEGS) Metrics Report",
+    "short_name": "FEGS Metrics Report",
+    "description": "FEGS metrics are expressed in units people understand so that they are useful in communicating ecosystem status or change to people. This report specifies over 200 metrics for 45 different ways in which people directly benefit from ecosystems across 7 ecosystems (coral reefs; estuaries; lakes; rivers and streams; wetlands; agricultural lands; forests).",
+    "url": "https://www.epa.gov/eco-research/final-ecosystem-goods-and-services-fegs-metrics-report"
+  },
+  {
+    "id": 3,
+    "name": "Causal Analysis/Diagnosis Decision Information System",
+    "short_name": "CADDIS",
+    "description": "A website developed to help scientists and engineers in the Regions, States, and Tribes conduct causal assessments in aquatic systems.",
+    "url": "https://www.epa.gov/caddis"
+  },
+  {
+    "id": 4,
+    "name": "Eco-Health Relationship Browser",
+    "short_name": "Eco-Health Browser",
+    "description": "An interactive tool provides information about several of our nation's major ecosystems, the services they provide, and how those services, or their degradation and loss, may affect people.",
+    "url": "https://enviroatlas.epa.gov/enviroatlas/Tools/EcoHealth_RelationshipBrowser/"
+  },
+  {
+    "id": 5,
+    "name": "EnviroAtlas",
+    "short_name": "EnviroAtlas",
+    "description": "A collection of interactive tools and resources that allows users to explore the many benefits people receive from nature, often referred to as ecosystem services.",
+    "url": "https://www.epa.gov/enviroatlas"
+  },
+  {
+    "id": 6,
+    "name": "EcoService Models Library",
+    "short_name": "ESML",
+    "description": "The ESML is an online database for finding, examining and comparing ecological models that may be useful for quantifying ecosystem goods and services. ",
+    "url": "https://www.epa.gov/eco-research/ecoservice-models-library"
+  },
+  {
+    "id": 7,
+    "name": "EPA H2O",
+    "short_name": "EPA H2O",
+    "description": "EPA H2O is a desktop GIS-based decision support tool for assessing the provision of ecosystem services under different land use scenarios.",
+    "url": "https://www.epa.gov/water-research/ecosystem-services-scenario-assessment-using-epa-h2o"
+  },
+  {
+    "id": 8,
+    "name": "National Ecosystem Services Classification System",
+    "short_name": "NESCS Plus",
+    "description": "The National Ecosystems Classification System-Plus (NESCS Plus, pronounced “nex-us plus”) is one such tool is a robust, step-by-step resource for tracing the links between natural ecosystems and human well-being. The main purpose of NESCS Plus is to serve as a framework for analyzing how changes to ecosystems impact human welfare.",
+    "url": "https://www.epa.gov/eco-research/national-ecosystem-services-classification-system-nescs-plus"
+  },
+  {
+    "id": 9,
+    "name": "Rapid Benefit Indicators (RBI) Approach",
+    "short_name": "RBI",
+    "description": "The Rapid Benefit Indicator (RBI) approach is an easy-to-use process for assessing restoration sites using non-monetary benefit indicators. It uses readily-available data to estimate and quantify benefits to people around an ecological restoration site.",
+    "url": "https://www.epa.gov/water-research/rapid-benefit-indicators-rbi-approach"
+  },
+  {
+    "id": 10,
+    "name": "Visualizing Ecosystem Land Management Assessments (VELMA) Model 2.0",
+    "short_name": "VELMA 2.0",
+    "description": "VELMA can be used to help improve the water quality of streams, rivers, and estuaries by making better use of both natural and engineered green infrastructure (GI) to control loadings from nonpoint sources of pollution.",
+    "url": "https://www.epa.gov/water-research/visualizing-ecosystem-land-management-assessments-velma-model-20"
+  },
+  {
+    "id": 11,
+    "name": "Practical Strategies (for Integrating Final Ecosystem Goods and Services into Community Decision-Making)",
+    "short_name": "Practical Strategies",
+    "description": "This report uses Structured Decision Making (SDM) as an organizing framework to illustrate the role ecosystem services can play in a values-focused decision-process. A number of practical strategies for incorporating Final Ecosystem Goods and Services (FEGS), and more broadly ecosystem services, into the decision-making process are presented.",
+    "url": "https://cfpub.epa.gov/si/si_public_record_report.cfm?dirEntryId=337461&Lab=NHEERL"
+  }
+]

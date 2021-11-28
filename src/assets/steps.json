@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Planning & Scoping",
+    "path_id": 1,
+    "rationale": "Initially, the risk assessor and manager (and the \nplanning team) need to evaluate and select the kind \nof risk information, exposure scenarios and \nassessment issues that need to be covered. At this \npoint, most EPA assessments focus on technical \ninformation related to the sources, effects, \npopulations and the routes of exposure.\n"
+  },
+  {
+    "id": 2,
+    "name": "Problem Formulation",
+    "path_id": 1,
+    "rationale": "Problem formulation is a systematic approach that \nidentifes all factors critical to a specifc risk \nassessment and considers the purpose of the \nassessment, scope and depth of the necessary \nanalysis, analytical approach, available resources and \noutcomes, and overall risk management goal."
+  },
+  {
+    "id": 3,
+    "name": "Analysis",
+    "path_id": 1,
+    "rationale": "Two components of the analysis phase are exposure and effects \nassessments. In the exposure assessment, the risk assessor determines \nwhich plants and animals are or are likely to be exposed to each \nenvironmental stressor and to what degree. In the effects assessment, \nthe risk assessor reviews available research on the relationship between \nexposure level and possible adverse effects on plants and animals. They \nmay also review evidence of existing harmful ecological effects."
+  },
+  {
+    "id": 4,
+    "name": "Risk Characterization",
+    "path_id": 1,
+    "rationale": "Risk characterization includes two major components—risk estimation and \nrisk description. \"Risk estimation\" compares: the estimated or measured \nexposure level for each stressor and plant or animal population, community, \nor ecosystem of concern; and the data on expected effects for that group for \nthe exposure level. \"Risk description\" provides information important for \ninterpreting the risk results. This includes: whether harmful effects are \nexpected on the plants and animals of concern; relevant qualitative \ncomparisons; and how uncertainties (data gaps and natural variation) might \naffect the assessment."
+  },
+  {
+    "id": 5,
+    "name": "Risk Communication",
+    "path_id": 1,
+    "rationale": "Information from ecological risk assessments can be \nused by risk managers to: communicate with \ninterested parties and the general public; limit \nexposure to the ecological stressor; negotiate \nremediation options with stakeholders; or develop \nmonitoring plans to confrm risk reduction and \necosystem recovery.\n"
+  },
+  {
+    "id": 6,
+    "name": "Site Assessment",
+    "path_id": 2,
+    "rationale": "A site assessment focuses on evaluating the \npotential risk of a release of hazardous substances \nor threat to people and the environment. Preliminary\ndeterminations are made regarding need for \nimmediate or further actions required. Background \nhistorical investigation information is collected.\n"
+  },
+  {
+    "id": 7,
+    "name": "Site Investigation and Alternatives Evaluation",
+    "path_id": 2,
+    "rationale": "More integrated and in-depth site \ncharacterizations are made (e.g., Remedial \nInvestigation/Feasibility Study [CERCLA], Phase II \nEnvironmental Site Assessments [Brownfeld], \nFacility Investigations [RCRA]. Remediation \nalternatives are evaluated."
+  },
+  {
+    "id": 8,
+    "name": "Remedy Selection",
+    "path_id": 2,
+    "rationale": "Formal selection of remedies for \ncleanup are defned in this stage (e.g., \nRecord of Decision [CERCLA], Remedial \nAction Plan [Brownfeld], Statement of \nBasis [RCRA])."
+  },
+  {
+    "id": 9,
+    "name": "Remedy Implementation",
+    "path_id": 2,
+    "rationale": "Formal implementation of remedies for \ncleanup are defned in this stage (e.g., \nRemedial Design/Remedial Action [CERCLA], \nCleanup and Development phase [Brownfeld], \nCorrective Measures Implementation [RCRA])."
+  },
+  {
+    "id": 10,
+    "name": "Post-Construction Activities",
+    "path_id": 2,
+    "rationale": "Operation and Maintenance phase. Also includes \nmonitoring, inspections, and assessment for \nremedy effectiveness determinations, and \nadaptive management needs (e.g., remedy \nOptimization [CERCLA]). For Brownfelds, \nredevelopment activities may occur."
+  },
+  {
+    "id": 11,
+    "name": "Clarify Decision Context",
+    "path_id": 3,
+    "rationale": "Clearly articulating the question or issue being addressed. This includes\nwho should be involved in the decision making process and what types \nof options are being considered (but not getting into details about those\noptions). For example, if the issue was needing to fnd a place to live, \nyou would identify all of those who would be living in the new place and \nwhether renting and/or buying options should be considered."
+  },
+  {
+    "id": 12,
+    "name": "Defne Objectives",
+    "path_id": 3,
+    "rationale": "Clearly defning what matters when making the decision. This \nincludes identifying the criteria that will be used in evaluating your \noptions and agreed upon metrics for those evaluations. For \nexample, one criterion when looking for a place to live would be \nprice and that could be measured in dollars or as a percentage of \nyour monthly take-home salary. Another criterion could be distance\nfrom work and that could be measured in minutes or miles."
+  },
+  {
+    "id": 13,
+    "name": "Defne Objectives",
+    "path_id": 3,
+    "rationale": "Identifying the set of options to be evaluated. \nThis includes looking at the full set of options \nthat should be evaluated. For example, \nidentifying the homes available for both rent and \npurchase in your desired neighborhood."
+  },
+  {
+    "id": 14,
+    "name": "Estimate Consequences",
+    "path_id": 3,
+    "rationale": "Examining how well each of the options fares in \nmeeting the decision criteria identifed in step \ntwo. This includes measuring how well each \noption does on the criteria metrics identifed in \nthe previous step. For example, identifying the \nrent or mortgage costs and driving time to work \nassociated with each home.\n"
+  },
+  {
+    "id": 15,
+    "name": "Evaluate Trade-offs and Select",
+    "path_id": 3,
+    "rationale": "Selecting the option that best meets your objectives. This \nincludes evaluating the relative importance of those decision \ncriteria. For example, if both price and distance to work are \nequally important, you may select a home that does reasonably\nwell on both metrics. If, however, commute is of more \nimportance, you may select a signifcantly more expensive \nhome in order to have the shortest possible commute."
+  },
+  {
+    "id": 16,
+    "name": "Implement, Monitor, and Review",
+    "path_id": 3,
+    "rationale": "Evaluating the decision after it has been made. This \nincludes refecting on the process, the criteria, and the \neffcacy of the chosen option. For example, after \nchoosing an apartment to rent, you may realize that \nyou selected a home in a noisy neighborhood and \nrecognize that, on your next home hunt, information \nabout the neighborhood would be a useful criterion to \ninclude."
+  }
+]
