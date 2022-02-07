@@ -2,19 +2,25 @@
   {
     "id": 1,
     "name": "Ecological Risk Assessments",
-    "description": "<b>Ecological risk assessment (ERA)</b> is the process for\nevaluating how likely it is that the environment might\nbe impacted because of exposure to one or more\nenvironmental stressors, such as chemicals, land-use\nchange, disease, and invasive species. Learn more at\n<a href=\"https://www.epa.gov/risk/ecological-risk-assessment\">https://www.epa.gov/risk/ecological-risk-assessment</a>",
-    "rationale": "Choose this path if you are:\n<ul>\n    <li>Evaluating the possible impact of\n        environmental stressors such as\n        chemicals, disease, or invasive\n        species.\n    </li>\n    <li>Predicting the likelihood of future\n        effects.\n    </li>\n    <li>Using an Ecological Risk Assessment.</li>\n</ul>"
+    "slug": "ecological-risk-assessments",
+    "description": "<b>Ecological risk assessment (ERA)</b> is the process for   evaluating how likely it is that the environment might   be impacted because of exposure to one or more   environmental stressors, such as chemicals, land-use   change, disease, and invasive species. Learn more at   <a href=\"https://www.epa.gov/risk/ecological-risk-assessment\">https://www.epa.gov/risk/ecological-risk-assessment</a>",
+    "rationale": "Choose this path if you are:   <ul>       <li>Evaluating the possible impact of environmental stressors such as chemicals, disease, or invasive species.</li>       <li>Predicting the likelihood of future effects.</li>       <li>Using an Ecological Risk Assessment.</li>   </ul>",
+    "moreinfo": "For more on these phases of Risk Assessment process see <a href=\"https://www.epa.gov/risk/conducting-ecological-risk-assessment\">Conducting an Ecological Risk Assessment</a>."
   },
   {
     "id": 2,
     "name": "Contaminated Site Cleanup",
-    "description": "<b>Contaminated Site Cleanup</b> is needed because accidents, spills,\nleaks, and past improper disposal and handling of hazardous\nmaterials and wastes have resulted in tens of thousands of sites\nacross our country that have contaminated our land, water\n(groundwater and surface water), and air (indoor and outdoor). EPA\nand its state and territorial partners have developed a variety of\ncleanup programs to assess and, where necessary, clean up these\ncontaminated sites. Learn more at <a href=\"https://www.epa.gov/cleanups\">https://www.epa.gov/cleanups</a>",
-    "rationale": "Choose this path if you are:\n<ul>\n    <li>Doing a preliminary assessment or\n        investigation of a contaminated site.\n    </li>\n    <li>Planning or engaged in cleanup or\n        reuse of a contaminated site.\n    </li>\n    <li>Working with a Contaminated Site\n        process or model.</li>\n</ul>"
+    "slug": "contaminated-site-cleanup",
+    "description": "<b>Contaminated Site Cleanup</b> is needed because accidents, spills, leaks, and past improper disposal and handling of hazardous materials and wastes have resulted in tens of thousands of sites   across our country that have contaminated our land, water   (groundwater and surface water), and air (indoor and outdoor). EPA and its state and territorial partners have developed a variety of cleanup programs to assess and, where necessary, clean up these contaminated sites. Learn more at <a href=\"https://www.epa.gov/cleanups\">https://www.epa.gov/cleanups</a>",
+    "rationale": "Choose this path if you are:<ul><li>Doing a preliminary assessment or investigation of a contaminated site.</li><li>Planning or engaged in cleanup or reuse of a contaminated site.</li><li>Working with a Contaminated Site process or model.</li></ul>",
+    "moreinfo": "For more on these phases of Contaminated Site Cleanup process see the <a href=\"https://www.epa.gov/superfund/superfund-cleanup-process\">Superfund Cleanup Process</a>."
   },
   {
     "id": 3,
     "name": "Other Decision-Making Contexts",
-    "description": "<b>Other Decision-Making Contexts:</b> Ecosystem services science can be\nincorporated into decision making through a number of decision\nscience approaches. This web tool identifes 6 generic decision-making\nsteps. Learn more in <a href=\"https://cfpub.epa.gov/si/si_public_record_report.cfm?dirEntryId=337461&Lab=NHEERL\">Yee et al. 2017 \"Practical Strategies for Integrating\nFinal Ecosystem Goods and Services into Community Decision Making.\"</a>",
-    "rationale": "Choose this path if you are:\n<ul>\n    <li>Working towards a goal that isn't\n        ecological risk assessment or\n        contaminated site cleanup.\n    </li>\n    <li>Have a general interest in ecosystem\n        services.</li>\n</ul>\n"
+    "slug": "other-decision-making-contexts",
+    "description": "<b>Other Decision-Making Contexts:</b> Ecosystem services science can be incorporated into decision making through a number of decision science approaches. This web tool identifies 6 generic decision-making steps. Learn more in <a href=\"https://cfpub.epa.gov/si/si_public_record_report.cfm?dirEntryId=337461&Lab=NHEERL\">Yee et al. 2017 \"Practical Strategies for Integrating   Final Ecosystem Goods and Services into Community Decision Making.\"</a>",
+    "rationale": "Choose this path if you are:<ul><li>Working towards a goal that isn't ecological risk assessment or contaminated site cleanup.</li><li>Have a general interest in ecosystem services.</li></ul>",
+    "moreinfo": "For more on these steps see <a href=\"https://www.epa.gov/superfund/superfund-cleanup-process\">Structured Decision Making</a>."
   }
 ]

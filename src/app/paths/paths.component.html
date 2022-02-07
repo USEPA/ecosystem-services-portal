@@ -1,1 +1,30 @@
-<p>paths works!</p>
+<p>Ecosystem services assessment tools help you describe, quantify, and sustain the benefts nature offers humans and
+  weigh the impact of
+  decisions, but selecting the best tools for your scenario can be diffcult. Choose a path below to fnd the tools that
+  match your needs.</p>
+
+<h4>I'm looking for help with...</h4>
+
+<div class="grid-row">
+  <ng-container *ngFor="let path of paths">
+    <div class="grid-col-3">
+      <a mat-stroked-button [routerLink]="[path.slug, 'steps']">
+        <b>{{path.name}}</b>
+      </a>
+      <p [innerHTML]=path.rationale></p>
+    </div>
+
+    <div class="grid-col-1">
+      <button mat-icon-button [mdePopoverTriggerFor]="appPopover"
+              mdePopoverTriggerOn="click"
+              #popoverTrigger="mdePopoverTrigger">
+        <img src="../../assets/info-circle.svg">
+      </button>
+      <mde-popover #appPopover="mdePopover" [mdePopoverOverlapTrigger]="false">
+        <mat-card style="max-width: 300px">
+          <mat-card-content [innerHTML]="path.description"></mat-card-content>
+        </mat-card>
+      </mde-popover>
+    </div>
+  </ng-container>
+</div>

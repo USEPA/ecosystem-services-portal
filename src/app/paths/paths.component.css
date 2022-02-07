@@ -1,0 +1,13 @@
+a {
+  width: 100%;
+  line-height: 80px;
+  font-size: medium;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+a b {
+  margin-left: -8px;
+}
+
+a:visited { color: #0071bc}

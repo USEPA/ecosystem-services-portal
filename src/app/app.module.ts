@@ -1,18 +1,24 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatCardModule} from '@angular/material/card';
+import {MdePopoverModule} from '@material-extended/mde';
 
-import { AppComponent } from './app.component';
-import { PortalComponent } from './portal/portal.component';
-import { PathsComponent } from './paths/paths.component';
-import { StepsComponent } from './steps/steps.component';
-import { TasksComponent } from './tasks/tasks.component';
-import { ToolsComponent } from './tools/tools.component';
-import { ToolDetailComponent } from './tool-detail/tool-detail.component';
+import {AppComponent} from './app.component';
+import {PathsComponent} from './paths/paths.component';
+import {StepsComponent} from './steps/steps.component';
+import {TasksComponent} from './tasks/tasks.component';
+import {ToolsComponent} from './tools/tools.component';
+import {ToolDetailComponent} from './tool-detail/tool-detail.component';
+import {AppRoutingModule} from './app-routing.module';
+import {RouterModule, UrlSegment} from "@angular/router";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
-    PortalComponent,
     PathsComponent,
     StepsComponent,
     TasksComponent,
@@ -20,9 +26,35 @@ import { ToolDetailComponent } from './tool-detail/tool-detail.component';
     ToolDetailComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatCardModule,
+    MdePopoverModule,
+    AppRoutingModule,
+    RouterModule.forRoot([
+      {
+        matcher: (url) => {
+          if (url.length === 3 && url[2].path == 'steps') {
+            return {
+              consumed: url,
+              posParams: {
+                slug: new UrlSegment(url[1].path, {})
+              }
+            };
+          }
+
+          return null;
+        },
+        component: PathsComponent
+      }])
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+
+export class AppModule {
+}

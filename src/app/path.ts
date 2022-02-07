@@ -1,6 +1,8 @@
 export interface Path {
   id: number;
   name: string;
+  slug: string;
   description: string;
   rationale: string;
+  moreinfo: string;
 }

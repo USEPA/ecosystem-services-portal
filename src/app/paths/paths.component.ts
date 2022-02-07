@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Path} from "../path";
+import {PathService} from "../path.service";
 
 @Component({
   selector: 'app-paths',
@@ -6,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./paths.component.css']
 })
 export class PathsComponent implements OnInit {
+  paths: Path[] = []
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(private pathService: PathService) {
   }
+
+  ngOnInit() {
+    this.getPaths();
+  }
+
+  getPaths(): void {
+    this.pathService.getPaths()
+      .subscribe(paths => this.paths = paths.slice(0, 3));
+  }
+
 
 }

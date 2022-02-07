@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+app-root {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1040px;
+}
+
+input:not([disabled]):focus,
+select:not([disabled]):focus,
+textarea:not([disabled]):focus,
+button:not([disabled]):focus,
+mat-card-content a {
+  outline: none !important;
+}
+
