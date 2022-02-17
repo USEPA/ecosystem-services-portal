@@ -1,32 +1,30 @@
-<div *ngIf="path">
-  Your Selections:<br>
-  <a [routerLink]="['/paths']">{{ path.name }}</a> > Select Process Phase<br><br>
-  <p>Where in your process do you want to incorporate Ecosystem Services?</p>
+Your Selections:<br>
+<a [routerLink]="['/paths']">{{ path.name }}</a> > Select Process Phase<br><br>
+<p>Where in your process do you want to incorporate Ecosystem Services?</p>
 
-  <form [formGroup]="stepGroup" (ngSubmit)="submit()" novalidate>
-    <ul>
-      <ng-container *ngFor="let step of steps; let i = index" formArrayName="steps">
-        <li>
+<form [formGroup]="stepGroup" novalidate>
+  <ul>
+    <ng-container *ngFor="let step of steps; let i = index" formArrayName="steps">
+      <li>
         <mat-checkbox [formControlName]="i" value="{{step.id}}" (change)="onCheckboxChange($event)" color="primary">
           {{ step.name }}
         </mat-checkbox>
         <button mat-icon-button [mdePopoverTriggerFor]="appPopover"
                 mdePopoverTriggerOn="click"
                 #popoverTrigger="mdePopoverTrigger">
-          <img alt="information icon" src="../../assets/info-circle.svg">
+          <img alt="information icon" src="assets/info-circle.svg">
         </button>
         <mde-popover #appPopover="mdePopover" [mdePopoverOverlapTrigger]="false">
           <mat-card style="max-width: 300px">
             <mat-card-content [innerHTML]="step.rationale"></mat-card-content>
           </mat-card>
         </mde-popover>
-        </li>
-      </ng-container>
-    </ul>
-    <button mat-stroked-button color="primary" [routerLink]="['/paths']">< Back</button>
-    <button mat-stroked-button color="primary" [disabled]="!selectedSteps.length" type="submit">Next ></button>
-  </form>
-  <p><br></p>
-  <p [innerHTML]="path.moreinfo"></p>
-</div>
+      </li>
+    </ng-container>
+  </ul>
+  <button mat-stroked-button color="primary" [routerLink]="['/paths']">< Back</button>
+  <button mat-stroked-button color="primary" [disabled]="selectedStepIds.length < 1" (click)="submit()">{{selectedStepIds.length}} Next ></button>
+</form>
+<p><br></p>
+<p [innerHTML]="path.moreinfo"></p>
 

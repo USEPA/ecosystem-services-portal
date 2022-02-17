@@ -38,15 +38,15 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     RouterModule.forRoot([
       {
         matcher: (url) => {
-          if (url.length === 3 && url[2].path == 'steps') {
+          let stepSegment = url.map(e => e.path).indexOf('steps')
+          if (stepSegment > 0) {
             return {
               consumed: url,
               posParams: {
-                slug: new UrlSegment(url[1].path, {})
+                slug: new UrlSegment(url[stepSegment - 1].path, {})
               }
             };
           }
-
           return null;
         },
         component: PathsComponent

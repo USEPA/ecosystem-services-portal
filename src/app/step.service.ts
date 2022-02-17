@@ -19,8 +19,9 @@ export class StepService {
     return of(step);
   }
 
-  getSteps(): Observable<Step[]> {
-    return of(this.steps);
+  getSteps(id: number[]): Observable<Step[]> {
+    const steps = this.steps.filter(h => id.indexOf(h.id) >= 0)!;
+    return of(steps);
   }
 
   getStepsByPath(path: Path): Observable<Step[]> {

@@ -3,5 +3,5 @@ export interface Step {
   name: string;
   path_id: number;
   rationale: string;
-  selected: boolean;
+  checked?: boolean;
 }

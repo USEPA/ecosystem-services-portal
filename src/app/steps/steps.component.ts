@@ -12,10 +12,10 @@ import {ReactiveFormsModule, FormGroup, FormBuilder, FormArray, FormControl} fro
   styleUrls: ['./steps.component.css']
 })
 export class StepsComponent implements OnInit {
-  path: Path | undefined;
+  path: Path;
   stepGroup: FormGroup;
   steps: Step[] = [];
-  selectedSteps: Step[] = [];
+  selectedStepIds: Number[] = [];
 
   constructor(private router: Router,
               private route: ActivatedRoute,
@@ -24,8 +24,17 @@ export class StepsComponent implements OnInit {
               private fb: FormBuilder) {
     const slug = String(this.route.snapshot.paramMap.get('slug'));
     this.path = this.pathService.getPathBySlug(slug)
-    if (!this.path) {
+    if (this.path) {
+      sessionStorage.setItem('selectedPathId', this.path.id.toString())
+    } else {
       this.router.navigate(['/', {}]);
+    }
+
+    try {
+      this.selectedStepIds = JSON.parse("[" + sessionStorage.getItem('selectedStepIds') + "]");
+    } catch (e) {
+      sessionStorage.setItem('selectedStepIds', '')
+      this.selectedStepIds = []
     }
 
     this.stepGroup = this.fb.group({
@@ -38,25 +47,24 @@ export class StepsComponent implements OnInit {
   };
 
   ngOnInit() {
-    if (this.path) {
-      this.stepService.getStepsByPath(this.path)
-        .subscribe(step => this.steps = step);
-      this.steps.forEach(step => this.controls.push(new FormControl()))
-    }
+    this.stepService.getStepsByPath(this.path)
+      .subscribe(step => this.steps = step);
+    this.steps.forEach(step => this.controls.push(new FormControl(this.selectedStepIds.indexOf(step.id) >= 0)))
   }
 
   onCheckboxChange(event: any) {
-    const selectedStep = event.source.value;
+    const selectedStepId = event.source.value;
     if (event.checked) {
-      this.selectedSteps.push(selectedStep);
+      this.selectedStepIds.push(selectedStepId);
     } else {
-      this.selectedSteps.forEach((step, index, array) => {
-        if (step === selectedStep) array.splice(index, 1);
+      this.selectedStepIds.forEach((step, index, array) => {
+        if (step === selectedStepId) array.splice(index, 1);
       });
     }
-    }
-
-    submit() {
-      console.log(this.stepGroup.value);
-    }
   }
+
+  submit() {
+    sessionStorage.setItem('selectedStepIds', this.selectedStepIds.toString())
+    this.router.navigate(['/paths', this.path.slug, 'steps', 'tasks', {}]);
+  }
+}

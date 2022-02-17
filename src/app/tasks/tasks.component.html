@@ -1,1 +1,42 @@
-<p>tasks works!</p>
+Your Selections:<br>
+<div *ngIf="path && step && step.name">
+  <a [routerLink]="['/paths']">{{ path.name }}</a> >
+  <a [routerLink]="['/paths', path.slug, 'steps']"> {{ step.name }}</a> > Select Tasks<br><br>
+</div>
+
+<p>What do you need help doing?</p>
+
+<div class="grid-col-6">
+  <form [formGroup]="form" #espForm="ngForm">
+    <mat-card style="min-height: 300px;">
+      <mat-card-content>
+        <h2 class="example-h2">Steps</h2>
+        <section class="section">
+          <div formArrayName="steps">
+            <ul>
+              <li *ngFor="let step of this.stepFormArray.controls; let i = index" [formGroupName]="i" class="step">
+                <mat-checkbox id="step{{ i }}" formControlName="checked">
+                  {{ step.value.name }}
+                </mat-checkbox>
+                <div formArrayName="tasks">
+                  <ul>
+                    <li *ngFor="let task of getStepTaskArray(i).controls; let j = index" [formGroupName]="j"
+                        class="task">
+                      <mat-checkbox id="task{{ i }}-{{ j }}" formControlName="checked">
+                        {{ task.value.name }}
+                      </mat-checkbox>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </mat-card-content>
+    </mat-card>
+    <div *ngIf="path">
+      <a mat-stroked-button color="primary" [routerLink]="['/paths', path.slug, 'steps']">< Back</a>
+    </div>
+    <pre>{{ form.value | json }}</pre>
+  </form>
+</div>
