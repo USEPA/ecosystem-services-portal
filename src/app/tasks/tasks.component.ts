@@ -63,12 +63,14 @@ export class TasksComponent implements OnInit {
       this.tasks.forEach((task: Task) => {
         if (task.step_id === step.id)
           tasks.push(new FormGroup({
+            id: new FormControl(task.id),
             name: new FormControl(task.name),
             checked: new FormControl(task.checked)
           }))
       });
       steps.push(
         new FormGroup({
+          id: new FormControl(step.id),
           name: new FormControl(step.name),
           checked: new FormControl(step.checked),
           tasks,

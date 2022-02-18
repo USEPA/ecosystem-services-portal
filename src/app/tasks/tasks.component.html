@@ -1,8 +1,6 @@
 Your Selections:<br>
-<div *ngIf="path && step && step.name">
-  <a [routerLink]="['/paths']">{{ path.name }}</a> >
-  <a [routerLink]="['/paths', path.slug, 'steps']"> {{ step.name }}</a> > Select Tasks<br><br>
-</div>
+<a [routerLink]="['/paths']">{{ path.name }}</a> >
+<a [routerLink]="['/paths', path.slug, 'steps']"> {{ step.name }}</a> > Select Tasks<br><br>
 
 <p>What do you need help doing?</p>
 
@@ -15,14 +13,14 @@ Your Selections:<br>
           <div formArrayName="steps">
             <ul>
               <li *ngFor="let step of this.stepFormArray.controls; let i = index" [formGroupName]="i" class="step">
-                <mat-checkbox id="step{{ i }}" formControlName="checked">
+                <mat-checkbox id="step{{ i }}" formControlName="checked" color="primary">
                   {{ step.value.name }}
                 </mat-checkbox>
                 <div formArrayName="tasks">
                   <ul>
                     <li *ngFor="let task of getStepTaskArray(i).controls; let j = index" [formGroupName]="j"
                         class="task">
-                      <mat-checkbox id="task{{ i }}-{{ j }}" formControlName="checked">
+                      <mat-checkbox id="task{{ i }}-{{ j }}" formControlName="checked" color="primary">
                         {{ task.value.name }}
                       </mat-checkbox>
                     </li>
@@ -34,9 +32,7 @@ Your Selections:<br>
         </section>
       </mat-card-content>
     </mat-card>
-    <div *ngIf="path">
-      <a mat-stroked-button color="primary" [routerLink]="['/paths', path.slug, 'steps']">< Back</a>
-    </div>
+    <a mat-stroked-button color="primary" [routerLink]="['/paths', path.slug, 'steps']">< Back</a>
     <pre>{{ form.value | json }}</pre>
   </form>
 </div>

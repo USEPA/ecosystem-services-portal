@@ -4,7 +4,8 @@ import {Path} from '../path';
 import {PathService} from '../path.service';
 import {Step} from '../step';
 import {StepService} from '../step.service';
-import {ReactiveFormsModule, FormGroup, FormBuilder, FormArray, FormControl} from '@angular/forms';
+import {FormGroup, FormBuilder, FormArray, FormControl, ValidatorFn} from '@angular/forms';
+import {Task} from "../task";
 
 @Component({
   selector: 'app-steps',
@@ -13,15 +14,19 @@ import {ReactiveFormsModule, FormGroup, FormBuilder, FormArray, FormControl} fro
 })
 export class StepsComponent implements OnInit {
   path: Path;
-  stepGroup: FormGroup;
+  step: Step;
+  form: FormGroup = new FormGroup({});
   steps: Step[] = [];
-  selectedStepIds: Number[] = [];
+  selectedStepIds: number[] = [];
 
   constructor(private router: Router,
               private route: ActivatedRoute,
               private pathService: PathService,
               private stepService: StepService,
               private fb: FormBuilder) {
+  }
+
+  ngOnInit() {
     const slug = String(this.route.snapshot.paramMap.get('slug'));
     this.path = this.pathService.getPathBySlug(slug)
     if (this.path) {
@@ -37,34 +42,49 @@ export class StepsComponent implements OnInit {
       this.selectedStepIds = []
     }
 
-    this.stepGroup = this.fb.group({
-      steps: this.fb.array([])
+    this.stepService.getStepsByPath(this.path).subscribe(step => this.steps = step);
+
+    this.initForm()
+  }
+
+  initForm() {
+    const steps = new FormArray([], minSelectedCheckboxes(1));
+    this.steps.forEach((step: Step) => {
+      steps.push(
+        new FormGroup({
+          id: new FormControl(step.id),
+          name: new FormControl(step.name),
+          checked: new FormControl(this.selectedStepIds.indexOf(step.id) >= 0),
+          rationale: new FormControl(step.rationale)
+        })
+      );
     });
+    this.form = this.fb.group({
+      steps: steps,
+    })
   }
 
-  get controls(): FormArray {
-    return this.stepGroup.get('steps') as FormArray;
-  };
-
-  ngOnInit() {
-    this.stepService.getStepsByPath(this.path)
-      .subscribe(step => this.steps = step);
-    this.steps.forEach(step => this.controls.push(new FormControl(this.selectedStepIds.indexOf(step.id) >= 0)))
-  }
-
-  onCheckboxChange(event: any) {
-    const selectedStepId = event.source.value;
-    if (event.checked) {
-      this.selectedStepIds.push(selectedStepId);
-    } else {
-      this.selectedStepIds.forEach((step, index, array) => {
-        if (step === selectedStepId) array.splice(index, 1);
-      });
-    }
+  get stepFormArray(): FormArray {
+    return this.form.get('steps') as FormArray;
   }
 
   submit() {
+    this.selectedStepIds = this.form.value.steps
+      .map((step, i) => step.checked ? step.id : null)
+      .filter(v => v !== null);
     sessionStorage.setItem('selectedStepIds', this.selectedStepIds.toString())
     this.router.navigate(['/paths', this.path.slug, 'steps', 'tasks', {}]);
   }
 }
+
+function minSelectedCheckboxes(min = 1) {
+  const validator: ValidatorFn = (formArray: FormArray) => {
+    const totalSelected = formArray.controls
+      .map(control => control.value.checked)
+      .reduce((prev, next) => next ? prev + next : prev, 0);
+    return totalSelected >= min ? null : {required: true};
+  };
+  return validator;
+}
+
+
