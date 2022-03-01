@@ -7,9 +7,9 @@ import {TasksComponent} from './tasks/tasks.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/paths', pathMatch: 'full'},
-  {path: 'paths', component: PathsComponent},
-  {path: 'paths/:slug/steps/tasks', component: TasksComponent},
-  {path: 'paths/:slug/steps', component: StepsComponent}
+  {path: 'paths', component: PathsComponent, data: {animation:'PathsPage'}},
+  {path: 'paths/:slug/steps/tasks', component: TasksComponent, data: {animation:'TasksPage'}},
+  {path: 'paths/:slug/steps', component: StepsComponent, data: {animation:'StepsPage'}}
 ];
 
 @NgModule({

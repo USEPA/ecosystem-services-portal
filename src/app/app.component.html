@@ -1,3 +1,5 @@
 <h1>EPA's Ecosystem Services Tool Selection Portal</h1>
 
-<router-outlet></router-outlet>
+<div [@routeAnimations]="prepareRoute(outlet)" style="min-height: 600px;">
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>
