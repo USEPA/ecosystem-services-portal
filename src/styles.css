@@ -14,3 +14,6 @@ mat-card-content a {
   outline: none !important;
 }
 
+mat-card-content a {
+  font-weight: bold !important;
+}
