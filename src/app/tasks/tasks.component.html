@@ -1,38 +1,55 @@
 Your Selections:<br>
-<a [routerLink]="['/paths']">{{ path.name }}</a> >
-<a [routerLink]="['/paths', path.slug, 'steps']"> {{ step.name }}</a> > Select Tasks<br><br>
+  <a [routerLink]="['/paths']">{{ path.name }}</a>
+  > <a [routerLink]="['/paths', path.slug, 'steps']"> {{ selectedStepBreadcrumbLabel }}</a>
+  > Select Tasks<br><br>
 
-<p>What do you need help doing?</p>
-
-<div class="grid-col-6">
-  <form [formGroup]="form" #espForm="ngForm">
-    <mat-card style="min-height: 300px;">
-      <mat-card-content>
-        <h2 class="example-h2">Steps</h2>
-        <section class="section">
-          <div formArrayName="steps">
-            <ul>
-              <li *ngFor="let step of this.stepFormArray.controls; let i = index" [formGroupName]="i" class="step">
-                <mat-checkbox id="step{{ i }}" formControlName="checked" color="primary">
-                  {{ step.value.name }}
-                </mat-checkbox>
-                <div formArrayName="tasks">
-                  <ul>
-                    <li *ngFor="let task of getStepTaskArray(i).controls; let j = index" [formGroupName]="j"
-                        class="task">
-                      <mat-checkbox id="task{{ i }}-{{ j }}" formControlName="checked" color="primary">
-                        {{ task.value.name }}
+<div class="grid-row grid-gap">
+  <div class="grid-col-6">
+    <p>What do you need help doing?</p>
+    <form [formGroup]="form" #espForm="ngForm">
+      <mat-card style="min-height: 300px;">
+        <mat-card-content>
+          <section class="section">
+            <div formArrayName="steps">
+              <ul>
+                <li *ngFor="let step of this.stepFormArray.controls; let i = index" [formGroupName]="i" class="step">
+                  <div style="display:flex; flex-direction: row; width: 100% !important;">
+                    <div style="width: 75%;">
+                      <mat-card-title>{{ step.value.name }}</mat-card-title>
+                    </div>
+                    <div style="width: 25%; text-align: right;">
+                      <!--                    <button mat-button [disabled]="form.get('checked').disabled"-->
+                      <!--                            (click)="form.get('checked').setValue('one');form.get('checked').markAsTouched()">-->
+                      <!--                    Select All-->
+                      <!--                    </button>-->
+                      <mat-checkbox id="step{{ i }}" formControlName="checked" labelPosition="before" color="primary">
+                        Select All
                       </mat-checkbox>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </section>
-      </mat-card-content>
-    </mat-card>
-    <a mat-stroked-button color="primary" [routerLink]="['/paths', path.slug, 'steps']">< Back</a>
-    <pre>{{ form.value | json }}</pre>
-  </form>
+                    </div>
+                  </div>
+                  <div formArrayName="tasks">
+                    <ul>
+                      <li *ngFor="let task of getStepTaskArray(i).controls; let j = index" [formGroupName]="j"
+                          class="task">
+                        <mat-checkbox id="task{{ i }}-{{ j }}" formControlName="checked" color="primary" (change)="setSelectedTaskIds()">
+                          {{ task.value.name }}
+                        </mat-checkbox>
+                      </li>
+                    </ul>
+                  </div>
+                  <br><br>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </mat-card-content>
+      </mat-card>
+      <br>
+      <a mat-stroked-button color="primary" [routerLink]="['/paths', path.slug, 'steps']">< Back</a>
+    </form>
+  </div>
+
+  <div class="grid-col-6">
+    <app-tools [matchingTools]="matchingTools"></app-tools>
+  </div>
 </div>

@@ -1,13 +1,15 @@
 import {Component, OnInit} from '@angular/core';
+import {FormGroup, FormBuilder, FormArray, FormControl} from '@angular/forms';
 import {Router, ActivatedRoute} from '@angular/router';
 import {PathService} from '../path.service';
 import {StepService} from '../step.service';
 import {TaskService} from '../task.service';
+import {ToolService} from '../tool.service';
 import {Path} from '../path';
 import {Step} from '../step';
 import {Task} from '../task';
+import {Tool} from "../tool";
 
-import {FormGroup, FormBuilder, FormArray, FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-tasks',
@@ -21,14 +23,19 @@ export class TasksComponent implements OnInit {
   steps: Step[] = [];
   tasks: Task[] = [];
   selectedStepIds: number[] = [];
+  selectedStepBreadcrumbLabel: String = '';
   selectedTaskIds: number[] = [];
+
+  // matchingTools: Tool[] = [];
 
   constructor(private router: Router,
               private route: ActivatedRoute,
               private pathService: PathService,
               private stepService: StepService,
               private taskService: TaskService,
-              private fb: FormBuilder) {}
+              private toolService: ToolService,
+              private fb: FormBuilder) {
+  }
 
   ngOnInit() {
     const slug = String(this.route.snapshot.paramMap.get('slug'));
@@ -47,7 +54,7 @@ export class TasksComponent implements OnInit {
       this.router.navigate(['/paths', this.path.slug, 'steps']);
     }
     this.stepService.getSteps(this.selectedStepIds).subscribe(step => this.steps = step);
-    this.step = this.steps[0]
+    this.selectedStepBreadcrumbLabel = this.steps[0].name + ((this.steps.length > 1) ? '...' : '');
 
     this.taskService.getTasksByStepIds(this.selectedStepIds).forEach(task => {
       task.checked = false;
@@ -85,12 +92,26 @@ export class TasksComponent implements OnInit {
     this.setListeners();
   }
 
+  get matchingTools(): Tool[] {
+    return this.toolService.getToolsByTaskIds(this.selectedTaskIds)
+  }
+
   get stepFormArray(): FormArray {
     return this.form.get('steps') as FormArray;
   }
 
   getStepTaskArray(stepIndex: number): FormArray {
     return this.stepFormArray.at(stepIndex).get('tasks') as FormArray;
+  }
+
+  setSelectedTaskIds() {
+    let selectedTaskIds: number[] = []
+    this.stepFormArray.controls.forEach((stepGroup: FormGroup, index) => {
+      this.getStepTaskArray(index).controls.forEach((taskGroup: FormGroup) => {
+        if (taskGroup.controls['checked'].value) selectedTaskIds.push(taskGroup.controls['id'].value)
+      })
+    });
+    this.selectedTaskIds = selectedTaskIds
   }
 
   private setListeners(): void {
@@ -101,6 +122,7 @@ export class TasksComponent implements OnInit {
         ).forEach((taskGroup: FormGroup) => {
           taskGroup.controls['checked'].setValue(value);
         });
+        this.setSelectedTaskIds();
       });
     });
   }

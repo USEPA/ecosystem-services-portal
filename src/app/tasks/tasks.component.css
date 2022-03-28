@@ -2,3 +2,10 @@ ul {
   list-style-type: none;
   margin-top: 4px;
 }
+
+::ng-deep .mat-checkbox-layout {
+  white-space: normal !important;
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 16.96px;
+  line-height: 25.44px;
+}

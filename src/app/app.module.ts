@@ -15,6 +15,8 @@ import {ToolDetailComponent} from './tool-detail/tool-detail.component';
 import {AppRoutingModule} from './app-routing.module';
 import {RouterModule, UrlSegment} from "@angular/router";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { SelectAllComponent } from './select-all.component';
+import {MatTableModule} from "@angular/material/table";
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     StepsComponent,
     TasksComponent,
     ToolsComponent,
-    ToolDetailComponent
+    ToolDetailComponent,
+    SelectAllComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +36,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     MatButtonModule,
     MatCheckboxModule,
     MatCardModule,
+    MatTableModule,
     MdePopoverModule,
     AppRoutingModule,
     RouterModule.forRoot([

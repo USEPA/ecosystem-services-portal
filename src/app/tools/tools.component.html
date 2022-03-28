@@ -1,1 +1,22 @@
-<p>tools works!</p>
+<div id="matchingTools" [hidden]="matchingTools.length==0">
+  <h4>Your Tool Matches</h4>
+
+  Click on a matched tool to view details.
+
+  <table mat-table [dataSource]="matchingTools" id="matchingToolsTable">
+    <ng-container matColumnDef="matching_step_name">
+      <th mat-header-cell *matHeaderCellDef>Process Phase</th>
+      <td mat-cell *matCellDef="let tool">{{tool.matching_step_name}}</td>
+    </ng-container>
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Recommended Ecosystem Services Tools</th>
+      <td mat-cell *matCellDef="let tool"><a [routerLink]="['/tool',tool.id]">{{tool.short_name}}</a></td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <div align="right">
+    <a [routerLink]="['/paths']">Contact us</a> to let us know if you have additional tool needs that aren’t addressed
+    by current tools or to submit ideas for the development of future tools.
+  </div>
+</div>
