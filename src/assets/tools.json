@@ -3,7 +3,8 @@
     "id": 1,
     "name": "Final Ecosystem Goods and Services (FEGS) Scoping Tool",
     "short_name": "FEGS Scoping Tool",
-    "description": "One such tool is the Final Ecosystems Goods and Services (FEGS) Scoping Tool. This online resource provides a structured, transparent, and repeatable process for identifying and prioritizing stakeholders, the ways those stakeholders benefit from the environment, and the aspects of the environment necessary to realize those benefits.",
+    "slug": "fegs_scoping",
+    "description": "The <a href=\"https://www.epa.gov/eco-research/final-ecosystem-goods-and-services-fegs-scoping-tool\" target=\"_blank\"><b>FEGS Scoping Tool</b></a> provides a transparent, repeatable, and documented approach for identifying and prioritizing stakeholders, the ways they benefit from the environment, and the aspects of the environment necessary for realizing those benefits for a specific decision or decision context.",
     "url": "https://www.epa.gov/eco-research/final-ecosystem-goods-and-services-fegs-scoping-tool",
     "image_file": "fegs_scoping.jpg",
     "related_steps": {
@@ -23,7 +24,7 @@
       ]
     },
     "detail": {
-      "Level of expertise needed": "No technical expertise is necessary to use the tool, only familiarity with the community and its stakeholder groups.",
+      "Level of expertise needed": ["No technical expertise is necessary to use the tool, only familiarity with the community and its stakeholder groups."],
       "Level of time needed:": [
         [
           "<b>Approach</b>",
@@ -59,7 +60,8 @@
     "id": 2,
     "name": "Final Ecosystem Goods and Services (FEGS) Metrics Report",
     "short_name": "FEGS Metrics Report",
-    "description": "FEGS metrics are expressed in units people understand so that they are useful in communicating ecosystem status or change to people. This report specifies over 200 metrics for 45 different ways in which people directly benefit from ecosystems across 7 ecosystems (coral reefs; estuaries; lakes; rivers and streams; wetlands; agricultural lands; forests).",
+    "slug": "fegs_metrics",
+    "description": "The <a href=\"https://www.epa.gov/eco-research/final-ecosystem-goods-and-services-fegs-metrics-report\" target=\"_blank\"><b>FEGS Metrics Report</b></a> provides a transparent, repeatable, and defendable approach for selecting relevant environmental attributes in the context of decision making and for developing user specific metrics for those attributes.\nThe report guides users through over 200 metrics for 45 different ways in which people directly benefit from ecosystems to help answer the question, \"How can I identify and develop metrics for new ecosystems or beneficial uses?\"",
     "url": "https://www.epa.gov/eco-research/final-ecosystem-goods-and-services-fegs-metrics-report",
     "image_file": "fegs_metrics.jpg",
     "related_steps": {
@@ -76,7 +78,7 @@
       ]
     },
     "detail": {
-      "Level of expertise needed": "No technical expertise is necessary to use the report.",
+      "Level of expertise needed": ["No technical expertise is necessary to use the report."],
       "Level of time needed:": [
         [
           "<b>Approach</b>",
@@ -112,7 +114,8 @@
     "id": 3,
     "name": "Causal Analysis/Diagnosis Decision Information System",
     "short_name": "CADDIS",
-    "description": "A website developed to help scientists and engineers in the Regions, States, and Tribes conduct causal assessments in aquatic systems.",
+    "slug": "caddis",
+    "description": "<a href=\"https://www.epa.gov/caddis\" target=\"_blank\"><b>CADDIS (Causal Analysis/Diagnosis Decision Information System)</b></a> is an on-line tool for conducting causal assessments, primarily in stream ecosystems. It provides a step-by-step framework for stressor identification (based on the U.S. EPA’s Stressor Identification Guidance Document) and additional information about tools that can be used in causal assessments.",
     "url": "https://www.epa.gov/caddis",
     "image_file": "caddis.jpg",
     "related_steps": {
@@ -131,7 +134,7 @@
       ]
     },
     "detail": {
-      "Level of expertise needed": "CADDIS is designed to help scientists and engineers in the Regions, States, and Tribes.<br><br>Medium - Familiarity with ecological and environmnetal stressor data ",
+      "Level of expertise needed": ["CADDIS is designed to help scientists and engineers in the Regions, States, and Tribes.<br><br>Medium - Familiarity with ecological and environmnetal stressor data "],
       "Level of time needed:": [
         [
           "<b>Approach</b>",
@@ -166,8 +169,9 @@
     "id": 4,
     "name": "Eco-Health Relationship Browser",
     "short_name": "Eco-Health Browser",
-    "description": "An interactive tool provides information about several of our nation's major ecosystems, the services they provide, and how those services, or their degradation and loss, may affect people.",
-    "url": "https://enviroatlas.epa.gov/enviroatlas/Tools/EcoHealth_RelationshipBrowser/",
+    "slug": "ecohealth",
+    "description": "The <a href=\"https://enviroatlas.epa.gov/enviroatlas/Tools/EcoHealth_RelationshipBrowser\" target=\"_blank\"><b>Eco-Health Relationship Browser</b></a> illustrates scientific evidence for linkages between human health and ecosystem services to answer the question, \"What connections are there between human health and the environment?\"",
+    "url": "https://enviroatlas.epa.gov/enviroatlas/Tools/EcoHealth_RelationshipBrowser",
     "image_file": "ecohealth.jpg",
     "related_steps": {
       "1": [
@@ -183,7 +187,7 @@
       ]
     },
     "detail": {
-      "Level of expertise needed": "Low",
+      "Level of expertise needed": ["Low"],
       "Level of time needed:": [
         [
           "<b>Approach</b>",
@@ -215,7 +219,8 @@
     "id": 5,
     "name": "EnviroAtlas",
     "short_name": "EnviroAtlas",
-    "description": "A collection of interactive tools and resources that allows users to explore the many benefits people receive from nature, often referred to as ecosystem services.",
+    "slug": "enviroatlas",
+    "description": "<a href=\"https://www.epa.gov/enviroatlas\" target=\"_blank\"><b>EnviroAtlas</b></a> is an interactive web-based tool containing more than 400 environmetnal and social geospatial data layers that decision-makers can use  to inform policy and planning in the places where people live, learn, work and play.",
     "url": "https://www.epa.gov/enviroatlas",
     "image_file": "enviroatlas.jpg",
     "related_steps": {
@@ -234,7 +239,7 @@
       ]
     },
     "detail": {
-      "Level of expertise needed": "Low.  Familiarity with using maps",
+      "Level of expertise needed": ["Low.  Familiarity with using maps"],
       "Level of time needed:": [
         [
           "<b>Approach</b>",
@@ -270,7 +275,8 @@
     "id": 6,
     "name": "EcoService Models Library",
     "short_name": "ESML",
-    "description": "The ESML is an online database for finding, examining and comparing ecological models that may be useful for quantifying ecosystem goods and services. ",
+    "slug": "esml",
+    "description": "<a href=\"https://www.epa.gov/eco-research/ecoservice-models-library\" target=\"_blank\"><b>EcoService Models Library (ESML)</b></a> is an online database for finding, examining, and comparing ecological models that may be useful for quantifying ecosystem goods and services. ",
     "url": "https://www.epa.gov/eco-research/ecoservice-models-library",
     "image_file": "esml.jpg",
     "related_steps": {
@@ -286,7 +292,7 @@
       ]
     },
     "detail": {
-      "Level of expertise needed": "Familiarity with ecological modeling concepts and ability to search an online database.",
+      "Level of expertise needed": ["Familiarity with ecological modeling concepts and ability to search an online database."],
       "Level of time needed:": [
         [
           "<b>Approach</b>",
@@ -322,7 +328,8 @@
     "id": 7,
     "name": "EPA H2O",
     "short_name": "EPA H2O",
-    "description": "EPA H2O is a desktop GIS-based decision support tool for assessing the provision of ecosystem services under different land use scenarios.",
+    "slug": "epa_h20",
+    "description": "<a href=\"https://www.epa.gov/water-research/ecosystem-services-scenario-assessment-using-epa-h2o\" target=\"_blank\"><b>EPA H2O</b></a> is a GIS tool for mapping and calculating a suite of ecosystem services under different land use scenarios. Users can map ecosystem goods and services at regional to local scales, complete spatial queries along hydrological networks, and generate customized reports for scenario comparisons.",
     "url": "https://www.epa.gov/water-research/ecosystem-services-scenario-assessment-using-epa-h2o",
     "image_file": "epa_h20.jpg",
     "related_steps": {
@@ -339,7 +346,7 @@
       ]
     },
     "detail": {
-      "Level of expertise needed": "The tool has a Basic Module and an Advanced Module.  The Basic Module is intended for users with no experience with GIS software.  and can be used to generate maps and reports for areas within the Tampa Bay Region.  The Advanced Module is for users who are comfortable working with spatial datasets to substitute in data from other locations and more customized scenarios.",
+      "Level of expertise needed": ["The tool has a Basic Module and an Advanced Module.  The Basic Module is intended for users with no experience with GIS software.  and can be used to generate maps and reports for areas within the Tampa Bay Region.  The Advanced Module is for users who are comfortable working with spatial datasets to substitute in data from other locations and more customized scenarios."],
       "Level of time needed:": [
         [
           "<b>Approach</b>",
@@ -375,7 +382,8 @@
     "id": 8,
     "name": "National Ecosystem Services Classification System",
     "short_name": "NESCS Plus",
-    "description": "The National Ecosystems Classification System-Plus (NESCS Plus, pronounced “nex-us plus”) is one such tool is a robust, step-by-step resource for tracing the links between natural ecosystems and human well-being. The main purpose of NESCS Plus is to serve as a framework for analyzing how changes to ecosystems impact human welfare.",
+    "slug": "nescs_plus",
+    "description": "The <a href=\"https://www.epa.gov/eco-research/national-ecosystem-services-classification-system-nescs-plus\" target=\"_blank\"><b>National Ecosystem Services Classification System (NESCS Plus)</b></a> serves as a framework for analyzing how changes to ecosystems impact human welfare. This classification system provides standardized vocabulary, classes, and codes. The aim is for this classification system to serve as a common language to improve communication, integration, and synthesis. For example, NESCS Plus has been linked to multiple EPA products including existing tools (e.g., EnviroAtlas and the EcoService Models Library).",
     "url": "https://www.epa.gov/eco-research/national-ecosystem-services-classification-system-nescs-plus",
     "image_file": "nescs_plus.jpg",
     "related_steps": {
@@ -396,7 +404,7 @@
       ]
     },
     "detail": {
-      "Level of expertise needed": "Low",
+      "Level of expertise needed": ["Low"],
       "Level of time needed:": [
         [
           "<b>Approach</b>",
@@ -432,7 +440,8 @@
     "id": 9,
     "name": "Rapid Benefit Indicators (RBI) Approach",
     "short_name": "RBI",
-    "description": "The Rapid Benefit Indicator (RBI) approach is an easy-to-use process for assessing restoration sites using non-monetary benefit indicators. It uses readily-available data to estimate and quantify benefits to people around an ecological restoration site.",
+    "slug": "rbi",
+    "description": "<a href=\"https://www.epa.gov/water-research/rapid-benefit-indicators-rbi-approach\" target=\"_blank\"><b>The Rapid Benefit Indicator (RBI)</b></a> approach allows users to quickly estimate and quantify benefits to people around an ecological restoration site with several components. It includes a fillable checklist and a spatial analysis toolset to help users develop and summarize indicators.",
     "url": "https://www.epa.gov/water-research/rapid-benefit-indicators-rbi-approach",
     "image_file": "rbi.jpg",
     "related_steps": {
@@ -448,7 +457,7 @@
       ]
     },
     "detail": {
-      "Level of expertise needed": "The checklist can be filled out using either an interactive excel spreadsheet or a PDF file.<br><br>The Spatial Analysis Toolset must be used within ESRI’s desktop software, ArcMap or ArcCatalog, versions 10.1 or newer.",
+      "Level of expertise needed": ["The checklist can be filled out using either an interactive excel spreadsheet or a PDF file.<br><br>The Spatial Analysis Toolset must be used within ESRI’s desktop software, ArcMap or ArcCatalog, versions 10.1 or newer."],
       "Level of time needed:": [
         [
           "<b>Approach</b>",
@@ -484,7 +493,8 @@
     "id": 10,
     "name": "Visualizing Ecosystem Land Management Assessments (VELMA) Model 2.0",
     "short_name": "VELMA 2.0",
-    "description": "VELMA can be used to help improve the water quality of streams, rivers, and estuaries by making better use of both natural and engineered green infrastructure (GI) to control loadings from nonpoint sources of pollution.",
+    "slug": "velma",
+    "description": "<a href=\"https://www.epa.gov/water-research/visualizing-ecosystem-land-management-assessments-velma-model-20\" target=\"_blank\"><b>VELMA (Visualizing Ecosystem Land Management Assessments)</b></a> can be used to help decision makers improve the water quality of streams, rivers, and estuaries by making better use of both natural and engineered green infrastructure (GI) to control loadings from nonpoint sources of pollution. It is designed to help users assess green infrastructure options for controlling the fate and transport of water, nutrients, and contaminants across multiple spatial and temporal scales for different ecoregions and present and future climates. VELMA was designed for use by communities, land managers, policy makers, and scientists and engineers",
     "url": "https://www.epa.gov/water-research/visualizing-ecosystem-land-management-assessments-velma-model-20",
     "image_file": "velma.jpg",
     "related_steps": {
@@ -501,7 +511,7 @@
       ]
     },
     "detail": {
-      "Level of expertise needed": "Users must have Java 7 JRE installed and accessible on their computer.  The Java JRE is freely available from Oracle’s Java website.",
+      "Level of expertise needed": ["Users must have Java 7 JRE installed and accessible on their computer.  The Java JRE is freely available from Oracle’s Java website."],
       "Level of time needed:": [
         [
           "<b>Approach</b>",
@@ -537,7 +547,8 @@
     "id": 11,
     "name": "Practical Strategies (for Integrating Final Ecosystem Goods and Services into Community Decision-Making)",
     "short_name": "Practical Strategies",
-    "description": "This report uses Structured Decision Making (SDM) as an organizing framework to illustrate the role ecosystem services can play in a values-focused decision-process. A number of practical strategies for incorporating Final Ecosystem Goods and Services (FEGS), and more broadly ecosystem services, into the decision-making process are presented.",
+    "slug": "practical_strategies",
+    "description": "<a href=\"https://cfpub.epa.gov/si/si_public_record_report.cfm?dirEntryId=337461&Lab=NHEERL\" target=\"_blank\"><b>Practical Strategies (for Integrating Final Ecosystem Goods and Services into Community Decision-Making)</b></a> is a synthesis report describing the U.S. EPA’s Office of Research and Development’s (ORD) research to incorporate ES benefits into community-scale decisions across the U.S.\nYou can learn how community-based studies have previously utilized ecosystem services to inform aspects of their decision making, to identify best practices that may be transferred to other communities, and to identify gaps in those practices.",
     "url": "https://cfpub.epa.gov/si/si_public_record_report.cfm?dirEntryId=337461&Lab=NHEERL",
     "image_file": "practical_strategies.jpg",
     "related_steps": {
@@ -557,7 +568,7 @@
       ]
     },
     "detail": {
-      "Level of expertise needed": "No technical expertise is necessary to use the report.",
+      "Level of expertise needed": ["No technical expertise is necessary to use the report."],
       "Level of time needed:": [
         [
           "<b>Approach</b>",

@@ -26,8 +26,6 @@ export class TasksComponent implements OnInit {
   selectedStepBreadcrumbLabel: String = '';
   selectedTaskIds: number[] = [];
 
-  // matchingTools: Tool[] = [];
-
   constructor(private router: Router,
               private route: ActivatedRoute,
               private pathService: PathService,

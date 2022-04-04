@@ -1,1 +1,32 @@
-<p>tool-detail works!</p>
+<!--Your Selections:<br>-->
+<!--<a [routerLink]="['/paths']">{{ path.name }}</a>-->
+<!--&gt; <a [routerLink]="['/paths', path.slug, 'steps']"> {{ selectedStepBreadcrumbLabel }}</a>-->
+<!--&gt; Select Tasks<br><br>-->
+
+<div class="grid-row grid-gap">
+  <div class="grid-col-12" [innerHTML]="tool.description"></div>
+</div>
+<br>
+<div class="grid-row grid-gap">
+  <div class="grid-col-6">
+    <mat-accordion multi="true">
+      <div *ngFor="let pathStep of this.pathSteps">
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>Steps in {{pathStep.name}} this Tool is Suited For</mat-expansion-panel-header>
+          <div *ngFor="let step of pathStep.related_steps; let i = index">
+            {{step}}
+          </div>
+        </mat-expansion-panel>
+      </div>
+    </mat-accordion>
+  </div>
+  <div class="grid-col-6" style="text-align: center">
+    <a href="{{tool.url}}" target="_blank"><img src="{{'/assets/images/' + tool.image_file}}" alt="{{tool.name}}"></a>
+  </div>
+</div>
+<div class="grid-row grid-gap">
+  <div class="grid-col-12">
+    <h3>Tool Details:</h3>
+    <span [innerHTML]="toolDetails"></span>
+  </div>
+</div>

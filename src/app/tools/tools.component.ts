@@ -1,4 +1,4 @@
-import {Component, Input, OnChanges, SimpleChanges} from '@angular/core';
+import {Component, Input, OnInit, SimpleChanges} from '@angular/core';
 import {Tool} from '../tool'
 
 @Component({
@@ -6,12 +6,12 @@ import {Tool} from '../tool'
   templateUrl: './tools.component.html',
   styleUrls: ['./tools.component.css']
 })
-export class ToolsComponent implements OnChanges {
+export class ToolsComponent implements OnInit {
   displayedColumns: string[] = ['matching_step_name', 'name'];
   @Input() matchingTools: Tool[] = []
 
   constructor() { }
 
-  ngOnChanges(changes: SimpleChanges) {
+  ngOnInit() {
   }
 }

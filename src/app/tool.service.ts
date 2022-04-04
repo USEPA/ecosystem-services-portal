@@ -35,12 +35,17 @@ export class ToolService {
     for (let i: number = 0; i < selectedToolIds.length; i++) {
       const matchingTool = <Tool>{
         id: selectedToolIds[i],
+        slug: this.tools.find(h => h.id === selectedToolIds[i]).slug,
         short_name: this.tools.find(h => h.id === selectedToolIds[i]).short_name,
         matching_step_name: this.steps.find(h => h.id === selectedStepIds[i]).name
       }
       matchingTools.push(matchingTool);
     }
     return matchingTools;
+  }
+
+  getToolBySlug(slug: string): Tool {
+    return this.tools.find(h => h.slug === slug)!;
   }
 
 }
