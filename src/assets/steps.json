@@ -63,36 +63,36 @@
     "id": 11,
     "name": "Clarify Decision Context",
     "path_id": 3,
-    "rationale": "Clearly articulating the question or issue being addressed. This includes who should be involved in the decision making process and what types of options are being considered (but not getting into details about those options).<br><br>For example, if the issue was needing to fnd a place to live, you would identify all of those who would be living in the new place and whether renting and/or buying options should be considered."
+    "rationale": "In this phase you should document the question or issue you are trying to address. This includes who you will involve in the decision making and types of options you will consider (but not details about those options).<br><br>For example, if the issue was finding a new place to live, you would identify those who would be living in the new place and if you will consider renting and/or buying as options."
   },
   {
     "id": 12,
     "name": "Define Objectives",
     "path_id": 3,
-    "rationale": "Clearly defining what matters when making the decision. This includes identifying the criteria that will be used in evaluating your options and agreed upon metrics for those evaluations.<br><br>For example, one criterion when looking for a place to live would be price and that could be measured in dollars or as a percentage of your monthly take-home salary. Another criterion could be distance from work and that could be measured in minutes or miles."
+    "rationale": "In this phase you should define what matters when making the decision. This includes identifying criteria for evaluating your options and metrics for those criteria.<br><br>For example, when finding a new place to live one criterion would be price and you could measure that in dollars or as a percentage of your monthly salary. Another criterion could be distance from work and you could measure it in minutes or miles."
   },
   {
     "id": 13,
     "name": "Develop Alternatives",
     "path_id": 3,
-    "rationale": "Identifying the set of options to be evaluated. This includes looking at the full set of options that should be evaluated.<br><br>For example, identifying the homes available for both rent and purchase in your desired neighborhood."
+    "rationale": "In this phase you identify the set of options to evaluate. This includes looking at the full set of options that should be evaluated.<br><br>For example, identifying homes for both rent and sale in your desired neighborhood."
   },
   {
     "id": 14,
     "name": "Estimate Consequences",
     "path_id": 3,
-    "rationale": "Examining how well each of the options fares in meeting the decision criteria identifed in step two. This includes measuring how well each option does on the criteria metrics identifed in the previous step.<br><br>For example, identifying the rent or mortgage costs and driving time to work associated with each home. "
+    "rationale": "In this phase you measure each identified criterion for your objective for each identified alternative or option. This includes measuring how well each option does on the criteria identified.<br><br>For example, identifying the rent or mortgage costs and distance to work for each home."
   },
   {
     "id": 15,
     "name": "Evaluate Trade-offs and Select",
     "path_id": 3,
-    "rationale": "Selecting the option that best meets your objectives. This includes evaluating the relative importance of those decision criteria.<br><br>For example, if both price and distance to work are equally important, you may select a home that does reasonably well on both metrics. If, however, commute is of more importance, you may select a signifcantly more expensive home in order to have the shortest possible commute."
+    "rationale": "In this phase you pick the option that best meets your objectives. When you have multiple criteria you must first evaluate their relative importance.<br><br>For example, if both cost and distance to work are equally important, you may select a home that does well on both metrics. However, if distance to work is more important, you may select a much more expensive home to have the shortest possible distance to work."
   },
   {
     "id": 16,
     "name": "Implement, Monitor, and Review",
     "path_id": 3,
-    "rationale": "Evaluating the decision after it has been made. This includes refecting on the process, the criteria, and the effcacy of the chosen option.<br><br>For example, after choosing an apartment to rent, you may realize that you selected a home in a noisy neighborhood and recognize that, on your next home hunt, information about the neighborhood would be a useful criterion to include."
+    "rationale": "In this phase, you take action on the decision and evaluate the results. This includes reflecting on the process, the criteria, and the efficacy of the chosen option.<br><br>For example, after choosing an apartment to rent, you may realize the apartment is in a noisy area. Recognizing that new criteria, the next time you search for a place to live you might also consider noise in the area."
   }
 ]
