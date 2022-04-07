@@ -4,7 +4,7 @@
     "name": "Final Ecosystem Goods and Services (FEGS) Scoping Tool",
     "short_name": "FEGS Scoping Tool",
     "slug": "fegs_scoping",
-    "description": "The <a href=\"https://www.epa.gov/eco-research/final-ecosystem-goods-and-services-fegs-scoping-tool\" target=\"_blank\"><b>FEGS Scoping Tool</b></a> provides a transparent, repeatable, and documented approach for identifying and prioritizing stakeholders, the ways they benefit from the environment, and the aspects of the environment necessary for realizing those benefits for a specific decision or decision context.",
+    "description": "The <a href=\"https://www.epa.gov/eco-research/final-ecosystem-goods-and-services-fegs-scoping-tool\" target=\"_blank\"><b>FEGS Scoping Tool</b></a> provides a transparent, repeatable, \nand documented approach for identifying and prioritizing stakeholders, the ways they beneft from \nthe environment, and the aspects of the environment necessary for realizing those benefits for a specific decision or decision context.",
     "url": "https://www.epa.gov/eco-research/final-ecosystem-goods-and-services-fegs-scoping-tool",
     "image_file": "fegs_scoping.jpg",
     "related_steps": {
@@ -61,7 +61,7 @@
     "name": "Final Ecosystem Goods and Services (FEGS) Metrics Report",
     "short_name": "FEGS Metrics Report",
     "slug": "fegs_metrics",
-    "description": "The <a href=\"https://www.epa.gov/eco-research/final-ecosystem-goods-and-services-fegs-metrics-report\" target=\"_blank\"><b>FEGS Metrics Report</b></a> provides a transparent, repeatable, and defendable approach for selecting relevant environmental attributes in the context of decision making and for developing user specific metrics for those attributes.\nThe report guides users through over 200 metrics for 45 different ways in which people directly benefit from ecosystems to help answer the question, \"How can I identify and develop metrics for new ecosystems or beneficial uses?\"",
+    "description": "The <a href=\"https://www.epa.gov/eco-research/final-ecosystem-goods-and-services-fegs-metrics-report\" target=\"_blank\"><b>FEGS Metrics Report</b></a> provides a transparent, repeatable, and defendable approach for selecting relevant environmental attributes in the context of decision making and for developing user specific metrics for those attributes.<br><br>The report guides users through over 200 metrics for 45 different ways in which people directly benefit from ecosystems to help answer the question, \"How can I identify and develop metrics for new ecosystems or beneficial uses?\"",
     "url": "https://www.epa.gov/eco-research/final-ecosystem-goods-and-services-fegs-metrics-report",
     "image_file": "fegs_metrics.jpg",
     "related_steps": {
@@ -115,7 +115,7 @@
     "name": "Causal Analysis/Diagnosis Decision Information System",
     "short_name": "CADDIS",
     "slug": "caddis",
-    "description": "<a href=\"https://www.epa.gov/caddis\" target=\"_blank\"><b>CADDIS (Causal Analysis/Diagnosis Decision Information System)</b></a> is an on-line tool for conducting causal assessments, primarily in stream ecosystems. It provides a step-by-step framework for stressor identification (based on the U.S. EPA’s Stressor Identification Guidance Document) and additional information about tools that can be used in causal assessments.",
+    "description": "<a href=\"https://www.epa.gov/caddis\" target=\"_blank\"><b>CADDIS (Causal Analysis/Diagnosis Decision Information System)</b></a> is an on-line application designed to help users' causal assessments, primarily in stream ecosystems. It provides a logical, step-by-step framework for stressor identifcation based on the U.S. EPA's Stressor Identifcation Guidance Document. The CADDIS application also provides additional information and tools that can be used in these assessments.",
     "url": "https://www.epa.gov/caddis",
     "image_file": "caddis.jpg",
     "related_steps": {
@@ -170,7 +170,7 @@
     "name": "Eco-Health Relationship Browser",
     "short_name": "Eco-Health Browser",
     "slug": "ecohealth",
-    "description": "The <a href=\"https://enviroatlas.epa.gov/enviroatlas/Tools/EcoHealth_RelationshipBrowser\" target=\"_blank\"><b>Eco-Health Relationship Browser</b></a> illustrates scientific evidence for linkages between human health and ecosystem services to answer the question, \"What connections are there between human health and the environment?\"",
+    "description": "The <a href=\"https://enviroatlas.epa.gov/enviroatlas/Tools/EcoHealth_RelationshipBrowser\" target=\"_blank\"><b>Eco-Health Relationship Browser</b></a> illustrates scientifc evidence for linkages between human health and ecosystem services.<br><br>This interactive tool provides information about several ecosystems (i.e., agro-ecosystems, drylands, forests, urban ecosystems, and wetlands), the services they provide, and how those services, or their degradation and loss, may affect people.",
     "url": "https://enviroatlas.epa.gov/enviroatlas/Tools/EcoHealth_RelationshipBrowser",
     "image_file": "ecohealth.jpg",
     "related_steps": {
@@ -220,7 +220,7 @@
     "name": "EnviroAtlas",
     "short_name": "EnviroAtlas",
     "slug": "enviroatlas",
-    "description": "<a href=\"https://www.epa.gov/enviroatlas\" target=\"_blank\"><b>EnviroAtlas</b></a> is an interactive web-based tool containing more than 400 environmetnal and social geospatial data layers that decision-makers can use  to inform policy and planning in the places where people live, learn, work and play.",
+    "description": "<a href=\"https://www.epa.gov/enviroatlas\" target=\"_blank\"><b>EnviroAtlas</b></a> is an interactive web-based tool containing more than 400 environmental and social geospatial data layers that decision-makers can use to inform policy and planning in the places where people live, learn, work and play.",
     "url": "https://www.epa.gov/enviroatlas",
     "image_file": "enviroatlas.jpg",
     "related_steps": {
@@ -276,7 +276,7 @@
     "name": "EcoService Models Library",
     "short_name": "ESML",
     "slug": "esml",
-    "description": "<a href=\"https://www.epa.gov/eco-research/ecoservice-models-library\" target=\"_blank\"><b>EcoService Models Library (ESML)</b></a> is an online database for finding, examining, and comparing ecological models that may be useful for quantifying ecosystem goods and services. ",
+    "description": "<a href=\"https://www.epa.gov/eco-research/ecoservice-models-library\" target=\"_blank\"><b>EcoService Models Library (ESML)</b></a> is an online database for finding, examining and comparing ecological models that may be useful for quantifying ecosystem goods and services.",
     "url": "https://www.epa.gov/eco-research/ecoservice-models-library",
     "image_file": "esml.jpg",
     "related_steps": {
@@ -441,7 +441,7 @@
     "name": "Rapid Benefit Indicators (RBI) Approach",
     "short_name": "RBI",
     "slug": "rbi",
-    "description": "<a href=\"https://www.epa.gov/water-research/rapid-benefit-indicators-rbi-approach\" target=\"_blank\"><b>The Rapid Benefit Indicator (RBI)</b></a> approach allows users to quickly estimate and quantify benefits to people around an ecological restoration site with several components. It includes a fillable checklist and a spatial analysis toolset to help users develop and summarize indicators.",
+    "description": "The <a href=\"https://www.epa.gov/water-research/rapid-benefit-indicators-rbi-approach\" target=\"_blank\"><b>Rapid Benefit Indicator (RBI) approach</b></a> allows users to quickly estimate and quantify benefits to people around an ecological restoration site with several components. It includes a fillable checklist and a spatial analysis toolset to help users develop and summarize indicators.",
     "url": "https://www.epa.gov/water-research/rapid-benefit-indicators-rbi-approach",
     "image_file": "rbi.jpg",
     "related_steps": {
@@ -494,7 +494,7 @@
     "name": "Visualizing Ecosystem Land Management Assessments (VELMA) Model 2.0",
     "short_name": "VELMA 2.0",
     "slug": "velma",
-    "description": "<a href=\"https://www.epa.gov/water-research/visualizing-ecosystem-land-management-assessments-velma-model-20\" target=\"_blank\"><b>VELMA (Visualizing Ecosystem Land Management Assessments)</b></a> can be used to help decision makers improve the water quality of streams, rivers, and estuaries by making better use of both natural and engineered green infrastructure (GI) to control loadings from nonpoint sources of pollution. It is designed to help users assess green infrastructure options for controlling the fate and transport of water, nutrients, and contaminants across multiple spatial and temporal scales for different ecoregions and present and future climates. VELMA was designed for use by communities, land managers, policy makers, and scientists and engineers",
+    "description": "<a href=\"https://www.epa.gov/water-research/visualizing-ecosystem-land-management-assessments-velma-model-20\" target=\"_blank\"><b>VELMA (Visualizing Ecosystem Land Management Assessments)</b></a> can be used to help decision makers improve the water quality of streams, rivers, and estuaries by making better use of both natural and engineered green infrastructure to control loadings from nonpoint sources of pollution. It is designed to help users assess green infrastructure options for controlling the fate and transport of water, nutrients, and contaminants across multiple spatial and temporal scales for different ecoregions and present and future climates. VELMA was designed for use by communities, land managers, policy makers, and scientists and engineers.",
     "url": "https://www.epa.gov/water-research/visualizing-ecosystem-land-management-assessments-velma-model-20",
     "image_file": "velma.jpg",
     "related_steps": {
@@ -548,7 +548,7 @@
     "name": "Practical Strategies (for Integrating Final Ecosystem Goods and Services into Community Decision-Making)",
     "short_name": "Practical Strategies",
     "slug": "practical_strategies",
-    "description": "<a href=\"https://cfpub.epa.gov/si/si_public_record_report.cfm?dirEntryId=337461&Lab=NHEERL\" target=\"_blank\"><b>Practical Strategies (for Integrating Final Ecosystem Goods and Services into Community Decision-Making)</b></a> is a synthesis report describing the U.S. EPA’s Office of Research and Development’s (ORD) research to incorporate ES benefits into community-scale decisions across the U.S.\nYou can learn how community-based studies have previously utilized ecosystem services to inform aspects of their decision making, to identify best practices that may be transferred to other communities, and to identify gaps in those practices.",
+    "description": "<a href=\"https://cfpub.epa.gov/si/si_public_record_report.cfm?dirEntryId=337461&Lab=NHEERL\" target=\"_blank\"><b>Practical Strategies (for Integrating Final Ecosystem Goods and Services into Community Decision-Making)</b></a> is a synthesis report describing the U.S. EPA's Office of Research and Development's (ORD) research to incorporate ES benefits into community-scale decisions across the U.S.<br><br>You can learn how community-based studies have previously utilized ecosystem services to inform aspects of their decision making, to identify best practices that may be transferred to other communities, and to identify gaps in those practices.",
     "url": "https://cfpub.epa.gov/si/si_public_record_report.cfm?dirEntryId=337461&Lab=NHEERL",
     "image_file": "practical_strategies.jpg",
     "related_steps": {
