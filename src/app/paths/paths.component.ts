@@ -5,7 +5,7 @@ import {PathService} from "../path.service";
 @Component({
   selector: 'app-paths',
   templateUrl: './paths.component.html',
-  styleUrls: ['./paths.component.css']
+  styleUrls: ['./paths.component.scss']
 })
 export class PathsComponent implements OnInit {
   paths: Path[] = []

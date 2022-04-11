@@ -12,7 +12,7 @@ import {StepService} from "../step.service";
 @Component({
   selector: 'app-tool-detail',
   templateUrl: './tool-detail.component.html',
-  styleUrls: ['./tool-detail.component.css'],
+  styleUrls: ['./tool-detail.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
 export class ToolDetailComponent implements OnInit {
