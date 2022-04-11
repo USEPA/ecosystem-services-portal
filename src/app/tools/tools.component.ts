@@ -1,5 +1,7 @@
-import {Component, Input, OnInit, SimpleChanges} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Tool} from '../tool'
+import {ActivatedRoute, Router} from "@angular/router";
+import {ToolService} from "../tool.service";
 
 @Component({
   selector: 'app-tools',
@@ -7,11 +9,21 @@ import {Tool} from '../tool'
   styleUrls: ['./tools.component.css']
 })
 export class ToolsComponent implements OnInit {
-  displayedColumns: string[] = ['matching_step_name', 'name'];
   @Input() matchingTools: Tool[] = []
+  selectedTool: Tool
 
-  constructor() { }
+  constructor(private router: Router,
+              private route: ActivatedRoute,
+              private toolService: ToolService
+  ) {
+  }
 
   ngOnInit() {
+  }
+
+  selectTool(task_id: number, slug: string) {
+    this.selectedTool = this.toolService.getToolBySlug(slug);
+
+    this.router.navigate(['/tools',task_id,this.selectedTool.slug]);
   }
 }

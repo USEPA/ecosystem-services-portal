@@ -1,46 +1,37 @@
-div.grid > .grid-row:nth-of-type(odd) {
+h2 {
+  width: 100%;
+  text-align: center;
+}
+
+div.grid {
+  border: 12px solid #e0e0e0;
+}
+
+div.grid > div.grid-row:nth-of-type(even) {
   background: #e0e0e0;
 }
 
-
-.accordion {
-  display: block;
-  max-width: 800px;
+.grid > .grid-row {
+  padding: .5em;
 }
 
-.accordion-item {
-  display: block;
-  border: solid 1px rgb(150, 147, 147);
+mat-accordion mat-expansion-panel-header {
+  background: #e0e0e0;
+  height: 32px !important;
 }
 
-.accordion-item + .accordion-item {
-  border-top: none;
+mat-accordion mat-expansion-panel-header.mat-expanded {
+  background: #d0d0d0 !important;
+  height: 32px !important;
+  white-space: normal !important;
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 16px;
 }
 
-.accordion-item-header {
-  display: flex;
-  align-content: center;
-  justify-content: space-between;
-}
-
-.accordion-item-description {
-  font-size: 0.85em;
-  color: #202cd6;
-}
-
-.accordion-item-header,
-.accordion-item-body {
-  padding: 10px;
-}
-
-.accordion-item-header:hover {
-  cursor: pointer;
-  background-color: rgb(143, 221, 78);
-}
-
-.accordion-item:first-child {
-  border-radius: 4px 4px 0 0;
-}
-.accordion-item:last-child  {
-  border-radius: 0 0 4px 4px;
+mat-accordion div.mat-expansion-panel-body {
+  line-height: 32px !important;
+  padding: 4px 24px 4px 48px !important;
+  white-space: normal !important;
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 16px;
 }

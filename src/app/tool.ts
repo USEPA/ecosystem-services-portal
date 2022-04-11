@@ -9,4 +9,5 @@ export interface Tool {
   related_steps: string[];
   detail: string[];
   matching_step_name: string;
+  matching_task_id: number;
 }

@@ -24,7 +24,7 @@
       ]
     },
     "detail": {
-      "Level of expertise needed": ["No technical expertise is necessary to use the tool, only familiarity with the community and its stakeholder groups."],
+      "Level of expertise needed:": ["No technical expertise is necessary to use the tool, only familiarity with the community and its stakeholder groups."],
       "Level of time needed:": [
         [
           "<b>Approach</b>",
@@ -78,7 +78,7 @@
       ]
     },
     "detail": {
-      "Level of expertise needed": ["No technical expertise is necessary to use the report."],
+      "Level of expertise needed:": ["No technical expertise is necessary to use the report."],
       "Level of time needed:": [
         [
           "<b>Approach</b>",
@@ -134,7 +134,7 @@
       ]
     },
     "detail": {
-      "Level of expertise needed": ["CADDIS is designed to help scientists and engineers in the Regions, States, and Tribes.<br><br>Medium - Familiarity with ecological and environmnetal stressor data "],
+      "Level of expertise needed:": ["CADDIS is designed to help scientists and engineers in the Regions, States, and Tribes.<br><br>Medium - Familiarity with ecological and environmnetal stressor data "],
       "Level of time needed:": [
         [
           "<b>Approach</b>",
@@ -187,7 +187,7 @@
       ]
     },
     "detail": {
-      "Level of expertise needed": ["Low"],
+      "Level of expertise needed:": ["Low"],
       "Level of time needed:": [
         [
           "<b>Approach</b>",
@@ -239,7 +239,7 @@
       ]
     },
     "detail": {
-      "Level of expertise needed": ["Low.  Familiarity with using maps"],
+      "Level of expertise needed:": ["Low.  Familiarity with using maps"],
       "Level of time needed:": [
         [
           "<b>Approach</b>",
@@ -292,7 +292,7 @@
       ]
     },
     "detail": {
-      "Level of expertise needed": ["Familiarity with ecological modeling concepts and ability to search an online database."],
+      "Level of expertise needed:": ["Familiarity with ecological modeling concepts and ability to search an online database."],
       "Level of time needed:": [
         [
           "<b>Approach</b>",
@@ -346,7 +346,7 @@
       ]
     },
     "detail": {
-      "Level of expertise needed": ["The tool has a Basic Module and an Advanced Module.  The Basic Module is intended for users with no experience with GIS software.  and can be used to generate maps and reports for areas within the Tampa Bay Region.  The Advanced Module is for users who are comfortable working with spatial datasets to substitute in data from other locations and more customized scenarios."],
+      "Level of expertise needed:": ["The tool has a Basic Module and an Advanced Module.  The Basic Module is intended for users with no experience with GIS software.  and can be used to generate maps and reports for areas within the Tampa Bay Region.  The Advanced Module is for users who are comfortable working with spatial datasets to substitute in data from other locations and more customized scenarios."],
       "Level of time needed:": [
         [
           "<b>Approach</b>",
@@ -404,7 +404,7 @@
       ]
     },
     "detail": {
-      "Level of expertise needed": ["Low"],
+      "Level of expertise needed:": ["Low"],
       "Level of time needed:": [
         [
           "<b>Approach</b>",
@@ -457,7 +457,7 @@
       ]
     },
     "detail": {
-      "Level of expertise needed": ["The checklist can be filled out using either an interactive excel spreadsheet or a PDF file.<br><br>The Spatial Analysis Toolset must be used within ESRI’s desktop software, ArcMap or ArcCatalog, versions 10.1 or newer."],
+      "Level of expertise needed:": ["The checklist can be filled out using either an interactive excel spreadsheet or a PDF file.<br><br>The Spatial Analysis Toolset must be used within ESRI’s desktop software, ArcMap or ArcCatalog, versions 10.1 or newer."],
       "Level of time needed:": [
         [
           "<b>Approach</b>",
@@ -511,7 +511,7 @@
       ]
     },
     "detail": {
-      "Level of expertise needed": ["Users must have Java 7 JRE installed and accessible on their computer.  The Java JRE is freely available from Oracle’s Java website."],
+      "Level of expertise needed:": ["Users must have Java 7 JRE installed and accessible on their computer.  The Java JRE is freely available from Oracle’s Java website."],
       "Level of time needed:": [
         [
           "<b>Approach</b>",
@@ -568,7 +568,7 @@
       ]
     },
     "detail": {
-      "Level of expertise needed": ["No technical expertise is necessary to use the report."],
+      "Level of expertise needed:": ["No technical expertise is necessary to use the report."],
       "Level of time needed:": [
         [
           "<b>Approach</b>",

@@ -1,34 +1,35 @@
 Your Selections:<br>
   <a [routerLink]="['/paths']">{{ path.name }}</a>
   > <a [routerLink]="['/paths', path.slug, 'steps']"> {{ selectedStepBreadcrumbLabel }}</a>
-  > Select Tasks<br><br>
+  > Select Tasks
+  <span [hidden]="matchingTools.length==0">
+  > Your Tool Matches
+  </span>
+<br><br>
+
+<p>What do you need help doing with Ecosystem Services (ES)?</p>
 
 <div class="grid-row grid-gap">
-  <div class="grid-col-6">
-    <p>What do you need help doing with Ecosystem Services (ES)?</p>
+  <div class="grid-col-5">
     <form [formGroup]="form" #espForm="ngForm">
       <mat-card style="min-height: 300px;">
         <mat-card-content>
           <section class="section">
             <div formArrayName="steps">
-              <ul>
+              <ul class="task-list">
                 <li *ngFor="let step of this.stepFormArray.controls; let i = index" [formGroupName]="i" class="step">
                   <div style="display:flex; flex-direction: row; width: 100% !important;">
                     <div style="width: 75%;">
                       <mat-card-title>{{ step.value.name }}</mat-card-title>
                     </div>
                     <div style="width: 25%; text-align: right;">
-                      <!--                    <button mat-button [disabled]="form.get('checked').disabled"-->
-                      <!--                            (click)="form.get('checked').setValue('one');form.get('checked').markAsTouched()">-->
-                      <!--                    Select All-->
-                      <!--                    </button>-->
                       <mat-checkbox id="step{{ i }}" formControlName="checked" labelPosition="before" color="primary">
                         Select All
                       </mat-checkbox>
                     </div>
                   </div>
                   <div formArrayName="tasks">
-                    <ul>
+                    <ul class="task-list">
                       <li *ngFor="let task of getStepTaskArray(i).controls; let j = index" [formGroupName]="j"
                           class="task">
                         <mat-checkbox id="task{{ i }}-{{ j }}" formControlName="checked" color="primary" (change)="setSelectedTaskIds()">
@@ -37,19 +38,16 @@ Your Selections:<br>
                       </li>
                     </ul>
                   </div>
-                  <br><br>
                 </li>
               </ul>
             </div>
           </section>
         </mat-card-content>
       </mat-card>
-      <br>
-      <a mat-stroked-button color="primary" [routerLink]="['/paths', path.slug, 'steps']">< Back</a>
     </form>
   </div>
-
-  <div class="grid-col-6">
+  <div class="grid-col-7">
     <app-tools [matchingTools]="matchingTools"></app-tools>
   </div>
 </div>
+<a mat-stroked-button color="primary" [routerLink]="['/paths', path.slug, 'steps']">< Back</a>

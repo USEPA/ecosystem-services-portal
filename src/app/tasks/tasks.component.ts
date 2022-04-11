@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {FormGroup, FormBuilder, FormArray, FormControl} from '@angular/forms';
 import {Router, ActivatedRoute} from '@angular/router';
 import {PathService} from '../path.service';
@@ -14,7 +14,8 @@ import {Tool} from "../tool";
 @Component({
   selector: 'app-tasks',
   templateUrl: './tasks.component.html',
-  styleUrls: ['./tasks.component.css']
+  styleUrls: ['./tasks.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class TasksComponent implements OnInit {
   path: Path | undefined;

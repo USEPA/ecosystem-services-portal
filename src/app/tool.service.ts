@@ -37,7 +37,8 @@ export class ToolService {
         id: selectedToolIds[i],
         slug: this.tools.find(h => h.id === selectedToolIds[i]).slug,
         short_name: this.tools.find(h => h.id === selectedToolIds[i]).short_name,
-        matching_step_name: this.steps.find(h => h.id === selectedStepIds[i]).name
+        matching_step_name: this.steps.find(h => h.id === selectedStepIds[i]).name,
+        matching_task_id: task_ids[i]
       }
       matchingTools.push(matchingTool);
     }
@@ -45,7 +46,7 @@ export class ToolService {
   }
 
   getToolBySlug(slug: string): Tool {
-    return this.tools.find(h => h.slug === slug)!;
+    return this.tools.find(h => isNaN(Number(slug)) ? h.slug === slug : h.id === Number(slug))!;
   }
 
 }

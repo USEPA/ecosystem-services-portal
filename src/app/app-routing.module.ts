@@ -11,6 +11,7 @@ const routes: Routes = [
   {path: 'paths', component: PathsComponent},
   {path: 'paths/:slug/steps', component: StepsComponent},
   {path: 'paths/:slug/steps/tasks', component: TasksComponent},
+  {path: 'tools/:task_id/:slug', component: ToolDetailComponent},
   {path: 'tools/:slug', component: ToolDetailComponent},
 ];
 

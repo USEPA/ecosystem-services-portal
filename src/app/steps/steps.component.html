@@ -1,13 +1,12 @@
 Your Selections:<br>
-<a [routerLink]="['/paths']">{{ path.name }}</a> > Select Process Phase<br><br>
+<a [routerLink]="['/paths']">{{ path.name }}</a> > Select Process Phases<br><br>
 <p>I want help incorporating Ecosystem Services into...</p>
 
 <form [formGroup]="form">
-  <div >
   <ul>
     <ng-container formArrayName="steps" *ngFor="let step of this.stepFormArray.controls; let i = index" class="step">
       <li [formGroupName]="i" >
-        <mat-checkbox id="step{{i}}" formControlName="checked" color="primary"> <!--  (change)="onCheckboxChange($event)" -->
+        <mat-checkbox id="step{{i}}" formControlName="checked" color="primary">
           {{ step.value.name }}
         </mat-checkbox>
         <button mat-icon-button [mdePopoverTriggerFor]="appPopover"
@@ -23,13 +22,10 @@ Your Selections:<br>
       </li>
     </ng-container>
   </ul>
-  </div>
   <button mat-stroked-button color="primary" [routerLink]="['/paths']">< Back</button>
   <button mat-stroked-button color="primary" [disabled]="!form.valid" (click)="submit()">Next ></button>
 </form>
 <p><br></p>
 <p [innerHTML]="path.moreinfo"></p>
-
-<!--<pre>{{ form.value | json }}</pre>-->
 
 
