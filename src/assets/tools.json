@@ -170,7 +170,7 @@
     "name": "Eco-Health Relationship Browser",
     "short_name": "Eco-Health Browser",
     "slug": "ecohealth",
-    "description": "The <a href=\"https://enviroatlas.epa.gov/enviroatlas/Tools/EcoHealth_RelationshipBrowser\" target=\"_blank\"><b>Eco-Health Relationship Browser</b></a> illustrates scientifc evidence for linkages between human health and ecosystem services.<br><br>This interactive tool provides information about several ecosystems (i.e., agro-ecosystems, drylands, forests, urban ecosystems, and wetlands), the services they provide, and how those services, or their degradation and loss, may affect people.",
+    "description": "The <a href=\"https://enviroatlas.epa.gov/enviroatlas/Tools/EcoHealth_RelationshipBrowser\" target=\"_blank\"><b>Eco-Health Relationship Browser</b></a> illustrates scientific evidence for linkages between human health and ecosystem services.<br><br>This interactive tool provides information about several ecosystems (i.e., agro-ecosystems, drylands, forests, urban ecosystems, and wetlands), the services they provide, and how those services, or their degradation and loss, may affect people.",
     "url": "https://enviroatlas.epa.gov/enviroatlas/Tools/EcoHealth_RelationshipBrowser",
     "image_file": "ecohealth.jpg",
     "related_steps": {
