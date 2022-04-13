@@ -17,7 +17,7 @@ Your Selections:<br>
           <section class="section">
             <div formArrayName="steps">
               <ul class="task-list">
-                <li *ngFor="let step of this.stepFormArray.controls; let i = index" [formGroupName]="i" class="step">
+                <li *ngFor="let step of this.stepFormArray.controls; let i = index" [formGroupName]="i" class="step  margin-bottom-3">
                   <div style="display:flex; flex-direction: row; width: 100% !important;">
                     <div style="width: 75%;">
                       <mat-card-title>{{ step.value.name }}</mat-card-title>
@@ -47,7 +47,7 @@ Your Selections:<br>
     </form>
   </div>
   <div class="grid-col-7">
-    <app-tools [matchingTools]="matchingTools"></app-tools>
+    <app-tools (selectToolEvent)="selectTool($event)" [matchingTools]="matchingTools"></app-tools>
   </div>
 </div>
-<a mat-stroked-button color="primary" [routerLink]="['/paths', path.slug, 'steps']">< Back</a>
+<button class="usa-button margin-top-3" [routerLink]="['/paths', path.slug, 'steps']">< Back</button>

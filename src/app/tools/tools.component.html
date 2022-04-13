@@ -13,7 +13,7 @@
         <div class="grid-row">
           <div class="grid-col-6">{{tool.matching_step_name}}</div>
           <div class="grid-col-6">
-            <a [routerLink]="['/tools',tool.matching_task_id,tool.slug]" (click)="selectTool(tool.matching_task_id,tool.slug);">{{tool.short_name}}</a>
+            <a rel="href" href="javascript:" (click)="selectToolEvent.emit(tool)">{{tool.short_name}}</a>
           </div>
         </div>
       </ng-container>
@@ -24,3 +24,4 @@
     </div>
   </div>
 </div>
+

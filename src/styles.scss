@@ -16,8 +16,17 @@ input:not([disabled]):focus,
 select:not([disabled]):focus,
 textarea:not([disabled]):focus,
 button:not([disabled]):focus,
+a:not([disabled]):focus,
 mat-card-content a {
   outline: none !important;
+}
+
+button.mat-flat-button {
+  margin-top: 12px;
+  margin-right: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif
 }
 
 mat-card-content a {

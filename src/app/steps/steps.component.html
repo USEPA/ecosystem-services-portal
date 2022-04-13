@@ -22,8 +22,8 @@ Your Selections:<br>
       </li>
     </ng-container>
   </ul>
-  <button mat-stroked-button color="primary" [routerLink]="['/paths']">< Back</button>
-  <button mat-stroked-button color="primary" [disabled]="!form.valid" (click)="submit()">Next ></button>
+  <button class="usa-button margin-top-3"  [routerLink]="['/paths']">< Back</button>
+  <button class="usa-button margin-top-3 margin-left-3"  [disabled]="!form.valid" (click)="submit()">Next ></button>
 </form>
 <p><br></p>
 <p [innerHTML]="path.moreinfo"></p>

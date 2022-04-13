@@ -46,6 +46,7 @@ export class ToolDetailComponent implements OnInit {
       this.router.navigate(['/', {}]);
     }
     this.getPathSteps();
+    this.getToolTasks();
   }
 
   getPathSteps(): void {
@@ -59,6 +60,12 @@ export class ToolDetailComponent implements OnInit {
     }
   }
 
+  getToolTasks(): void {
+    let tasks: Task[] = this.taskService.getTasksByToolId(this.tool.id);
+    this.tool.detail["Tasks it can help with:"] = tasks.map(task => task.name)
+  }
+
+
   get toolDetails(): String {
     let detail = "<div class=\"grid mat-expansion-panel\">";
     for (let col1 of this.objectKeys(this.tool.detail)) {
@@ -67,7 +74,7 @@ export class ToolDetailComponent implements OnInit {
       this.tool.detail[col1].forEach((value, index) => {
         if (col1 == "Level of time needed:") {
           detail += "<div class=\"grid-col-4\">" + value[0] + "</div>\n" +
-            "<div class=\"grid-col-5\">" + value[1] + "</div>\n"
+            "<div class=\"grid-col-5\">" + value[1] + "</div>\n";
         } else {
           detail += "<div class=\"grid-col-9\">" + value + "</div>\n"
         }

@@ -15,7 +15,7 @@ import {ToolDetailComponent} from './tool-detail/tool-detail.component';
 import {AppRoutingModule} from './app-routing.module';
 import {RouterModule, UrlSegment} from "@angular/router";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import { SelectAllComponent } from './select-all.component';
+import {SelectAllComponent} from './select-all.component';
 import {MatTableModule} from "@angular/material/table";
 import {MatExpansionModule} from "@angular/material/expansion";
 
@@ -29,35 +29,35 @@ import {MatExpansionModule} from "@angular/material/expansion";
     ToolDetailComponent,
     SelectAllComponent
   ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        ReactiveFormsModule,
-        FormsModule,
-        MatButtonModule,
-        MatCheckboxModule,
-        MatCardModule,
-        MatTableModule,
-        MdePopoverModule,
-        AppRoutingModule,
-        RouterModule.forRoot([
-            {
-                matcher: (url) => {
-                    let stepSegment = url.map(e => e.path).indexOf('steps')
-                    if (stepSegment > 0) {
-                        return {
-                            consumed: url,
-                            posParams: {
-                                slug: new UrlSegment(url[stepSegment - 1].path, {})
-                            }
-                        };
-                    }
-                    return null;
-                },
-                component: PathsComponent
-            }]),
-        MatExpansionModule
-    ],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    FormsModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatCardModule,
+    MatTableModule,
+    MdePopoverModule,
+    AppRoutingModule,
+    RouterModule.forRoot([
+      {
+        matcher: (url) => {
+          let stepSegment = url.map(e => e.path).indexOf('steps')
+          if (stepSegment > 0) {
+            return {
+              consumed: url,
+              posParams: {
+                slug: new UrlSegment(url[stepSegment - 1].path, {})
+              }
+            };
+          }
+          return null;
+        },
+        component: PathsComponent
+      }], {scrollPositionRestoration: 'enabled'}),
+    MatExpansionModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

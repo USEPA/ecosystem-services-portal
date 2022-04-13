@@ -5,7 +5,7 @@ ul.task-list {
   padding-bottom: 0.2em;
 }
 
-ul > li> mat-checkbox.mat-checkbox > label.mat-checkbox-layout {
+ul.task-list > li > mat-checkbox.mat-checkbox > label.mat-checkbox-layout {
   white-space: normal !important;
   font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: 16.96px;

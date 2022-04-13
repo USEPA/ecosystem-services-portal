@@ -1,21 +1,17 @@
-<ng-template [ngIf]="task">
-  <div class="grid-row grid-gap">
-    <div>Your Selections:</div>
-    <div>
-      Path: <a [routerLink]="['/paths']" class="margin-2 ">{{ path.name }}</a> >
-      <div class="margin-left-3">
-        Step: <a [routerLink]="['/paths', path.slug, 'steps']" class="margin-2">{{ step.name }}</a> >
-      </div>
-      <div class="margin-left-6">
-        Task: <a [routerLink]="['/paths', path.slug, 'steps','tasks']" class="margin-2"> {{ task.name }}</a> >
-      </div>
-    </div>
+<ng-template [ngIf]="task" [ngIfElse]="noSelection">
+  <div>
+    Your Selections:<br>
+      <a [routerLink]="['/paths']">{{ path.name }}</a> >
+      <a [routerLink]="['/paths', path.slug, 'steps']">{{ step.name }}</a> >
+      <a [routerLink]="['/paths', path.slug, 'steps','tasks']"> {{ task.name }}</a> >
+      {{tool.short_name}}
   </div>
 </ng-template>
+<ng-template #noSelection>
+  <h2>{{tool.short_name}}</h2>
+</ng-template>
 
-<h2>{{tool.name}}</h2>
-
-<div class="grid-row margin-top-3">
+<div class="grid-row margin-top-6">
   <div class="grid-col-12" [innerHTML]="tool.description"></div>
 </div>
 
@@ -25,7 +21,7 @@
       <mat-accordion multi="true">
         <div *ngFor="let pathStep of this.pathSteps">
           <mat-expansion-panel [expanded]="pathStep.id == path.id">
-            <mat-expansion-panel-header>Steps in {{pathStep.name}} this Tool is Suited For
+            <mat-expansion-panel-header>Steps in {{pathStep.name}} this Tool is Suited for
             </mat-expansion-panel-header>
             <div *ngFor="let step of pathStep.related_steps; let i = index">
               <span class="text-green">
@@ -44,7 +40,6 @@
                                                   alt="{{tool.name}}"></a>
     </div>
   </div>
-  <div class="grid-row grid-gap margin-top-3">
-    <span [innerHTML]="toolDetails"></span>
-  </div>
+  <div class="grid-row margin-top-3" [innerHTML]="toolDetails"></div>
 </div>
+<button class="usa-button margin-top-3"  [routerLink]="['/paths', path.slug, 'steps','tasks']">< Return To Decision Path</button>

@@ -4,7 +4,7 @@
     "name": "Final Ecosystem Goods and Services (FEGS) Scoping Tool",
     "short_name": "FEGS Scoping Tool",
     "slug": "fegs_scoping",
-    "description": "The <a href=\"https://www.epa.gov/eco-research/final-ecosystem-goods-and-services-fegs-scoping-tool\" target=\"_blank\"><b>FEGS Scoping Tool</b></a> provides a transparent, repeatable, \nand documented approach for identifying and prioritizing stakeholders, the ways they beneft from \nthe environment, and the aspects of the environment necessary for realizing those benefits for a specific decision or decision context.",
+    "description": "The <a href=\"https://www.epa.gov/eco-research/final-ecosystem-goods-and-services-fegs-scoping-tool\" target=\"_blank\"><b>FEGS Scoping Tool</b></a> provides a transparent, repeatable, and documented approach for identifying and prioritizing stakeholders, the ways they benefit from the environment, and the aspects of the environment necessary for realizing those benefits for a specific decision or decision context.",
     "url": "https://www.epa.gov/eco-research/final-ecosystem-goods-and-services-fegs-scoping-tool",
     "image_file": "fegs_scoping.jpg",
     "related_steps": {
@@ -18,9 +18,9 @@
         "Site Investigation and Alternatives Evaluation"
       ],
       "3": [
-        "Clarify Decision Context",
-        "Define Objectives",
-        "Evaluate Trade-offs and Select"
+        "Clarifying Decision Context",
+        "Defining Objectives",
+        "Evaluating Trade-offs and Select"
       ]
     },
     "detail": {
@@ -31,7 +31,7 @@
           "<b>Time Needed</b>"
         ],
         [
-          "Tool Orientation",
+          "Tool orientation",
           "30 minutes"
         ],
         [
@@ -48,6 +48,7 @@
         "What aspects of the environment are necessary for those benefits?",
         "What interests do different groups have in common?"
       ],
+      "Tasks it can help with:": [],
       "How it has been used:": [
         "*Link to EMZ project report when available",
         "*Link to Tillamook report when available",
@@ -73,8 +74,8 @@
         "Post-Construction Activities"
       ],
       "3": [
-        "Define Objectives",
-        "Implement, Monitor, and Review"
+        "Defining Objectives",
+        "Implementing, Monitoring, and Reviewing"
       ]
     },
     "detail": {
@@ -102,6 +103,7 @@
         "What are suggested data sources for these metrics?",
         "Are there remotely sensed datasets or models available for these metrics?"
       ],
+      "Tasks it can help with:": [],
       "How it has been used:": [
         "<a href=\"https://www.epa.gov/eco-research/final-ecosystem-goods-and-services-fegs-metrics-report\" target=\"_blank\">Learn about Final Ecosystem Goods and Services (FEGS)</a>",
         "<a href=\"https://nepis.epa.gov/Exe/ZyPDF.cgi/P1010Y7B.PDF?Dockey=P1010Y7B.PDF\" target=\"_blank\">FEGS Metrics Report</a>",
@@ -115,7 +117,7 @@
     "name": "Causal Analysis/Diagnosis Decision Information System",
     "short_name": "CADDIS",
     "slug": "caddis",
-    "description": "<a href=\"https://www.epa.gov/caddis\" target=\"_blank\"><b>CADDIS (Causal Analysis/Diagnosis Decision Information System)</b></a> is an on-line application designed to help users' causal assessments, primarily in stream ecosystems. It provides a logical, step-by-step framework for stressor identifcation based on the U.S. EPA's Stressor Identifcation Guidance Document. The CADDIS application also provides additional information and tools that can be used in these assessments.",
+    "description": "<a href=\"https://www.epa.gov/caddis\" target=\"_blank\"><b>CADDIS (Causal Analysis/Diagnosis Decision Information System)</b></a> is an on-line application designed to help users' causal assessments, primarily in stream ecosystems. It provides a logical, step-by-step framework for stressor identification based on the U.S. EPA's Stressor Identification Guidance Document. The CADDIS application also provides additional information and tools that can be used in these assessments.",
     "url": "https://www.epa.gov/caddis",
     "image_file": "caddis.jpg",
     "related_steps": {
@@ -130,18 +132,18 @@
         "Site Investigation and Alternatives Evaluation"
       ],
       "3": [
-        "Estimate Consequences"
+        "Estimating Consequences"
       ]
     },
     "detail": {
-      "Level of expertise needed:": ["CADDIS is designed to help scientists and engineers in the Regions, States, and Tribes.<br><br>Medium - Familiarity with ecological and environmnetal stressor data "],
+      "Level of expertise needed:": ["CADDIS is designed to help scientists and engineers in the Regions, States, and Tribes.<br><br>Medium - Familiarity with ecological and environmental stressor data "],
       "Level of time needed:": [
         [
           "<b>Approach</b>",
           "<b>Time Needed</b>"
         ],
         [
-          "Tool Orientation",
+          "Tool orientation",
           "1 hour"
         ],
         [
@@ -158,6 +160,7 @@
         "What are the sources (land uses or entities) that directly or indirectly result in stressors at my site?",
         "What data analysis approaches can help me understand stressors at my site?"
       ],
+      "Tasks it can help with:": [],
       "How it has been used:": [
         "<a href=\"https://www.epa.gov/caddis/basic-information-about-caddis\" target=\"_blank\">Learn About CADDIS</a>",
         "<a href=\"https://www.epa.gov/caddis-vol5/cadlink\" target=\"_blank\">CADDIS Literature Database (CADLink)</a>",
@@ -168,7 +171,7 @@
   {
     "id": 4,
     "name": "Eco-Health Relationship Browser",
-    "short_name": "Eco-Health Browser",
+    "short_name": "Eco-Health Relationship Browser",
     "slug": "ecohealth",
     "description": "The <a href=\"https://enviroatlas.epa.gov/enviroatlas/Tools/EcoHealth_RelationshipBrowser\" target=\"_blank\"><b>Eco-Health Relationship Browser</b></a> illustrates scientific evidence for linkages between human health and ecosystem services.<br><br>This interactive tool provides information about several ecosystems (i.e., agro-ecosystems, drylands, forests, urban ecosystems, and wetlands), the services they provide, and how those services, or their degradation and loss, may affect people.",
     "url": "https://enviroatlas.epa.gov/enviroatlas/Tools/EcoHealth_RelationshipBrowser",
@@ -182,8 +185,8 @@
         "Site Assessment"
       ],
       "3": [
-        "Define Objectives",
-        "Estimate Consequences"
+        "Defining Objectives",
+        "Estimating Consequences"
       ]
     },
     "detail": {
@@ -194,7 +197,7 @@
           "<b>Time Needed</b>"
         ],
         [
-          "Tool Orientation",
+          "Tool orientation",
           "5-10 minutes"
         ],
         [
@@ -207,6 +210,7 @@
         "How can urban green spaces such as parks, urban forests, and public and private gardens improve human health?",
         "How can greening an area (for example, planting trees) affect air quality, water quality, and heat hazard mitigation?"
       ],
+      "Tasks it can help with:": [],
       "How it has been used:": [
         "<a href=\"https://www.epa.gov/enviroatlas/enviroatlas-eco-health-relationship-browser-fact-sheet\" target=\"_blank\">Fact sheet</a>",
         "<a href=\"https://cfpub.epa.gov/si/si_public_record_report.cfm?Lab=NHEERL&dirEntryId=260857\" target=\"_blank\">Linking Ecosystem Services and Human Health: The Eco-Health Relationship Browser (paper) </a>",
@@ -222,7 +226,7 @@
     "slug": "enviroatlas",
     "description": "<a href=\"https://www.epa.gov/enviroatlas\" target=\"_blank\"><b>EnviroAtlas</b></a> is an interactive web-based tool containing more than 400 environmental and social geospatial data layers that decision-makers can use to inform policy and planning in the places where people live, learn, work and play.",
     "url": "https://www.epa.gov/enviroatlas",
-    "image_file": "enviroatlas.jpg",
+    "image_file": "enviroatlas.png",
     "related_steps": {
       "1": [
         "Planning & Scoping",
@@ -235,7 +239,7 @@
         "Site Investigation and Alternatives Evaluation"
       ],
       "3": [
-        "Estimate Consequences"
+        "Estimating Consequences"
       ]
     },
     "detail": {
@@ -246,7 +250,7 @@
           "<b>Time Needed</b>"
         ],
         [
-          "Tool Orientation",
+          "Tool orientation",
           "15 minutes"
         ],
         [
@@ -255,14 +259,15 @@
         ],
         [
           "Explore different data layers related to ecosystem services, their chemical and non-chemical stressors, and human health",
-          "time varies depending upon your interest"
+          "Time varies depending upon your interest"
         ]
       ],
       "Questions it might answer:": [
-        "What National, community, and demographic datasets can I map at my site?",
+        "What national, community, and demographic datasets can I map at my site?",
         "How do the natural environment and ecosystem services vary around my site?",
         "How can EnviroAtlas maps and tools help me tell the story about the status of local environments, populations, and contaminated sites needing improvement?"
       ],
+      "Tasks it can help with:": [],
       "How it has been used:": [
         "<a href=\"https://www.epa.gov/enviroatlas/tutorials\" target=\"_blank\">Interactive Tutorial Story Map</a>",
         "<a href=\"https://www.epa.gov/enviroatlas/enviroatlas-interactive-map\" target=\"_blank\">EnviroAtlas Interactive Map</a>",
@@ -276,8 +281,8 @@
     "name": "EcoService Models Library",
     "short_name": "ESML",
     "slug": "esml",
-    "description": "<a href=\"https://www.epa.gov/eco-research/ecoservice-models-library\" target=\"_blank\"><b>EcoService Models Library (ESML)</b></a> is an online database for finding, examining and comparing ecological models that may be useful for quantifying ecosystem goods and services.",
-    "url": "https://www.epa.gov/eco-research/ecoservice-models-library",
+    "description": "<a href=\"https://esml.epa.gov\" target=\"_blank\"><b>EcoService Models Library (ESML)</b></a> is an online database for finding, examining and comparing ecological models that may be useful for quantifying ecosystem goods and services.",
+    "url": "https://esml.epa.gov",
     "image_file": "esml.jpg",
     "related_steps": {
       "1": [
@@ -288,7 +293,7 @@
         "Site Investigation and Alternatives Evaluation"
       ],
       "3": [
-        "Estimate Consequences"
+        "Estimating Consequences"
       ]
     },
     "detail": {
@@ -299,7 +304,7 @@
           "<b>Time Needed</b>"
         ],
         [
-          "Tool Orientation",
+          "Tool orientation",
           "15 minutes"
         ],
         [
@@ -316,6 +321,7 @@
         "What models are available for specific environment type?",
         "What models are available for specific Generic Ecological Assessment Endpoints?"
       ],
+      "Tasks it can help with:": [],
       "How it has been used:": [
         "<a href=\"https://www.epa.gov/eco-research/ecoservice-models-library\" target=\"_blank\">EPA Landing Page</a>",
         "<a href=\"https://esml.epa.gov\"Online database</a>",
@@ -329,7 +335,7 @@
     "name": "EPA H2O",
     "short_name": "EPA H2O",
     "slug": "epa_h20",
-    "description": "<a href=\"https://www.epa.gov/water-research/ecosystem-services-scenario-assessment-using-epa-h2o\" target=\"_blank\"><b>EPA H2O</b></a> is a GIS tool for mapping and calculating a suite of ecosystem services under different land use scenarios. Users can map ecosystem goods and services at regional to local scales, complete spatial queries along hydrological networks, and generate customized reports for scenario comparisons.",
+    "description": "<a href=\"https://www.epa.gov/water-research/ecosystem-services-scenario-assessment-using-epa-h2o\" target=\"_blank\"><b>EPA H2O</b></a> is a GIS tool for mapping and calculating a suite of ecosystem services under different land use scenarios. Users can map ecosystem goods and services at regional to local scales, complete spatial queries along hydrological networks, and generate customized reports for scenario comparisons. This tool was originally developed for the Tampa Bay area, but can be applied to other areas, by users who have expertise using GIS.",
     "url": "https://www.epa.gov/water-research/ecosystem-services-scenario-assessment-using-epa-h2o",
     "image_file": "epa_h20.jpg",
     "related_steps": {
@@ -342,18 +348,18 @@
         ""
       ],
       "3": [
-        "Estimate Consequences"
+        "Estimating Consequences"
       ]
     },
     "detail": {
-      "Level of expertise needed:": ["The tool has a Basic Module and an Advanced Module.  The Basic Module is intended for users with no experience with GIS software.  and can be used to generate maps and reports for areas within the Tampa Bay Region.  The Advanced Module is for users who are comfortable working with spatial datasets to substitute in data from other locations and more customized scenarios."],
+      "Level of expertise needed:": ["The tool has a Basic Module and an Advanced Module.  The Basic Module is intended for users with no experience with GIS software and can be used to generate maps and reports for areas within the Tampa Bay Region.  The Advanced Module is for users who are comfortable working with spatial datasets to substitute in data from other locations and more customized scenarios."],
       "Level of time needed:": [
         [
           "<b>Approach</b>",
           "<b>Time Needed</b>"
         ],
         [
-          "Tool Orientation",
+          "Tool orientation",
           "30 minutes"
         ],
         [
@@ -370,11 +376,11 @@
         "How do land-use scenarios affect costs (for example, health care, waste water treatment, and stormwater infrastructure)?",
         "How do land-use scenarios at my site affect flood protection?"
       ],
+      "Tasks it can help with:": [],
       "How it has been used:": [
         "<a href=\"https://www.epa.gov/water-research/ecosystem-services-scenario-assessment-using-epa-h2o\" target=\"_blank\">Download Tool</a>",
         "<a href=\"https://www.epa.gov/sites/default/files/2016-10/documents/day2_russell_epa_h20_v2.pdf\" target=\"_blank\">Presentation on \"Assessing Ecosystem Value: Restoration Scenarios on Tribal Lands using the EPA H2O Tool\"</a>",
-        "<a href=\"https://cfpub.epa.gov/si/si_public_record_report.cfm?Lab=NHEERL&dirEntryId=301663&keyword=delivery&actType=&TIMSType=+&TIMSSubTypeID=&DEID=&epaNumber=&ntisID=&archiveStatus=Both&ombCat=Any&dateBeginCreated=&dateEndCreated=&dateBeginPublishedPresented=&dateEndPublishedPresented=&dateBeginUpdated=&dateEndUpdated=&dateBeginCompleted=&dateEndCompleted=&personID=&role=Any&journalID=&publisherID=&sortBy=revisionDate&count=50&CFID=59137945&CFTOKEN=82091789\" target=\"_blank\">Poster Abstract for \"The use of a new ecosystem services assessment tool, EPA H2O, for identifying, quantifying, and valuing ecosystem services production.\"</a>",
-        "<a href=\"https://cfpub.epa.gov/si/si_public_record_report.cfm?Lab=NHEERL&dirEntryId=307793\" target=\"_blank\">COMING SOON - PUBLICLY AVAILABLE USER MANUAL BY FULFORD/BOSQUIN</a>"
+        "<a href=\"https://cfpub.epa.gov/si/si_public_record_report.cfm?Lab=NHEERL&dirEntryId=301663\" target=\"_blank\">Poster Abstract for \"The use of a new ecosystem services assessment tool, EPA H2O, for identifying, quantifying, and valuing ecosystem services production.\"</a>"
       ]
     }
   },
@@ -398,9 +404,9 @@
         "Post-Construction Activities"
       ],
       "3": [
-        "Clarify Decision Context",
-        "Define Objectives",
-        "Implement, Monitor, and Review"
+        "Clarifying Decision Context",
+        "Defining Objectives",
+        "Implementing, Monitoring, and Reviewing"
       ]
     },
     "detail": {
@@ -411,7 +417,7 @@
           "<b>Time Needed</b>"
         ],
         [
-          "Tool Orientation",
+          "Tool orientation",
           "15 minutes"
         ],
         [
@@ -428,6 +434,7 @@
         "Who are the people and economic sectors that benefit from ecosystem services?",
         "How do these people benefit (e.g., direct use, existence value, etc.) from ecosystem services?"
       ],
+      "Tasks it can help with:": [],
       "How it has been used:": [
         "<a href=\"https://www.epa.gov/eco-research/national-ecosystem-services-classification-system-nescs-plus\" target=\"_blank\">Informational site</a>",
         "<a href=\"https://geopub.epa.gov/nescs\" target=\"_blank\">Webtool</a>",
@@ -453,18 +460,18 @@
         "Site Investigation and Alternatives Evaluation"
       ],
       "3": [
-        "Estimate Consequences"
+        "Estimating Consequences"
       ]
     },
     "detail": {
-      "Level of expertise needed:": ["The checklist can be filled out using either an interactive excel spreadsheet or a PDF file.<br><br>The Spatial Analysis Toolset must be used within ESRI’s desktop software, ArcMap or ArcCatalog, versions 10.1 or newer."],
+      "Level of expertise needed:": ["The checklist can be filled out using either an interactive Excel spreadsheet or a PDF file.<br><br>The Spatial Analysis Toolset must be used within ESRI’s desktop software, ArcMap or ArcCatalog, versions 10.1 or newer."],
       "Level of time needed:": [
         [
           "<b>Approach</b>",
           "<b>Time Needed</b>"
         ],
         [
-          "Tool Orientation",
+          "Tool orientation",
           "15 minutes"
         ],
         [
@@ -477,10 +484,11 @@
         ]
       ],
       "Questions it might answer:": [
-        "How do prioritze restoration sites and projects?",
+        "How do prioritize restoration sites and projects?",
         "How can I assess who may benefit most from a project?",
         "How can I evaluate tradeoffs?"
       ],
+      "Tasks it can help with:": [],
       "How it has been used:": [
         "<a href=\"https://cfpub.epa.gov/si/si_public_record_report.cfm?Lab=NHEERL&direntryid=335869\" target=\"_blank\">Fact Sheet</a>",
         "<a href=\"https://cfpub.epa.gov/si/si_public_record_Report.cfm?Lab=NHEERL&dirEntryId=331110\" target=\"_blank\">Checklist Tool & Quick Start Manual</a>",
@@ -491,12 +499,12 @@
   },
   {
     "id": 10,
-    "name": "Visualizing Ecosystem Land Management Assessments (VELMA) Model 2.0",
-    "short_name": "VELMA 2.0",
+    "name": "Visualizing Ecosystem Land Management Assessments (VELMA) Model",
+    "short_name": "VELMA",
     "slug": "velma",
     "description": "<a href=\"https://www.epa.gov/water-research/visualizing-ecosystem-land-management-assessments-velma-model-20\" target=\"_blank\"><b>VELMA (Visualizing Ecosystem Land Management Assessments)</b></a> can be used to help decision makers improve the water quality of streams, rivers, and estuaries by making better use of both natural and engineered green infrastructure to control loadings from nonpoint sources of pollution. It is designed to help users assess green infrastructure options for controlling the fate and transport of water, nutrients, and contaminants across multiple spatial and temporal scales for different ecoregions and present and future climates. VELMA was designed for use by communities, land managers, policy makers, and scientists and engineers.",
     "url": "https://www.epa.gov/water-research/visualizing-ecosystem-land-management-assessments-velma-model-20",
-    "image_file": "velma.jpg",
+    "image_file": "velma.png",
     "related_steps": {
       "1": [
         "Risk Characterization",
@@ -507,7 +515,7 @@
         "Site Investigation and Alternatives Evaluation"
       ],
       "3": [
-        "Estimate Consequences"
+        "Estimating Consequences"
       ]
     },
     "detail": {
@@ -518,16 +526,16 @@
           "<b>Time Needed</b>"
         ],
         [
-          "Tool Orientation",
+          "Tool orientation",
           "1 hour"
         ],
         [
-          "Quick Example",
+          "Quick example",
           "12 pages"
         ],
         [
           "Learning and running VELMA",
-          "at least several weeks"
+          "At least several weeks"
         ]
       ],
       "Questions it might answer:": [
@@ -535,6 +543,7 @@
         "How do climate scenarios affect ecosystem services at my site?",
         "How resilient will my green infrastructure solution be over time?"
       ],
+      "Tasks it can help with:": [],
       "How it has been used:": [
         "<a href=\"https://nepis.epa.gov/Exe/ZyNET.exe/P100PB8E.TXT?ZyActionD=ZyDocument&Client=EPA&Index=2016+Thru+2020&Docs=&Query=&Time=&EndTime=&SearchMethod=1&TocRestrict=n&Toc=&TocEntry=&QField=&QFieldYear=&QFieldMonth=&QFieldDay=&IntQFieldOp=0&ExtQFieldOp=0&XmlQuery=&File=D%3A%5Czyfiles%5CIndex%20Data%5C16thru20%5CTxt%5C00000002%5CP100PB8E.txt&User=ANONYMOUS&Password=anonymous&SortMethod=h%7C-&MaximumDocuments=1&FuzzyDegree=0&ImageQuality=r75g8/r75g8/x150y150g16/i425&Display=hpfr&DefSeekPage=x&SearchBack=ZyActionL&Back=ZyActionS&BackDesc=Results%20page&MaximumPages=1&ZyEntry=1&SeekPage=x&ZyPURL\" target=\"_blank\">Fact Sheet</a>",
         "<a href=\"https://www.epa.gov/water-research/velma-20-quick-example-pdf\" target=\"_blank\">Quick Example</a>",
@@ -560,11 +569,11 @@
         "Post-Construction Activities"
       ],
       "3": [
-        "Clarify Decision Context",
-        "Define Objectives",
-        "Develop Alternatives",
-        "Evaluate Trade-offs and Select",
-        "Implement, Monitor, and Review"
+        "Clarifying Decision Context",
+        "Defining Objectives",
+        "Developing Alternatives",
+        "Evaluating Trade-offs and Select",
+        "Implementing, Monitoring, and Reviewing"
       ]
     },
     "detail": {
@@ -588,6 +597,7 @@
         "What are some strategies for evaluating ES tradeoffs?",
         "What are some strategies for communicating ES risks and benefits?"
       ],
+      "Tasks it can help with:": [],
       "How it has been used:": [
         "<a href=\"https://cfpub.epa.gov/si/si_public_record_report.cfm?dirEntryId=337461&Lab=NHEERL\" target=\"_blank\">Report</a>"
       ]

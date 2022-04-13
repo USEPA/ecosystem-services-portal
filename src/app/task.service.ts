@@ -25,5 +25,9 @@ export class TaskService {
   getTasksByStepIds(step_ids: number[]): Task[] {
     return this.tasks.filter(h => step_ids.indexOf(h.step_id) >= 0)!;
   }
+
+  getTasksByToolId(tool_id: number): Task[] {
+    return this.tasks.filter(h => h.tool_id === tool_id)!;
+  }
 }
 

@@ -15,6 +15,7 @@ export class PathsComponent implements OnInit {
 
   ngOnInit() {
     sessionStorage.setItem('selectedStepIds', '')
+    sessionStorage.setItem('selectedTaskIds', '')
     this.getPaths();
   }
 

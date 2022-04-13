@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, Output, OnChanges, EventEmitter} from '@angular/core';
 import {Tool} from '../tool'
 import {ActivatedRoute, Router} from "@angular/router";
 import {ToolService} from "../tool.service";
@@ -8,22 +8,16 @@ import {ToolService} from "../tool.service";
   templateUrl: './tools.component.html',
   styleUrls: ['./tools.component.scss']
 })
-export class ToolsComponent implements OnInit {
+export class ToolsComponent implements OnChanges {
   @Input() matchingTools: Tool[] = []
-  selectedTool: Tool
+  @Output() selectToolEvent = new EventEmitter<Tool>();
 
   constructor(private router: Router,
-              private route: ActivatedRoute,
               private toolService: ToolService
   ) {
   }
 
-  ngOnInit() {
+  ngOnChanges() {
   }
 
-  selectTool(task_id: number, slug: string) {
-    this.selectedTool = this.toolService.getToolBySlug(slug);
-
-    this.router.navigate(['/tools',task_id,this.selectedTool.slug]);
-  }
 }

@@ -39,6 +39,7 @@ export class StepsComponent implements OnInit {
       this.selectedStepIds = JSON.parse("[" + sessionStorage.getItem('selectedStepIds') + "]");
     } catch (e) {
       sessionStorage.setItem('selectedStepIds', '')
+      sessionStorage.setItem('selectedTaskIds', '')
       this.selectedStepIds = []
     }
 

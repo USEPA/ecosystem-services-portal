@@ -42,7 +42,6 @@ export class TasksComponent implements OnInit {
     if (!this.path) {
       this.router.navigate(['/', {}]);
     }
-
     try {
       this.selectedStepIds = JSON.parse("[" + sessionStorage.getItem('selectedStepIds') + "]");
     } catch (e) {
@@ -52,13 +51,21 @@ export class TasksComponent implements OnInit {
     if (!this.selectedStepIds.length) {
       this.router.navigate(['/paths', this.path.slug, 'steps']);
     }
+    try {
+      this.selectedTaskIds = JSON.parse("[" + sessionStorage.getItem('selectedTaskIds') + "]");
+    } catch (e) {
+      sessionStorage.setItem('selectedTaskIds', '')
+      this.selectedTaskIds = []
+    }
     this.stepService.getSteps(this.selectedStepIds).subscribe(step => this.steps = step);
     this.selectedStepBreadcrumbLabel = this.steps[0].name + ((this.steps.length > 1) ? '...' : '');
 
     this.taskService.getTasksByStepIds(this.selectedStepIds).forEach(task => {
-      task.checked = false;
+      task.checked = this.selectedTaskIds.find(x => x === task.id) > 0;
       this.tasks.push(task);
     })
+
+    this.selectedTaskIds = this.selectedTaskIds.filter(id => this.tasks.map(task => task.id).includes(id))
     this.initForm()
   }
 
@@ -95,6 +102,10 @@ export class TasksComponent implements OnInit {
     return this.toolService.getToolsByTaskIds(this.selectedTaskIds)
   }
 
+  selectTool(tool: Tool) {
+    this.router.navigate(['/tools', tool.matching_task_id, tool.slug], {});
+  }
+
   get stepFormArray(): FormArray {
     return this.form.get('steps') as FormArray;
   }
@@ -111,6 +122,7 @@ export class TasksComponent implements OnInit {
       })
     });
     this.selectedTaskIds = selectedTaskIds
+    sessionStorage.setItem('selectedTaskIds', this.selectedTaskIds.toString())
   }
 
   private setListeners(): void {
