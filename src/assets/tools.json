@@ -15,7 +15,9 @@
       ],
       "2": [
         "Site Assessment",
-        "Site Investigation and Alternatives Evaluation"
+        "Site Investigation and Alternatives Evaluation",
+        "Remedy Selection",
+        "Remedy Implementation"
       ],
       "3": [
         "Clarifying Decision Context",
@@ -24,11 +26,13 @@
       ]
     },
     "detail": {
-      "Level of expertise needed:": ["No technical expertise is necessary to use the tool, only familiarity with the community and its stakeholder groups."],
-      "Level of time needed:": [
+      "Level of expertise needed:": [
+        "No technical expertise is necessary to use the tool, only familiarity with the community and its stakeholder groups."
+      ],
+      "Level of effort needed:": [
         [
           "<b>Approach</b>",
-          "<b>Time Needed</b>"
+          "<b>Effort Needed</b>"
         ],
         [
           "Tool orientation",
@@ -50,10 +54,9 @@
       ],
       "Tasks it can help with:": [],
       "How it has been used:": [
-        "*Link to EMZ project report when available",
-        "*Link to Tillamook report when available",
-        "*Link to Ryann Rossi's Chesapeake Bay MS",
-        "*Link to use case paper when available"
+        "<a href=\"https://cfpub.epa.gov/si/si_public_record_Report.cfm?dirEntryId=350722&Lab=CEMM\" target=\"_blank\">Prioritizing Stakeholders, Beneficiaries, and Environmental Attributes: A Tool for Ecosystem-Based Management</a> (2020)",
+        "<a href=\"https://www.epa.gov/eco-research/fegs-scoping-tool-installation\" target=\"_blank\">FEGS Scoping Tool Installation</a>",
+        "<a href=\"https://www.epa.gov/eco-research/fegs-scoping-tool-user-manual\" target=\"_blank\">FEGS Scoping Tool User Manual</a>"
       ]
     }
   },
@@ -70,6 +73,9 @@
         "Risk Communication"
       ],
       "2": [
+        "Site Assessment",
+        "Site Investigation and Alternatives Evaluation",
+        "Remedy Selection",
         "Remedy Implementation",
         "Post-Construction Activities"
       ],
@@ -79,11 +85,13 @@
       ]
     },
     "detail": {
-      "Level of expertise needed:": ["No technical expertise is necessary to use the report."],
-      "Level of time needed:": [
+      "Level of expertise needed:": [
+        "No technical expertise is necessary to use the report."
+      ],
+      "Level of effort needed:": [
         [
           "<b>Approach</b>",
-          "<b>Time Needed</b>"
+          "<b>Effort Needed</b>"
         ],
         [
           "Orientation and Learn about FEGS",
@@ -91,7 +99,7 @@
         ],
         [
           "Explore the FEGS Metrics Spreadsheet",
-          "a couple of hours"
+          "A couple of hours"
         ],
         [
           "Read the full report",
@@ -136,11 +144,13 @@
       ]
     },
     "detail": {
-      "Level of expertise needed:": ["CADDIS is designed to help scientists and engineers in the Regions, States, and Tribes.<br><br>Medium - Familiarity with ecological and environmental stressor data "],
-      "Level of time needed:": [
+      "Level of expertise needed:": [
+        "CADDIS is designed to help scientists and engineers in the Regions, States, and Tribes.<br><br>Medium - Familiarity with ecological and environmental stressor data "
+      ],
+      "Level of effort needed:": [
         [
           "<b>Approach</b>",
-          "<b>Time Needed</b>"
+          "<b>Effort Needed</b>"
         ],
         [
           "Tool orientation",
@@ -182,7 +192,8 @@
         "Risk Communication"
       ],
       "2": [
-        "Site Assessment"
+        "Site Assessment",
+        "Site Investigation and Alternatives Evaluation"
       ],
       "3": [
         "Defining Objectives",
@@ -190,11 +201,13 @@
       ]
     },
     "detail": {
-      "Level of expertise needed:": ["Low"],
-      "Level of time needed:": [
+      "Level of expertise needed:": [
+        "Low"
+      ],
+      "Level of effort needed:": [
         [
           "<b>Approach</b>",
-          "<b>Time Needed</b>"
+          "<b>Effort Needed</b>"
         ],
         [
           "Tool orientation",
@@ -236,22 +249,25 @@
       ],
       "2": [
         "Site Assessment",
-        "Site Investigation and Alternatives Evaluation"
+        "Site Investigation and Alternatives Evaluation",
+        "Remedy Selection"
       ],
       "3": [
         "Estimating Consequences"
       ]
     },
     "detail": {
-      "Level of expertise needed:": ["Low.  Familiarity with using maps"],
-      "Level of time needed:": [
+      "Level of expertise needed:": [
+        "Low.  Familiarity with using maps"
+      ],
+      "Level of effort needed:": [
         [
           "<b>Approach</b>",
-          "<b>Time Needed</b>"
+          "<b>Effort Needed</b>"
         ],
         [
           "Tool orientation",
-          "15 minutes"
+          "30 minutes"
         ],
         [
           "Find your site",
@@ -281,8 +297,8 @@
     "name": "EcoService Models Library",
     "short_name": "ESML",
     "slug": "esml",
-    "description": "<a href=\"https://esml.epa.gov\" target=\"_blank\"><b>EcoService Models Library (ESML)</b></a> is an online database for finding, examining and comparing ecological models that may be useful for quantifying ecosystem goods and services.",
-    "url": "https://esml.epa.gov",
+    "description": "<a href=\"https://www.epa.gov/eco-research/ecoservice-models-library\" target=\"_blank\"><b>EcoService Models Library (ESML)</b></a> is an online database for finding, examining and comparing ecological models that may be useful for quantifying ecosystem goods and services.",
+    "url": "https://www.epa.gov/eco-research/ecoservice-models-library",
     "image_file": "esml.jpg",
     "related_steps": {
       "1": [
@@ -297,11 +313,13 @@
       ]
     },
     "detail": {
-      "Level of expertise needed:": ["Familiarity with ecological modeling concepts and ability to search an online database."],
-      "Level of time needed:": [
+      "Level of expertise needed:": [
+        "Familiarity with ecological modeling concepts and ability to search an online database."
+      ],
+      "Level of effort needed:": [
         [
           "<b>Approach</b>",
-          "<b>Time Needed</b>"
+          "<b>Effort Needed</b>"
         ],
         [
           "Tool orientation",
@@ -319,23 +337,23 @@
       "Questions it might answer:": [
         "What models are available for specific ecosystem services?",
         "What models are available for specific environment type?",
-        "What models are available for specific Generic Ecological Assessment Endpoints?"
+        "What models are available for specific Ecological Assessment Endpoints?"
       ],
       "Tasks it can help with:": [],
       "How it has been used:": [
         "<a href=\"https://www.epa.gov/eco-research/ecoservice-models-library\" target=\"_blank\">EPA Landing Page</a>",
-        "<a href=\"https://esml.epa.gov\"Online database</a>",
-        "<a href=\"https://www.epa.gov/eco-research/epas-ecoservice-models-library-fact-sheet\">Fact Sheet</a>",
-        "<a href=\"https://esml.epa.gov/secondary/readPGESAE\">ESML and Hazardous Waste Site ERA</a>"
+        "<a href=\"https://esml.epa.gov\" target=\"_blank\">Online database</a>",
+        "<a href=\"https://www.epa.gov/eco-research/epas-ecoservice-models-library-fact-sheet\" target=\"_blank\">Fact Sheet</a>",
+        "<a href=\"https://esml.epa.gov/secondary/readPGESAE\" target=\"_blank\">ESML and Hazardous Waste Site ERA</a>"
       ]
     }
   },
   {
     "id": 7,
-    "name": "EPA H2O",
-    "short_name": "EPA H2O",
+    "name": "EPA H<sub>2</sub>O",
+    "short_name": "EPA H<sub>2</sub>O",
     "slug": "epa_h20",
-    "description": "<a href=\"https://www.epa.gov/water-research/ecosystem-services-scenario-assessment-using-epa-h2o\" target=\"_blank\"><b>EPA H2O</b></a> is a GIS tool for mapping and calculating a suite of ecosystem services under different land use scenarios. Users can map ecosystem goods and services at regional to local scales, complete spatial queries along hydrological networks, and generate customized reports for scenario comparisons. This tool was originally developed for the Tampa Bay area, but can be applied to other areas, by users who have expertise using GIS.",
+    "description": "<a href=\"https://www.epa.gov/water-research/ecosystem-services-scenario-assessment-using-epa-h2o\" target=\"_blank\"><b>EPA H<sub>2</sub>O</b></a> is a GIS tool for mapping and calculating a suite of ecosystem services under different land use scenarios. Users can map ecosystem goods and services at regional to local scales, complete spatial queries along hydrological networks, and generate customized reports for scenario comparisons. This tool was originally developed for the Tampa Bay area, but can be applied to other areas, by users who have expertise using GIS.",
     "url": "https://www.epa.gov/water-research/ecosystem-services-scenario-assessment-using-epa-h2o",
     "image_file": "epa_h20.jpg",
     "related_steps": {
@@ -345,18 +363,19 @@
         "Risk Communication"
       ],
       "2": [
-        ""
       ],
       "3": [
         "Estimating Consequences"
       ]
     },
     "detail": {
-      "Level of expertise needed:": ["The tool has a Basic Module and an Advanced Module.  The Basic Module is intended for users with no experience with GIS software and can be used to generate maps and reports for areas within the Tampa Bay Region.  The Advanced Module is for users who are comfortable working with spatial datasets to substitute in data from other locations and more customized scenarios."],
-      "Level of time needed:": [
+      "Level of expertise needed:": [
+        "The tool has a Basic Module and an Advanced Module.  The Basic Module is intended for users with no experience with GIS software and can be used to generate maps and reports for areas within the Tampa Bay Region.  The Advanced Module is for users who are comfortable working with spatial datasets to substitute in data from other locations and more customized scenarios."
+      ],
+      "Level of effort needed:": [
         [
           "<b>Approach</b>",
-          "<b>Time Needed</b>"
+          "<b>Effort Needed</b>"
         ],
         [
           "Tool orientation",
@@ -364,11 +383,11 @@
         ],
         [
           "Create a Green Value Analysis Report (Basic Module)",
-          "a few hours"
+          "A few hours"
         ],
         [
           "Create maps and reports for a custom site (outside of Tampa Bay Region)",
-          "several days"
+          "Several days"
         ]
       ],
       "Questions it might answer:": [
@@ -379,8 +398,8 @@
       "Tasks it can help with:": [],
       "How it has been used:": [
         "<a href=\"https://www.epa.gov/water-research/ecosystem-services-scenario-assessment-using-epa-h2o\" target=\"_blank\">Download Tool</a>",
-        "<a href=\"https://www.epa.gov/sites/default/files/2016-10/documents/day2_russell_epa_h20_v2.pdf\" target=\"_blank\">Presentation on \"Assessing Ecosystem Value: Restoration Scenarios on Tribal Lands using the EPA H2O Tool\"</a>",
-        "<a href=\"https://cfpub.epa.gov/si/si_public_record_report.cfm?Lab=NHEERL&dirEntryId=301663\" target=\"_blank\">Poster Abstract for \"The use of a new ecosystem services assessment tool, EPA H2O, for identifying, quantifying, and valuing ecosystem services production.\"</a>"
+        "<a href=\"https://www.epa.gov/sites/default/files/2016-10/documents/day2_russell_epa_h20_v2.pdf\" target=\"_blank\">Presentation on \"Assessing Ecosystem Value: Restoration Scenarios on Tribal Lands using the EPA H<sub>2</sub>O Tool\"</a>",
+        "<a href=\"https://cfpub.epa.gov/si/si_public_record_report.cfm?Lab=NHEERL&dirEntryId=301663\" target=\"_blank\">Poster Abstract for \"The use of a new ecosystem services assessment tool, EPA H<sub>2</sub>O, for identifying, quantifying, and valuing ecosystem services production.\"</a>"
       ]
     }
   },
@@ -389,7 +408,7 @@
     "name": "National Ecosystem Services Classification System",
     "short_name": "NESCS Plus",
     "slug": "nescs_plus",
-    "description": "The <a href=\"https://www.epa.gov/eco-research/national-ecosystem-services-classification-system-nescs-plus\" target=\"_blank\"><b>National Ecosystem Services Classification System (NESCS Plus)</b></a> serves as a framework for analyzing how changes to ecosystems impact human welfare. This classification system provides standardized vocabulary, classes, and codes. The aim is for this classification system to serve as a common language to improve communication, integration, and synthesis. For example, NESCS Plus has been linked to multiple EPA products including existing tools (e.g., EnviroAtlas and the EcoService Models Library).",
+    "description": "The <a href=\"https://www.epa.gov/eco-research/national-ecosystem-services-classification-system-nescs-plus\" target=\"_blank\"><b>National Ecosystem Services Classification System (NESCS Plus)</b></a> serves as a framework for analyzing how changes to ecosystems impact human welfare. This classification system provides standardized vocabulary, classes, and codes. The aim is for this classification system to serve as a common language to improve communication, integration, and synthesis. For example, NESCS Plus has been linked to multiple EPA tools (e.g., <a href=\"tools/fegs_scoping\">FEGS Scoping Tool</a>, <a href=\"tools/enviroatlas\">EnviroAtlas</a> and the <a href=\"tools/esml\">EcoService Models Library</a>)",
     "url": "https://www.epa.gov/eco-research/national-ecosystem-services-classification-system-nescs-plus",
     "image_file": "nescs_plus.jpg",
     "related_steps": {
@@ -410,11 +429,13 @@
       ]
     },
     "detail": {
-      "Level of expertise needed:": ["Low"],
-      "Level of time needed:": [
+      "Level of expertise needed:": [
+        "Low"
+      ],
+      "Level of effort needed:": [
         [
           "<b>Approach</b>",
-          "<b>Time Needed</b>"
+          "<b>Effort Needed</b>"
         ],
         [
           "Tool orientation",
@@ -464,15 +485,17 @@
       ]
     },
     "detail": {
-      "Level of expertise needed:": ["The checklist can be filled out using either an interactive Excel spreadsheet or a PDF file.<br><br>The Spatial Analysis Toolset must be used within ESRI’s desktop software, ArcMap or ArcCatalog, versions 10.1 or newer."],
-      "Level of time needed:": [
+      "Level of expertise needed:": [
+        "The checklist can be filled out using either an interactive Excel spreadsheet or a PDF file.<br><br>The Spatial Analysis Toolset must be used within ESRI’s desktop software, ArcMap or ArcCatalog, versions 10.1 or newer."
+      ],
+      "Level of effort needed:": [
         [
           "<b>Approach</b>",
-          "<b>Time Needed</b>"
+          "<b>Effort Needed</b>"
         ],
         [
           "Tool orientation",
-          "15 minutes"
+          "30 minutes"
         ],
         [
           "Checklist Tool",
@@ -519,11 +542,13 @@
       ]
     },
     "detail": {
-      "Level of expertise needed:": ["Users must have Java 7 JRE installed and accessible on their computer.  The Java JRE is freely available from Oracle’s Java website."],
-      "Level of time needed:": [
+      "Level of expertise needed:": [
+        "Users must have Java 7 JRE installed and accessible on their computer.  The Java JRE is freely available from Oracle’s Java website."
+      ],
+      "Level of effort needed:": [
         [
           "<b>Approach</b>",
-          "<b>Time Needed</b>"
+          "<b>Effort Needed</b>"
         ],
         [
           "Tool orientation",
@@ -577,11 +602,13 @@
       ]
     },
     "detail": {
-      "Level of expertise needed:": ["No technical expertise is necessary to use the report."],
-      "Level of time needed:": [
+      "Level of expertise needed:": [
+        "No technical expertise is necessary to use the report."
+      ],
+      "Level of effort needed:": [
         [
           "<b>Approach</b>",
-          "<b>Time Needed</b>"
+          "<b>Effort Needed</b>"
         ],
         [
           "Orientation",
