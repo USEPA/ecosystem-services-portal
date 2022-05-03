@@ -13,14 +13,15 @@
         <div class="grid-row">
           <div class="grid-col-6">{{tool.matching_step_name}}</div>
           <div class="grid-col-6">
-            <a rel="href" href="javascript:" (click)="selectToolEvent.emit(tool)">{{tool.short_name}}</a>
+            <a rel="href" href="javascript:" (click)="selectToolEvent.emit(tool)" [innerHTML]="tool.short_name"></a>
           </div>
         </div>
       </ng-container>
     </div>
     <div class="grid-col-12 margin-top-6">
       <a [routerLink]="['/paths']">Contact us</a> to let us know if you have additional tool needs not addressed by
-      these tools or to submit ideas for future tools.
+      these tools or to submit ideas for future tools. This Portal includes a limited selection of curated tools.
+      Please contact us to suggest including additional tools for specific phases and tasks.
     </div>
   </div>
 </div>

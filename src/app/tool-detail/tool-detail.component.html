@@ -1,10 +1,10 @@
 <ng-template [ngIf]="task" [ngIfElse]="noSelection">
   <div>
     Your Selections:<br>
-      <a [routerLink]="['/paths']">{{ path.name }}</a> >
-      <a [routerLink]="['/paths', path.slug, 'steps']">{{ step.name }}</a> >
-      <a [routerLink]="['/paths', path.slug, 'steps','tasks']"> {{ task.name }}</a> >
-      {{tool.short_name}}
+    <a [routerLink]="['/paths']" [innerHTML]="path.name"></a> >
+    <a [routerLink]="['/paths', path.slug, 'steps']" [innerHTML]="step.name"></a> >
+    <a [routerLink]="['/paths', path.slug, 'steps','tasks']" [innerHTML]="task.name"></a> >
+    <span [innerHTML]="tool.short_name"></span>
   </div>
 </ng-template>
 <ng-template #noSelection>
@@ -20,7 +20,8 @@
     <div class="grid-col-6">
       <mat-accordion multi="true">
         <div *ngFor="let pathStep of this.pathSteps">
-          <mat-expansion-panel [expanded]="pathStep.id == path.id">
+          <ng-container *ngIf="pathStep.related_steps.length > 0">
+          <mat-expansion-panel [expanded]="path && pathStep.id === path.id">
             <mat-expansion-panel-header>Steps in {{pathStep.name}} this Tool is Suited for
             </mat-expansion-panel-header>
             <div *ngFor="let step of pathStep.related_steps; let i = index">
@@ -32,6 +33,7 @@
               {{step}}
             </div>
           </mat-expansion-panel>
+          </ng-container>
         </div>
       </mat-accordion>
     </div>
@@ -42,4 +44,14 @@
   </div>
   <div class="grid-row margin-top-3" [innerHTML]="toolDetails"></div>
 </div>
-<button class="usa-button margin-top-3"  [routerLink]="['/paths', path.slug, 'steps','tasks']">< Return To Decision Path</button>
+
+<ng-template [ngIf]="path" [ngIfElse]="noPathSelection">
+  <button class="usa-button margin-top-3" [routerLink]="['/paths', path.slug, 'steps','tasks']">
+    < Return To Decision Path
+  </button>
+</ng-template>
+<ng-template #noPathSelection>
+  <button class="usa-button margin-top-3" [routerLink]="['/paths']">
+    < Return To Decision Path
+  </button>
+</ng-template>

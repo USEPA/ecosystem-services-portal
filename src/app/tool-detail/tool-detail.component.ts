@@ -34,19 +34,19 @@ export class ToolDetailComponent implements OnInit {
   ngOnInit() {
     const slug = String(this.route.snapshot.paramMap.get('slug'));
     this.tool = this.toolService.getToolBySlug(slug);
-    if (this.tool) {
+    if (this.tool !== undefined) {
       const task_id = Number(this.route.snapshot.paramMap.get('task_id'));
       this.taskService.getTask(task_id).subscribe(task => this.task = task);
-      if (this.task) {
+      if (this.task !== undefined) {
         this.stepService.getStep(this.task.step_id).subscribe(step => this.step = step);
         this.pathService.getPath(this.step.path_id).subscribe(path => this.path = path)
       }
       sessionStorage.setItem('selectedToolId', this.tool.id.toString())
+      this.getPathSteps();
+      this.getToolTasks();
     } else {
-      this.router.navigate(['/', {}]);
+      this.router.navigate(['/']);
     }
-    this.getPathSteps();
-    this.getToolTasks();
   }
 
   getPathSteps(): void {
@@ -62,9 +62,12 @@ export class ToolDetailComponent implements OnInit {
 
   getToolTasks(): void {
     let tasks: Task[] = this.taskService.getTasksByToolId(this.tool.id);
-    this.tool.detail["Tasks it can help with:"] = tasks.map(task => task.name)
+    let taskNames = tasks.map(task => task.name);
+    this.tool.detail["Tasks it can help with:"] =
+      taskNames.filter(function (elem, index, self) {
+        return index === self.indexOf(elem);
+      })
   }
-
 
   get toolDetails(): String {
     let detail = "<div class=\"grid mat-expansion-panel\">";
@@ -72,7 +75,7 @@ export class ToolDetailComponent implements OnInit {
       detail += "<div class=\"grid-row\">\n" +
         "    <div class=\"grid-col-3\"><b>" + col1 + "</b></div>"
       this.tool.detail[col1].forEach((value, index) => {
-        if (col1 == "Level of time needed:") {
+        if (col1 == "Level of effort needed:") {
           detail += "<div class=\"grid-col-4\">" + value[0] + "</div>\n" +
             "<div class=\"grid-col-5\">" + value[1] + "</div>\n";
         } else {

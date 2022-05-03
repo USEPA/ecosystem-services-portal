@@ -1,17 +1,16 @@
-<p>Ecosystem services assessment tools help you describe, quantify, and sustain the benefits nature offers humans and weigh the impact of decisions. This tool portal helps select the best tools for your scenario. Choose a path below to find the tools that match your needs.</p>
+<p>Ecosystem services assessment tools help you describe, quantify, and sustain the benefits nature offers humans and
+  weigh the impact of decisions. This tool portal helps select the best tools for your scenario. Choose a path below to
+  find the tools that match your needs.</p>
 
 <h4>I'm looking for help with...</h4>
 
 <div class="grid-row">
   <ng-container *ngFor="let path of paths">
-    <div class="grid-col-3">
-      <a mat-stroked-button [routerLink]="[path.slug, 'steps']">
+    <div class="grid-col-4 grid-gap">
+      <a mat-stroked-button class="pathway" [routerLink]="[path.slug, 'steps']">
         <b>{{path.name}}</b>
       </a>
-      <p [innerHTML]=path.rationale></p>
-    </div>
 
-    <div class="grid-col-1">
       <button mat-icon-button [mdePopoverTriggerFor]="appPopover"
               mdePopoverTriggerOn="click"
               #popoverTrigger="mdePopoverTrigger">
@@ -22,6 +21,26 @@
           <mat-card-content [innerHTML]="path.description"></mat-card-content>
         </mat-card>
       </mde-popover>
+      <div [innerHTML]=path.rationale></div>
     </div>
   </ng-container>
+</div>
+<div class="grid-col-6"><img src="../progress-bar.component.svg" class="progress-bar"></div>
+
+<div class="margin-top-4">
+  <p> Ecosystem goods and services contribute to our well-being and the well-being of our communities in ways that often
+    aren't recognized until they are negatively impacted. Integrating ecosystem services assessment tools into your
+    process can increase the visibility of these benefits and strengthen your environmental efforts. Some examples of
+    ecosystem goods and services include:
+  </p>
+  <ul>
+    <li>Clean water for drinking, bathing, and recreational uses like fishing</li>
+    <li>Fertile, uncontaminated soil for raising crops</li>
+    <li>Pollinators that pollinate those crops</li>
+    <li>Tree cover that provides cooling shade around homes.</li>
+  </ul>
+  <p>Learn more about <a [routerLink]="['/paths']">Ecosystem Goods and Services</a></p>
+  <p><a [routerLink]="['/paths']">Contact us</a> to ask a question, provide feedback, or report a
+    problem. This Portal includes a limited selection of curated tools. Please contact us to suggest including
+    additional tools for specific phases and tasks.</p>
 </div>

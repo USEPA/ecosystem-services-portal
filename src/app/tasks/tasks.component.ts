@@ -48,8 +48,8 @@ export class TasksComponent implements OnInit {
       sessionStorage.setItem('selectedStepIds', '')
       this.selectedStepIds = []
     }
-    if (!this.selectedStepIds.length) {
-      this.router.navigate(['/paths', this.path.slug, 'steps']);
+    if (!this.selectedStepIds[0]) {
+      this.router.navigate(['/', {}]);
     }
     try {
       this.selectedTaskIds = JSON.parse("[" + sessionStorage.getItem('selectedTaskIds') + "]");
@@ -99,11 +99,21 @@ export class TasksComponent implements OnInit {
   }
 
   get matchingTools(): Tool[] {
-    return this.toolService.getToolsByTaskIds(this.selectedTaskIds)
+    let matchingTools: Tool[] = this.toolService.getToolsByTaskIds(this.selectedTaskIds)
+    let currentStep: string = ''
+    matchingTools.forEach((tool: Tool, index) => {
+      if (index === 0) currentStep = tool.matching_step_name
+      else if (currentStep === tool.matching_step_name)
+        tool.matching_step_name = ''
+      else
+        currentStep = tool.matching_step_name
+    })
+    return matchingTools
   }
 
   selectTool(tool: Tool) {
-    this.router.navigate(['/tools', tool.matching_task_id, tool.slug], {});
+    const url = this.router.serializeUrl(this.router.createUrlTree(['/tools', tool.matching_task_id, tool.slug], {}));
+    window.open(url, '_blank');
   }
 
   get stepFormArray(): FormArray {

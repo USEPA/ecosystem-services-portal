@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Planning & Scoping",
     "path_id": 1,
-    "rationale": "Initially, the risk assessor and manager (and the planning team) need to evaluate and select the kind of risk information, exposure scenarios and assessment issues that need to be covered. At this point, most EPA assessments focus on technical information related to the sources, effects, populations and the routes of exposure. "
+    "rationale": "Initially, the risk assessor and manager (and the planning team) need to evaluate and select the kind of risk information, exposure scenarios and assessment issues that need to be covered. At this point, most EPA assessments focus on technical information related to the sources of contamination, toxic effects, wildlife populations, routes of exposure, and habitats."
   },
   {
     "id": 2,
@@ -33,13 +33,13 @@
     "id": 6,
     "name": "Site Assessment",
     "path_id": 2,
-    "rationale": "A site assessment focuses on evaluating the potential risk of a release of hazardous substances or threat to people and the environment. Preliminary determinations are made regarding need for immediate or further actions required. Background historical investigation information is collected. "
+    "rationale": "A site assessment focuses on evaluating the risk of a release of hazardous substances or threat to people and the environment. Preliminary determinations are made regarding need for immediate or further actions required.  Historical background information is collected, including information pertaining to past environmental investigations, as is information pertaining to the site's environmental setting and potentially impacted populations and habitats."
   },
   {
     "id": 7,
     "name": "Site Investigation and Alternatives Evaluation",
     "path_id": 2,
-    "rationale": "More integrated and in-depth site characterizations are made (e.g., Remedial Investigation/Feasibility Study [CERCLA], Phase II Environmental Site Assessments [Brownfeld], Facility Investigations [RCRA]. Remediation alternatives are evaluated."
+    "rationale": "More integrated and in-depth site characterizations, including risk assessments, are made (e.g., Remedial Investigation/Feasibility Study [CERCLA], Phase II Environmental Site Assessments [Brownfield], Facility Investigations [RCRA]. Remediation alternatives are evaluated."
   },
   {
     "id": 8,
@@ -57,7 +57,7 @@
     "id": 10,
     "name": "Post-Construction Activities",
     "path_id": 2,
-    "rationale": "Operation and Maintenance phase. Also includes monitoring, inspections, and assessment for remedy effectiveness determinations, and adaptive management needs (e.g., remedy Optimization [CERCLA]). For Brownfelds, redevelopment activities may occur."
+    "rationale": "Operation and Maintenance phase. Also includes monitoring, inspections, and assessment for remedy effectiveness determinations, and adaptive management needs (e.g., quarterly and/or annual reviews, Five-Year Reviews, Remedy Optimization [CERCLA]).  For Brownfields, redevelopment activities may occur."
   },
   {
     "id": 11,
