@@ -18,6 +18,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {SelectAllComponent} from './select-all.component';
 import {MatTableModule} from "@angular/material/table";
 import {MatExpansionModule} from "@angular/material/expansion";
+import {ProgressBarComponent} from "./progress-bar.component";
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {MatExpansionModule} from "@angular/material/expansion";
     TasksComponent,
     ToolsComponent,
     ToolDetailComponent,
-    SelectAllComponent
+    SelectAllComponent,
+    ProgressBarComponent
   ],
   imports: [
     BrowserModule,
