@@ -40,7 +40,7 @@ export class TasksComponent implements OnInit {
     const slug = String(this.route.snapshot.paramMap.get('slug'));
     this.path = this.pathService.getPathBySlug(slug)
     if (!this.path) {
-      this.router.navigate(['/', {}]);
+      this.router.navigate(['/']);
     }
     try {
       this.selectedStepIds = JSON.parse("[" + sessionStorage.getItem('selectedStepIds') + "]");
@@ -49,7 +49,7 @@ export class TasksComponent implements OnInit {
       this.selectedStepIds = []
     }
     if (!this.selectedStepIds[0]) {
-      this.router.navigate(['/', {}]);
+      this.router.navigate(['/']);
     }
     try {
       this.selectedTaskIds = JSON.parse("[" + sessionStorage.getItem('selectedTaskIds') + "]");

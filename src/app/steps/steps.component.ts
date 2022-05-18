@@ -32,7 +32,7 @@ export class StepsComponent implements OnInit {
     if (this.path) {
       sessionStorage.setItem('selectedPathId', this.path.id.toString())
     } else {
-      this.router.navigate(['/', {}]);
+      this.router.navigate(['/']);
     }
 
     try {

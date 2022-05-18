@@ -27,7 +27,7 @@
     },
     "detail": {
       "Level of expertise needed:": [
-        "No technical expertise is necessary to use the tool, only familiarity with the community and its stakeholder groups."
+        "Low – No technical expertise is necessary to use the tool, only familiarity with the community and its stakeholder groups."
       ],
       "Level of effort needed:": [
         [
@@ -35,15 +35,15 @@
           "<b>Effort Needed</b>"
         ],
         [
-          "Tool orientation",
+          "Tool Orientation",
           "30 minutes"
         ],
         [
-          "Decision makers alone",
+          "An individual or group using the tool alone",
           "2-4 hours"
         ],
         [
-          "Decision makers plus consultation with stakeholders",
+          "One or more groups using the tool in consultation with stakeholders",
           "Time varies based on method of consultation and the number of groups involved, could range from a single workshop to a series of conversations/meetings"
         ]
       ],
@@ -53,7 +53,7 @@
         "What interests do different groups have in common?"
       ],
       "Tasks it can help with:": [],
-      "How it has been used:": [
+      "Resources:": [
         "<a href=\"https://cfpub.epa.gov/si/si_public_record_Report.cfm?dirEntryId=350722&Lab=CEMM\" target=\"_blank\">Prioritizing Stakeholders, Beneficiaries, and Environmental Attributes: A Tool for Ecosystem-Based Management</a> (2020)",
         "<a href=\"https://www.epa.gov/eco-research/fegs-scoping-tool-installation\" target=\"_blank\">FEGS Scoping Tool Installation</a>",
         "<a href=\"https://www.epa.gov/eco-research/fegs-scoping-tool-user-manual\" target=\"_blank\">FEGS Scoping Tool User Manual</a>"
@@ -86,7 +86,7 @@
     },
     "detail": {
       "Level of expertise needed:": [
-        "No technical expertise is necessary to use the report."
+        "Low – No technical expertise is necessary to use the report."
       ],
       "Level of effort needed:": [
         [
@@ -94,11 +94,11 @@
           "<b>Effort Needed</b>"
         ],
         [
-          "Orientation and Learn about FEGS",
+          "Tool Orientation and Learning about FEGS",
           "5-10 minutes"
         ],
         [
-          "Explore the FEGS Metrics Spreadsheet",
+          "To explore the FEGS Metrics Spreadsheet",
           "A couple of hours"
         ],
         [
@@ -112,7 +112,7 @@
         "Are there remotely sensed datasets or models available for these metrics?"
       ],
       "Tasks it can help with:": [],
-      "How it has been used:": [
+      "Resources:": [
         "<a href=\"https://www.epa.gov/eco-research/final-ecosystem-goods-and-services-fegs-metrics-report\" target=\"_blank\">Learn about Final Ecosystem Goods and Services (FEGS)</a>",
         "<a href=\"https://nepis.epa.gov/Exe/ZyPDF.cgi/P1010Y7B.PDF?Dockey=P1010Y7B.PDF\" target=\"_blank\">FEGS Metrics Report</a>",
         "<a href=\"https://ofmpub.epa.gov/eims/eimscomm.getfile?p_download_id=542522\" target=\"_blank\">FEGS Metrics Spreadsheet (PDF)</a>",
@@ -145,7 +145,7 @@
     },
     "detail": {
       "Level of expertise needed:": [
-        "CADDIS is designed to help scientists and engineers in the Regions, States, and Tribes.<br><br>Medium - Familiarity with ecological and environmental stressor data "
+        "Medium – CADDIS is designed to be used by scientists and engineers familiar with ecological and environmental stressor data"
       ],
       "Level of effort needed:": [
         [
@@ -153,15 +153,15 @@
           "<b>Effort Needed</b>"
         ],
         [
-          "Tool orientation",
+          "Tool Orientation",
           "1 hour"
         ],
         [
-          "Decision makers alone",
+          "An individual or group using the tool alone",
           "Time varies but at least a week--this is an iterative process that may require new data"
         ],
         [
-          "Decision makers plus consultation with stakeholders",
+          "One or more groups using the tool in consultation with stakeholders",
           "Time varies based on method of consultation and the number of groups involved. It could range from a single workshop to a series of conversations/meetings"
         ]
       ],
@@ -171,7 +171,7 @@
         "What data analysis approaches can help me understand stressors at my site?"
       ],
       "Tasks it can help with:": [],
-      "How it has been used:": [
+      "Resources:": [
         "<a href=\"https://www.epa.gov/caddis/basic-information-about-caddis\" target=\"_blank\">Learn About CADDIS</a>",
         "<a href=\"https://www.epa.gov/caddis-vol5/cadlink\" target=\"_blank\">CADDIS Literature Database (CADLink)</a>",
         "<a href=\"https://www.epa.gov/causal-analysisdiagnosis-decision-information-system-caddis/caddis-publications\" target=\"_blank\">CADDIS Publications</a>"
@@ -202,7 +202,7 @@
     },
     "detail": {
       "Level of expertise needed:": [
-        "Low"
+        "Low – Familiarity with using an on-line interactive series of pathways."
       ],
       "Level of effort needed:": [
         [
@@ -210,7 +210,7 @@
           "<b>Effort Needed</b>"
         ],
         [
-          "Tool orientation",
+          "Tool Orientation",
           "5-10 minutes"
         ],
         [
@@ -224,7 +224,7 @@
         "How can greening an area (for example, planting trees) affect air quality, water quality, and heat hazard mitigation?"
       ],
       "Tasks it can help with:": [],
-      "How it has been used:": [
+      "Resources:": [
         "<a href=\"https://www.epa.gov/enviroatlas/enviroatlas-eco-health-relationship-browser-fact-sheet\" target=\"_blank\">Fact sheet</a>",
         "<a href=\"https://cfpub.epa.gov/si/si_public_record_report.cfm?Lab=NHEERL&dirEntryId=260857\" target=\"_blank\">Linking Ecosystem Services and Human Health: The Eco-Health Relationship Browser (paper) </a>",
         "<a href=\"https://youtu.be/bxjD7LcPYZ8\" target=\"_blank\">Demo Video </a>",
@@ -258,7 +258,7 @@
     },
     "detail": {
       "Level of expertise needed:": [
-        "Low.  Familiarity with using maps"
+        "Low – Familiarity with using on-line geospatial maps, selecting and viewing different data layers."
       ],
       "Level of effort needed:": [
         [
@@ -266,12 +266,12 @@
           "<b>Effort Needed</b>"
         ],
         [
-          "Tool orientation",
+          "Tool Orientation",
           "30 minutes"
         ],
         [
-          "Find your site",
-          "5 minutes"
+          "To find your site",
+          "5 minutes; a few hours to explore the suite of data layers"
         ],
         [
           "Explore different data layers related to ecosystem services, their chemical and non-chemical stressors, and human health",
@@ -284,7 +284,7 @@
         "How can EnviroAtlas maps and tools help me tell the story about the status of local environments, populations, and contaminated sites needing improvement?"
       ],
       "Tasks it can help with:": [],
-      "How it has been used:": [
+      "Resources:": [
         "<a href=\"https://www.epa.gov/enviroatlas/tutorials\" target=\"_blank\">Interactive Tutorial Story Map</a>",
         "<a href=\"https://www.epa.gov/enviroatlas/enviroatlas-interactive-map\" target=\"_blank\">EnviroAtlas Interactive Map</a>",
         "<a href=\"https://www.epa.gov/enviroatlas/enviroatlas-brownfields\" target=\"_blank\">EnviroAtlas & Brownfields</a>",
@@ -314,7 +314,7 @@
     },
     "detail": {
       "Level of expertise needed:": [
-        "Familiarity with ecological modeling concepts and ability to search an online database."
+        "Medium – Familiarity with ecological modeling concepts and ability to search an online database."
       ],
       "Level of effort needed:": [
         [
@@ -322,15 +322,15 @@
           "<b>Effort Needed</b>"
         ],
         [
-          "Tool orientation",
+          "Tool Orientation",
           "15 minutes"
         ],
         [
-          "Decision makers alone",
+          "An individual or group using the tool alone",
           "2-4 hours"
         ],
         [
-          "Decision makers plus consultation with stakeholders",
+          "One or more groups using the tool in consultation with stakeholders",
           "8-12 hours"
         ]
       ],
@@ -340,7 +340,7 @@
         "What models are available for specific Ecological Assessment Endpoints?"
       ],
       "Tasks it can help with:": [],
-      "How it has been used:": [
+      "Resources:": [
         "<a href=\"https://www.epa.gov/eco-research/ecoservice-models-library\" target=\"_blank\">EPA Landing Page</a>",
         "<a href=\"https://esml.epa.gov\" target=\"_blank\">Online database</a>",
         "<a href=\"https://www.epa.gov/eco-research/epas-ecoservice-models-library-fact-sheet\" target=\"_blank\">Fact Sheet</a>",
@@ -370,7 +370,7 @@
     },
     "detail": {
       "Level of expertise needed:": [
-        "The tool has a Basic Module and an Advanced Module.  The Basic Module is intended for users with no experience with GIS software and can be used to generate maps and reports for areas within the Tampa Bay Region.  The Advanced Module is for users who are comfortable working with spatial datasets to substitute in data from other locations and more customized scenarios."
+        "Medium - The tool has a Basic Module and an Advanced Module. The Basic Module is intended for users with no experience with GIS software and can be used to generate maps and reports for areas within the Tampa Bay Region. The Advanced Module is for users who are comfortable working with spatial datasets to substitute in data from other locations and more customized scenarios."
       ],
       "Level of effort needed:": [
         [
@@ -378,11 +378,11 @@
           "<b>Effort Needed</b>"
         ],
         [
-          "Tool orientation",
+          "Tool Orientation",
           "30 minutes"
         ],
         [
-          "Create a Green Value Analysis Report (Basic Module)",
+          "To create a Green Value Analysis Report (Basic Module)",
           "A few hours"
         ],
         [
@@ -396,7 +396,7 @@
         "How do land-use scenarios at my site affect flood protection?"
       ],
       "Tasks it can help with:": [],
-      "How it has been used:": [
+      "Resources:": [
         "<a href=\"https://www.epa.gov/water-research/ecosystem-services-scenario-assessment-using-epa-h2o\" target=\"_blank\">Download Tool</a>",
         "<a href=\"https://www.epa.gov/sites/default/files/2016-10/documents/day2_russell_epa_h20_v2.pdf\" target=\"_blank\">Presentation on \"Assessing Ecosystem Value: Restoration Scenarios on Tribal Lands using the EPA H<sub>2</sub>O Tool\"</a>",
         "<a href=\"https://cfpub.epa.gov/si/si_public_record_report.cfm?Lab=NHEERL&dirEntryId=301663\" target=\"_blank\">Poster Abstract for \"The use of a new ecosystem services assessment tool, EPA H<sub>2</sub>O, for identifying, quantifying, and valuing ecosystem services production.\"</a>"
@@ -430,7 +430,7 @@
     },
     "detail": {
       "Level of expertise needed:": [
-        "Low"
+        "Low – Familiarity with using an on-line, interactive database."
       ],
       "Level of effort needed:": [
         [
@@ -438,11 +438,11 @@
           "<b>Effort Needed</b>"
         ],
         [
-          "Tool orientation",
+          "Tool Orientation",
           "15 minutes"
         ],
         [
-          "Decision makers alone",
+          "An individual or group using the tool alone",
           "2-4 hours"
         ],
         [
@@ -456,7 +456,7 @@
         "How do these people benefit (e.g., direct use, existence value, etc.) from ecosystem services?"
       ],
       "Tasks it can help with:": [],
-      "How it has been used:": [
+      "Resources:": [
         "<a href=\"https://www.epa.gov/eco-research/national-ecosystem-services-classification-system-nescs-plus\" target=\"_blank\">Informational site</a>",
         "<a href=\"https://geopub.epa.gov/nescs\" target=\"_blank\">Webtool</a>",
         "<a href=\"https://cfpub.epa.gov/si/si_public_record_Report.cfm?dirEntryId=350613&Lab=CEMM\" target=\"_blank\">Report</a>",
@@ -486,7 +486,7 @@
     },
     "detail": {
       "Level of expertise needed:": [
-        "The checklist can be filled out using either an interactive Excel spreadsheet or a PDF file.<br><br>The Spatial Analysis Toolset must be used within ESRI’s desktop software, ArcMap or ArcCatalog, versions 10.1 or newer."
+        "Low – Medium. The tool requires familiarity with or knowledge of the sites and surrounding area. The tool contains a checklist format as well as a Spatial Analysis Toolset. No technical expertise is necessary to use the checklist, but familiarity with ESRI’s desktop software, ArcMap, or ArcCatalog is needed for the Spatial Analysis Toolset."
       ],
       "Level of effort needed:": [
         [
@@ -494,15 +494,15 @@
           "<b>Effort Needed</b>"
         ],
         [
-          "Tool orientation",
-          "30 minutes"
+          "Tool Orientation",
+          "15 minutes"
         ],
         [
-          "Checklist Tool",
+          "To use the Checklist Tool",
           "1-4 hours"
         ],
         [
-          "Spatial Analysis Tool",
+          "To use the Spatial Analysis Tool",
           "Multiple hours"
         ]
       ],
@@ -512,7 +512,7 @@
         "How can I evaluate tradeoffs?"
       ],
       "Tasks it can help with:": [],
-      "How it has been used:": [
+      "Resources:": [
         "<a href=\"https://cfpub.epa.gov/si/si_public_record_report.cfm?Lab=NHEERL&direntryid=335869\" target=\"_blank\">Fact Sheet</a>",
         "<a href=\"https://cfpub.epa.gov/si/si_public_record_Report.cfm?Lab=NHEERL&dirEntryId=331110\" target=\"_blank\">Checklist Tool & Quick Start Manual</a>",
         "<a href=\"https://cfpub.epa.gov/si/si_public_record_Report.cfm?Lab=NHEERL&dirEntryId=338471\" target=\"_blank\">Spatial Analysis Tool & Manual</a>",
@@ -543,7 +543,7 @@
     },
     "detail": {
       "Level of expertise needed:": [
-        "Users must have Java 7 JRE installed and accessible on their computer.  The Java JRE is freely available from Oracle’s Java website."
+        "High – Familiarity with concepts of geospatial mathematical modeling concepts."
       ],
       "Level of effort needed:": [
         [
@@ -551,11 +551,11 @@
           "<b>Effort Needed</b>"
         ],
         [
-          "Tool orientation",
+          "Tool Orientation",
           "1 hour"
         ],
         [
-          "Quick example",
+          "To learn a quick example",
           "12 pages"
         ],
         [
@@ -569,7 +569,7 @@
         "How resilient will my green infrastructure solution be over time?"
       ],
       "Tasks it can help with:": [],
-      "How it has been used:": [
+      "Resources:": [
         "<a href=\"https://nepis.epa.gov/Exe/ZyNET.exe/P100PB8E.TXT?ZyActionD=ZyDocument&Client=EPA&Index=2016+Thru+2020&Docs=&Query=&Time=&EndTime=&SearchMethod=1&TocRestrict=n&Toc=&TocEntry=&QField=&QFieldYear=&QFieldMonth=&QFieldDay=&IntQFieldOp=0&ExtQFieldOp=0&XmlQuery=&File=D%3A%5Czyfiles%5CIndex%20Data%5C16thru20%5CTxt%5C00000002%5CP100PB8E.txt&User=ANONYMOUS&Password=anonymous&SortMethod=h%7C-&MaximumDocuments=1&FuzzyDegree=0&ImageQuality=r75g8/r75g8/x150y150g16/i425&Display=hpfr&DefSeekPage=x&SearchBack=ZyActionL&Back=ZyActionS&BackDesc=Results%20page&MaximumPages=1&ZyEntry=1&SeekPage=x&ZyPURL\" target=\"_blank\">Fact Sheet</a>",
         "<a href=\"https://www.epa.gov/water-research/velma-20-quick-example-pdf\" target=\"_blank\">Quick Example</a>",
         "<a href=\"https://www.epa.gov/sites/default/files/2016-01/velma_v2.0.zip\" target=\"_blank\">Tool</a>",
@@ -603,7 +603,7 @@
     },
     "detail": {
       "Level of expertise needed:": [
-        "No technical expertise is necessary to use the report."
+        "Low - No technical expertise is necessary to use the report."
       ],
       "Level of effort needed:": [
         [
@@ -611,7 +611,7 @@
           "<b>Effort Needed</b>"
         ],
         [
-          "Orientation",
+          "Tool Orientation",
           "5-10 minutes"
         ],
         [
@@ -625,7 +625,7 @@
         "What are some strategies for communicating ES risks and benefits?"
       ],
       "Tasks it can help with:": [],
-      "How it has been used:": [
+      "Resources:": [
         "<a href=\"https://cfpub.epa.gov/si/si_public_record_report.cfm?dirEntryId=337461&Lab=NHEERL\" target=\"_blank\">Report</a>"
       ]
     }
