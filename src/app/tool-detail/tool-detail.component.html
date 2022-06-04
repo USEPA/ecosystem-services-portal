@@ -21,18 +21,18 @@
       <mat-accordion multi="true">
         <div *ngFor="let pathStep of this.pathSteps">
           <ng-container *ngIf="pathStep.related_steps.length > 0">
-          <mat-expansion-panel [expanded]="path && pathStep.id === path.id">
-            <mat-expansion-panel-header>Steps in {{pathStep.name}} this Tool is Suited for
-            </mat-expansion-panel-header>
-            <div *ngFor="let step of pathStep.related_steps; let i = index">
+            <mat-expansion-panel [expanded]="path && pathStep.id === path.id">
+              <mat-expansion-panel-header>Steps in {{pathStep.name}} this Tool is Suited for
+              </mat-expansion-panel-header>
+              <div *ngFor="let step of pathStep.related_steps; let i = index">
               <span class="text-green">
                 <svg class="usa-icon" aria-hidden="true" role="img">
                   <use xlink:href="/assets/sprite.svg#check_circle"></use>
                 </svg>
               </span>
-              {{step}}
-            </div>
-          </mat-expansion-panel>
+                {{step}}
+              </div>
+            </mat-expansion-panel>
           </ng-container>
         </div>
       </mat-accordion>
@@ -42,16 +42,59 @@
                                                   alt="{{tool.name}}"></a>
     </div>
   </div>
-  <div class="grid-row margin-top-3" [innerHTML]="toolDetails"></div>
-</div>
+  <div class="grid-row margin-top-3">
+    <div class="grid mat-expansion-panel">
+      <ng-container *ngFor="let col1 of this.objectKeys(this.tool.detail)">
+        <ng-container *ngFor="let value of this.tool.detail[col1]; let i = index">
+          <div class="grid-row">
+            <ng-template [ngIf]="i == 0" [ngIfElse]="emptyDiv">
+              <div class="grid-col-3"><b>{{col1}}</b></div>
+            </ng-template>
+            <ng-template #emptyDiv>
+              <div class="grid-col-3"></div>
+            </ng-template>
+            <ng-template [ngIf]="col1 == 'Level of effort needed:'" [ngIfElse]="fullWidthDiv">
+              <ng-template [ngIf]="value[0] == 'Tool Orientation'" [ngIfElse]="htmlDiv">
+                <div class="grid-col-4">
+                  {{value[0]}}
+                  <span [mdePopoverTriggerFor]="orientationPopover"
+                        mdePopoverPositionX="after" mdePopoverPositionY="above"
+                        mdePopoverTriggerOn="click" #popoverTrigger="mdePopoverTrigger">
+                    <img style="vertical-align: text-top;" id="orientation-icon" alt="information icon"
+                         src="assets/info-circle.svg">
+                  </span>
+                  <mde-popover #orientationPopover="mdePopover" [mdePopoverOverlapTrigger]="false">
+                    <mat-card style="max-width: 300px">
+                      <mat-card-content>
+                        Sufficient exploration with the tool for a general user to become familiar with the basic
+                        elements of the tool and its potential use or application.
+                      </mat-card-content>
+                    </mat-card>
+                  </mde-popover>
+                </div>
+              </ng-template>
+              <ng-template #htmlDiv>
+                <div class="grid-col-4" [innerHTML]="value[0]"></div>
+              </ng-template>
+              <div class="grid-col-5" [innerHTML]="value[1]"></div>
+            </ng-template>
+            <ng-template #fullWidthDiv>
+              <div class="grid-col-9" [innerHTML]="value"></div>
+            </ng-template>
+          </div>
+        </ng-container>
+      </ng-container>
+    </div>
 
-<ng-template [ngIf]="path" [ngIfElse]="noPathSelection">
-  <button class="usa-button margin-top-3" [routerLink]="['/paths', path.slug, 'steps','tasks']">
-    < Return To Decision Path
-  </button>
-</ng-template>
-<ng-template #noPathSelection>
-  <button class="usa-button margin-top-3" [routerLink]="['/paths']">
-    < Return To Decision Path
-  </button>
-</ng-template>
+    <ng-template [ngIf]="path" [ngIfElse]="noPathSelection">
+      <button class="usa-button margin-top-3" [routerLink]="['/paths', path.slug, 'steps','tasks']">
+        < Return To Decision Path
+      </button>
+    </ng-template>
+    <ng-template #noPathSelection>
+      <button class="usa-button margin-top-3" [routerLink]="['/paths']">
+        < Return To Decision Path
+      </button>
+    </ng-template>
+  </div>
+</div>

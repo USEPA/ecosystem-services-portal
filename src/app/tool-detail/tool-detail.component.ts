@@ -1,4 +1,4 @@
-import {Component, OnInit, Input, ViewEncapsulation} from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {Router, ActivatedRoute} from '@angular/router';
 import {Tool} from "../tool";
 import {Path} from "../path";
@@ -68,27 +68,4 @@ export class ToolDetailComponent implements OnInit {
         return index === self.indexOf(elem);
       })
   }
-
-  get toolDetails(): String {
-    let detail = "<div class=\"grid mat-expansion-panel\">";
-    for (let col1 of this.objectKeys(this.tool.detail)) {
-      detail += "<div class=\"grid-row\">\n" +
-        "    <div class=\"grid-col-3\"><b>" + col1 + "</b></div>"
-      this.tool.detail[col1].forEach((value, index) => {
-        if (col1 == "Level of effort needed:") {
-          detail += "<div class=\"grid-col-4\">" + value[0] + "</div>\n" +
-            "<div class=\"grid-col-5\">" + value[1] + "</div>\n";
-        } else {
-          detail += "<div class=\"grid-col-9\">" + value + "</div>\n"
-        }
-        detail += "</div>"
-        if (index < this.tool.detail[col1].length - 1) {
-          detail += "<div class=\"grid-row\"><div class=\"grid-col-3\"></div>"
-        }
-      })
-    }
-    detail += "</div>"
-    return detail
-  }
-
 }
