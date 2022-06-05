@@ -1,15 +1,17 @@
 import {Component, Input, Output, OnChanges, EventEmitter} from '@angular/core';
 import {Tool} from '../tool'
-import {ActivatedRoute, Router} from "@angular/router";
+import {Path} from "../path";
+import {Router} from "@angular/router";
 import {ToolService} from "../tool.service";
 
 @Component({
-  selector: 'app-tools',
-  templateUrl: './tools.component.html',
-  styleUrls: ['./tools.component.scss']
+  selector: 'app-task-tools',
+  templateUrl: './task-tools.component.html',
+  styleUrls: ['./task-tools.component.scss']
 })
-export class ToolsComponent implements OnChanges {
+export class TaskToolsComponent implements OnChanges {
   @Input() matchingTools: Tool[] = []
+  @Input() path: Path | undefined;
   @Output() selectToolEvent = new EventEmitter<Tool>();
 
   constructor(private router: Router,

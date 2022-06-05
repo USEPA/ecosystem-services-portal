@@ -10,7 +10,8 @@ import {AppComponent} from './app.component';
 import {PathsComponent} from './paths/paths.component';
 import {StepsComponent} from './steps/steps.component';
 import {TasksComponent} from './tasks/tasks.component';
-import {ToolsComponent} from './tools/tools.component';
+import {TaskToolsComponent} from './task-tools/task-tools.component';
+import {PathToolsComponent} from './path-tools/path-tools.component';
 import {ToolDetailComponent} from './tool-detail/tool-detail.component';
 import {AppRoutingModule} from './app-routing.module';
 import {RouterModule, UrlSegment} from "@angular/router";
@@ -26,7 +27,8 @@ import {ProgressBarComponent} from "./progress-bar.component";
     PathsComponent,
     StepsComponent,
     TasksComponent,
-    ToolsComponent,
+    TaskToolsComponent,
+    PathToolsComponent,
     ToolDetailComponent,
     SelectAllComponent,
     ProgressBarComponent

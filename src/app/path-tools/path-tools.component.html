@@ -1,10 +1,11 @@
 <div id="matchingTools" [hidden]="matchingTools.length==0">
   <h4>Your Tool Matches</h4>
-  <div class="grid-col-12 margin-top-3">
+    <div>
+      Click on a matched tool to view details.
+      Or, <a [routerLink]="['/paths']">View All {{path.name}} Steps Tool Matches</a>
+    </div>
+  <div class="grid-col-12">
     <div class="grid mat-expansion-panel">
-      <div>
-        Click on a matched tool to view details.
-      </div>
       <div class="grid-row">
         <div class="grid-col-6"><b>Process Phase</b></div>
         <div class="grid-col-6"><b>Recommended Ecosystem Services Tools</b></div>

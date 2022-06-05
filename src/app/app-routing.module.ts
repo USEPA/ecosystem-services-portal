@@ -5,6 +5,7 @@ import {PathsComponent} from "./paths/paths.component";
 import {StepsComponent} from './steps/steps.component';
 import {TasksComponent} from './tasks/tasks.component';
 import {ToolDetailComponent} from "./tool-detail/tool-detail.component";
+import {PathToolsComponent} from "./path-tools/path-tools.component";
 
 const routes: Routes = [
   {path: '', redirectTo: '/paths', pathMatch: 'full'},
@@ -13,6 +14,7 @@ const routes: Routes = [
   {path: 'paths/:slug/steps/tasks', component: TasksComponent},
   {path: 'tools/:task_id/:slug', component: ToolDetailComponent},
   {path: 'tools/:slug', component: ToolDetailComponent},
+  {path: 'paths/:slug/tools', component: PathToolsComponent},
 ];
 
 @NgModule({

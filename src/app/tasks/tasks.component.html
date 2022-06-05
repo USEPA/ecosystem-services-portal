@@ -47,7 +47,7 @@ Your Selections:<br>
     </form>
   </div>
   <div class="grid-col-7">
-    <app-tools (selectToolEvent)="selectTool($event)" [matchingTools]="matchingTools"></app-tools>
+    <app-task-tools (selectToolEvent)="selectTool($event)" [matchingTools]="matchingTools" [path]="path"></app-task-tools>
   </div>
 </div>
 <button class="usa-button margin-top-3" [routerLink]="['/paths', path.slug, 'steps']">< Back</button>

@@ -6,6 +6,7 @@ import * as steps from '../assets/steps.json';
 import {Tool} from "./tool";
 import {Task} from "./task";
 import {Step} from './step'
+import {PathService} from "./path.service";
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,7 @@ export class ToolService {
   tools: Tool[] = (tools as any).default;
   tasks: Task[] = (tasks as any).default;
   steps: Step[] = (steps as any).default;
+  pathService: PathService;
 
   constructor() {
   }
@@ -29,8 +31,8 @@ export class ToolService {
   }
 
   getToolsByTaskIds(task_ids: number[]): Tool[] {
-    let selectedToolIds: number[] = this.tasks.filter(h => task_ids.indexOf(h.id) >= 0).map(task => task.tool_id)
-    let selectedStepIds: number[] = this.tasks.filter(h => task_ids.indexOf(h.id) >= 0).map(task => task.step_id)
+    let selectedToolIds: number[] = this.tasks.filter(h => task_ids.indexOf(h.id) > -1).map(task => task.tool_id)
+    let selectedStepIds: number[] = this.tasks.filter(h => task_ids.indexOf(h.id) > -1).map(task => task.step_id)
     let matchingTools: Tool[] = []
     for (let i: number = 0; i < selectedToolIds.length; i++) {
       const matchingTool = <Tool>{
@@ -47,6 +49,13 @@ export class ToolService {
 
   getToolBySlug(slug: string): Tool {
     return this.tools.find(h => isNaN(Number(slug)) ? h.slug === slug : h.id === Number(slug))!;
+  }
+
+  getToolsByPathSlug(slug: string): Tool[] {
+    let path = this.pathService.getPathBySlug(slug)
+    let stepIds: number[] = this.steps.filter(h => h.path_id == path.id).map(step => step.id)
+    let taskIds: number[] = this.tasks.filter(h => stepIds.indexOf(h.step_id) > -1).map(task => task.id)
+    return this.getToolsByTaskIds(taskIds);
   }
 
 }
