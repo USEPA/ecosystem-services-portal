@@ -1,29 +1,30 @@
-<div id="matchingTools" [hidden]="matchingTools.length==0">
-  <h4>Your Tool Matches</h4>
-    <div>
-      Click on a matched tool to view details.
-      Or, <a [routerLink]="['/paths']">View All {{path.name}} Steps Tool Matches</a>
-    </div>
-  <div class="grid-col-12">
-    <div class="grid mat-expansion-panel">
-      <div class="grid-row">
-        <div class="grid-col-6"><b>Process Phase</b></div>
-        <div class="grid-col-6"><b>Recommended Ecosystem Services Tools</b></div>
-      </div>
-      <ng-container *ngFor="let tool of this.matchingTools">
-        <div class="grid-row">
-          <div class="grid-col-6">{{tool.matching_step_name}}</div>
-          <div class="grid-col-6">
-            <a rel="href" href="javascript:" (click)="selectToolEvent.emit(tool)" [innerHTML]="tool.short_name"></a>
+<button mat-icon-button [mdePopoverTriggerFor]="appPopover"
+        mdePopoverPositionX="after"
+        mdePopoverPositionY="above"
+        mdePopoverTriggerOn="click"
+        #popoverTrigger="mdePopoverTrigger">
+  <img alt="information icon" src="assets/info-circle.svg">
+</button>
+<mde-popover #appPopover="mdePopover" [mdePopoverOverlapTrigger]="false">
+  <mat-card style="max-width: 1248px">
+    <mat-card-content>
+      <div class="grid-col-12">
+        <div class="grid mat-expansion-panel">
+          <div class="grid-row ">
+            <div class="grid-col-4"><b>{{path.name}} Steps</b></div>
+            <div class="grid-col-4"><b>Tool Names</b></div>
+            <div class="grid-col-4"><b>Task Labels</b></div>
           </div>
+          <ng-container *ngFor="let tool of this.matchingTools">
+            <div class="grid-row">
+              <div class="grid-col-4" [innerHTML]="tool.matching_step.name"></div>
+              <div class="grid-col-4" [innerHTML]="tool.short_name"></div>
+              <div class="grid-col-4" [innerHTML]="tool.matching_task.name"></div>
+            </div>
+          </ng-container>
         </div>
-      </ng-container>
-    </div>
-    <div class="grid-col-12 margin-top-6">
-      <a [routerLink]="['/paths']">Contact us</a> to let us know if you have additional tool needs not addressed by
-      these tools or to submit ideas for future tools. This Portal includes a limited selection of curated tools.
-      Please contact us to suggest including additional tools for specific phases and tasks.
-    </div>
-  </div>
-</div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</mde-popover>
 

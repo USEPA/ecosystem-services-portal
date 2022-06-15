@@ -99,20 +99,20 @@ export class TasksComponent implements OnInit {
   }
 
   get matchingTools(): Tool[] {
-    let matchingTools: Tool[] = this.toolService.getToolsByTaskIds(this.selectedTaskIds)
-    let currentStep: string = ''
-    matchingTools.forEach((tool: Tool, index) => {
-      if (index === 0) currentStep = tool.matching_step_name
-      else if (currentStep === tool.matching_step_name)
-        tool.matching_step_name = ''
-      else
-        currentStep = tool.matching_step_name
-    })
-    return matchingTools
+    // let matchingTools: Tool[] = this.toolService.getToolsByTaskIds(this.selectedTaskIds)
+    // let currentStep: Step | undefined
+    // matchingTools.forEach((tool: Tool, index) => {
+    //   if (index === 0) currentStep = tool.matching_step
+    //   else if (currentStep === tool.matching_step)
+    //     // tool.matching_step.name = ''
+    //   // else
+    //     currentStep = tool.matching_step
+    // })
+    return this.toolService.getToolsByTaskIds(this.selectedTaskIds)
   }
 
   selectTool(tool: Tool) {
-    const url = this.router.serializeUrl(this.router.createUrlTree(['/tools', tool.matching_task_id, tool.slug], {}));
+    const url = this.router.serializeUrl(this.router.createUrlTree(['/tools', tool.matching_task.id, tool.slug], {}));
     window.open(url, '_blank');
   }
 

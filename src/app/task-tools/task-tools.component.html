@@ -2,7 +2,7 @@
   <h4>Your Tool Matches</h4>
     <div>
       Click on a matched tool to view details,
-      or view <a [routerLink]="['/paths', path.slug, 'tools']" target="_blank">All {{path.name}} Tool Matches</a>
+      or view <app-path-tools [path]="path"></app-path-tools>
     </div>
   <div class="grid-col-12">
     <div class="grid mat-expansion-panel">
@@ -12,7 +12,7 @@
       </div>
       <ng-container *ngFor="let tool of this.matchingTools">
         <div class="grid-row">
-          <div class="grid-col-6">{{tool.matching_step_name}}</div>
+          <div class="grid-col-6">{{tool.matching_step.name}}</div>
           <div class="grid-col-6">
             <a rel="href" href="javascript:" (click)="selectToolEvent.emit(tool)" [innerHTML]="tool.short_name"></a>
           </div>

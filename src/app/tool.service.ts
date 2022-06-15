@@ -7,6 +7,7 @@ import {Tool} from "./tool";
 import {Task} from "./task";
 import {Step} from './step'
 import {PathService} from "./path.service";
+import {Path} from "./path";
 
 @Injectable({
   providedIn: 'root'
@@ -39,8 +40,8 @@ export class ToolService {
         id: selectedToolIds[i],
         slug: this.tools.find(h => h.id === selectedToolIds[i]).slug,
         short_name: this.tools.find(h => h.id === selectedToolIds[i]).short_name,
-        matching_step_name: this.steps.find(h => h.id === selectedStepIds[i]).name,
-        matching_task_id: task_ids[i]
+        matching_step: this.steps.find(h => h.id === selectedStepIds[i]),
+        matching_task: this.tasks.find(h => h.id === task_ids[i])
       }
       matchingTools.push(matchingTool);
     }
@@ -51,8 +52,7 @@ export class ToolService {
     return this.tools.find(h => isNaN(Number(slug)) ? h.slug === slug : h.id === Number(slug))!;
   }
 
-  getToolsByPathSlug(slug: string): Tool[] {
-    let path = this.pathService.getPathBySlug(slug)
+  getToolsByPath(path: Path): Tool[] {
     let stepIds: number[] = this.steps.filter(h => h.path_id == path.id).map(step => step.id)
     let taskIds: number[] = this.tasks.filter(h => stepIds.indexOf(h.step_id) > -1).map(task => task.id)
     return this.getToolsByTaskIds(taskIds);
