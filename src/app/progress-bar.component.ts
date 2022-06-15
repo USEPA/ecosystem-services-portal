@@ -9,6 +9,7 @@ import {Tool} from "./tool";
 })
 export class ProgressBarComponent implements OnChanges {
   @Input() matchingTools: Tool[] = []
+  slug: String
 
   unfilledColor = '#ffffff';
   fillColor = '#e3e4e5';
@@ -23,7 +24,11 @@ export class ProgressBarComponent implements OnChanges {
   step3_weight = 'normal';
   step4_weight = 'normal';
 
+  step1_href = false;
+  step2_href = false;
+
   constructor(private route: ActivatedRoute) {
+    this.slug = String(this.route.snapshot.paramMap.get('slug'));
     this.step1 = this.fillColor;
     if (this.route.snapshot.url.find(h => h.path === 'steps')) {
       this.step2 = this.fillColor;
@@ -34,8 +39,11 @@ export class ProgressBarComponent implements OnChanges {
     let thisUrlSegment = this.route.snapshot.url[this.route.snapshot.url.length-1].toString()
     if (thisUrlSegment === 'tasks') {
       this.step3_weight = 'bold';
+      this.step2_href = true;
+      this.step1_href = true;
     } else if (thisUrlSegment === 'steps') {
       this.step2_weight = 'bold';
+      this.step1_href = true;
     } else {
       this.step1_weight = 'bold';
     }
