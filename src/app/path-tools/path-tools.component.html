@@ -1,30 +1,3 @@
-<button mat-icon-button [mdePopoverTriggerFor]="appPopover"
-        mdePopoverPositionX="after"
-        mdePopoverPositionY="above"
-        mdePopoverTriggerOn="click"
-        #popoverTrigger="mdePopoverTrigger">
-  <img alt="information icon" src="assets/info-circle.svg">
-</button>
-<mde-popover #appPopover="mdePopover" [mdePopoverOverlapTrigger]="false">
-  <mat-card style="max-width: 1248px">
-    <mat-card-content>
-      <div class="grid-col-12">
-        <div class="grid mat-expansion-panel">
-          <div class="grid-row ">
-            <div class="grid-col-4"><b>{{path.name}} Steps</b></div>
-            <div class="grid-col-4"><b>Tool Names</b></div>
-            <div class="grid-col-4"><b>Task Labels</b></div>
-          </div>
-          <ng-container *ngFor="let tool of this.matchingTools">
-            <div class="grid-row">
-              <div class="grid-col-4" [innerHTML]="tool.matching_step.name"></div>
-              <div class="grid-col-4" [innerHTML]="tool.short_name"></div>
-              <div class="grid-col-4" [innerHTML]="tool.matching_task.name"></div>
-            </div>
-          </ng-container>
-        </div>
-      </div>
-    </mat-card-content>
-  </mat-card>
-</mde-popover>
-
+<a href="javascript:" (click)="openDialog()">
+  all tool matches for steps in this path
+</a>

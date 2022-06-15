@@ -11,7 +11,7 @@ import {PathsComponent} from './paths/paths.component';
 import {StepsComponent} from './steps/steps.component';
 import {TasksComponent} from './tasks/tasks.component';
 import {TaskToolsComponent} from './task-tools/task-tools.component';
-import {PathToolsComponent} from './path-tools/path-tools.component';
+import {PathToolsComponent, PathToolsComponentDialog} from './path-tools/path-tools.component';
 import {ToolDetailComponent} from './tool-detail/tool-detail.component';
 import {AppRoutingModule} from './app-routing.module';
 import {RouterModule, UrlSegment} from "@angular/router";
@@ -20,6 +20,7 @@ import {SelectAllComponent} from './select-all.component';
 import {MatTableModule} from "@angular/material/table";
 import {MatExpansionModule} from "@angular/material/expansion";
 import {ProgressBarComponent} from "./progress-bar.component";
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import {ProgressBarComponent} from "./progress-bar.component";
     TasksComponent,
     TaskToolsComponent,
     PathToolsComponent,
+    PathToolsComponentDialog,
     ToolDetailComponent,
     SelectAllComponent,
     ProgressBarComponent
@@ -42,6 +44,7 @@ import {ProgressBarComponent} from "./progress-bar.component";
     MatCheckboxModule,
     MatCardModule,
     MatTableModule,
+    MatDialogModule,
     MdePopoverModule,
     AppRoutingModule,
     RouterModule.forRoot([

@@ -1,45 +1,5 @@
-.mat-table {
-  width: 100% !important;
-}
-
-.mat-header-cell {
-  font-weight: bold;
-  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-  font-size: 16px;
-  color: black;
-  line-height: 24px;
-  padding-left: 24px;
-  padding-right: 24px;
-}
-
-.mat-row .mat-cell {
-  padding-left: 24px;
-}
-
-.mat-row:hover .mat-cell {
-  border-color: currentColor;
-}
-
-h4 {
-  text-align: center
-}
-
-div.grid {
-  border: 4px solid #e0e0e0;
-  font-size: 16px;
-  line-height: 25px;
-}
-
-div.grid > div:first-of-type,
-div.grid > div.grid-row:nth-of-type(even) {
-  background: #e0e0e0;
-}
-
-div.grid div.grid-row:first-of-type {
-  background: #d0d0d0 !important;
-}
-
-div.grid > div.grid-row {
-  padding-left: .25em;
-  padding-right: .25em;
+div.item {
+  border: solid 1px #cccccc !important;
+    padding-left: .25em;
+    padding-right: .25em;
 }

@@ -1,0 +1,22 @@
+<h2 mat-dialog-title>Matching Tools for all {{path.name}} Steps</h2>
+<mat-dialog-content class="mat-typography">
+      <div class="grid-col-12">
+        <div class="grid">
+          <div class="grid-row">
+            <div class="grid-col-4"><b>{{path.name}} Steps</b></div>
+            <div class="grid-col-4"><b>Tool Names</b></div>
+            <div class="grid-col-4"><b>Task Labels</b></div>
+          </div>
+          <ng-container *ngFor="let tool of this.matchingTools; let i = index">
+            <div class="grid-row row-{{i}}">
+              <div class="grid-col-4 item" [innerHTML]="tool.matching_step.id + ' - ' + tool.matching_step.name"></div>
+              <div class="grid-col-4 item" [innerHTML]="tool.short_name"></div>
+              <div class="grid-col-4 item" [innerHTML]="tool.matching_task.name"></div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>
