@@ -36,6 +36,7 @@ export class PathToolsComponent {
 export class PathToolsComponentDialog implements OnInit {
   path: Path
   matchingTools: Tool[] = [];
+  offset: number = 0;
 
   constructor(private toolService: ToolService,
               public dialog: MatDialog,
@@ -43,6 +44,7 @@ export class PathToolsComponentDialog implements OnInit {
   ) {
     this.path = data.path
     this.matchingTools = this.toolService.getToolsByPath(this.path)
+    this.offset = this.matchingTools[0].matching_step.id - 1
   }
 
   ngOnInit(): void {

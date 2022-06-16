@@ -3,5 +3,6 @@ export interface Step {
   name: string;
   path_id: number;
   rationale: string;
+  color: string;
   checked?: boolean;
 }

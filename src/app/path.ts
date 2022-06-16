@@ -5,5 +5,6 @@ export interface Path {
   description: string;
   rationale: string;
   moreinfo: string;
+  color: string;
   related_steps: string[];
 }

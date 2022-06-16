@@ -7,7 +7,7 @@
 <div class="grid-row">
   <ng-container *ngFor="let path of paths">
     <div class="grid-col-4 grid-gap">
-      <a mat-stroked-button class="pathway" [routerLink]="[path.slug, 'steps']">
+      <a mat-stroked-button class="pathway" [style]="'border: solid ' + path.color" [routerLink]="[path.slug, 'steps']">
         <b>{{path.name}}</b>
       </a>
 

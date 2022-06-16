@@ -5,19 +5,20 @@ a.pathway {
   font-size: medium;
   margin-bottom: 15px;
   text-align: center;
-  border: #0071bc solid; //#469f39
+  //border: solid; //#469f39 #0071bc
   border-radius: 1em;
 }
 
-a.pathway b {
-  margin-left: -8px;
-}
+//a.pathway b {
+//  margin-left: -8px;
+//}
 
 a.pathway:visited { color: #000000}
 
-rect.step4 {
-  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
-}
+//rect.step4 {
+//  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+//}
+
 .mat-icon-button {
   vertical-align: top;
 }
