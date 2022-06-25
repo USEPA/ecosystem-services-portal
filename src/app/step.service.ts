@@ -3,30 +3,32 @@ import {Step} from "./step";
 import * as data from '../assets/steps.json';
 import {Observable, of} from 'rxjs';
 import {Path} from "./path";
+import {PathService} from "./path.service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class StepService {
 
-  steps: Step[] = (data as any).default;
+  private dataRows = (data as any).default;
+  steps: Step[] = [];
 
-  constructor() {
+  constructor(private pathService: PathService) {
+    for (let dataRow of this.dataRows) {
+      this.pathService.getPath(dataRow.path_id as number).subscribe(path => dataRow.path = path);
+      this.steps.push(<Step>{...dataRow});
+    }
   }
 
   getStep(id: number): Observable<Step> {
-    const step = this.steps.find(h => h.id === id)!;
-    return of(step);
+    return of(this.steps.find(h => h.id === id)!);
   }
 
   getSteps(id: number[]): Observable<Step[]> {
-    const steps = this.steps.filter(h => id.indexOf(h.id) >= 0)!;
-    return of(steps);
+    return of(this.steps.filter(h => id.indexOf(h.id) >= 0)!);
   }
 
-  getStepsByPath(path: Path): Observable<Step[]> {
-    const steps = this.steps.filter(h => h.path_id === path.id)!;
-    return of(steps);
+  getPathSteps(path: Path): Observable<Step[]> {
+    return of(this.steps.filter(h => h.path === path)!);
   }
 }
-

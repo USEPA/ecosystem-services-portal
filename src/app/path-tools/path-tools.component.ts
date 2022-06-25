@@ -15,8 +15,7 @@ export class PathToolsComponent {
 
   constructor(public dialog: MatDialog, private route: ActivatedRoute, private pathService: PathService,) {
     const slug = String(this.route.snapshot.paramMap.get('slug'));
-    console.log(this.route.snapshot.paramMap)
-    this.path = this.pathService.getPathBySlug(slug)
+    this.pathService.getPathBySlug(slug).subscribe(h => this.path = h)
   }
 
   openDialog() {
@@ -42,8 +41,9 @@ export class PathToolsComponentDialog implements OnInit {
               public dialog: MatDialog,
               @Optional() @Inject(MAT_DIALOG_DATA) public data: any
   ) {
+    console.log(data.path)
     this.path = data.path
-    this.matchingTools = this.toolService.getToolsByPath(this.path)
+    this.toolService.getPathTools(this.path).subscribe(h => this.matchingTools = h)
     this.offset = this.matchingTools[0].matching_step.id - 1
   }
 

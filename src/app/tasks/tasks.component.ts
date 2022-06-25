@@ -9,6 +9,7 @@ import {Path} from '../path';
 import {Step} from '../step';
 import {Task} from '../task';
 import {Tool} from "../tool";
+import {Observable} from "rxjs";
 
 
 @Component({
@@ -23,9 +24,9 @@ export class TasksComponent implements OnInit {
   form: FormGroup = new FormGroup({});
   steps: Step[] = [];
   tasks: Task[] = [];
-  selectedStepIds: number[] = [];
+  selectedSteps: Step[] = [];
+  selectedTasks: Task[] = [];
   selectedStepBreadcrumbLabel: String = '';
-  selectedTaskIds: number[] = [];
 
   constructor(private router: Router,
               private route: ActivatedRoute,
@@ -37,44 +38,46 @@ export class TasksComponent implements OnInit {
   }
 
   ngOnInit() {
-    const slug = String(this.route.snapshot.paramMap.get('slug'));
-    this.path = this.pathService.getPathBySlug(slug)
+    this.pathService.getPathBySlug(this.route.snapshot.paramMap.get('slug')).subscribe(path => this.path = path)
     if (!this.path) {
       this.router.navigate(['/']);
     }
     try {
-      this.selectedStepIds = JSON.parse("[" + sessionStorage.getItem('selectedStepIds') + "]");
+      let selectedStepIds = JSON.parse("[" + sessionStorage.getItem('selectedStepIds') + "]");
+      this.stepService.getSteps(selectedStepIds).subscribe(steps => this.selectedSteps = steps)
     } catch (e) {
       sessionStorage.setItem('selectedStepIds', '')
-      this.selectedStepIds = []
+      this.selectedSteps = []
     }
-    if (!this.selectedStepIds[0]) {
+    if (!this.selectedSteps[0]) {
       this.router.navigate(['/']);
     }
     try {
-      this.selectedTaskIds = JSON.parse("[" + sessionStorage.getItem('selectedTaskIds') + "]");
+      var selectedTaskIds = JSON.parse("[" + sessionStorage.getItem('selectedTaskIds') + "]");
+      this.taskService.getTasks().subscribe(tasks => tasks.forEach(task => selectedTaskIds.indexOf(task.id) ? this.selectedTasks.push(task) : null))
     } catch (e) {
       sessionStorage.setItem('selectedTaskIds', '')
-      this.selectedTaskIds = []
+      this.selectedTasks = []
     }
-    this.stepService.getSteps(this.selectedStepIds).subscribe(step => this.steps = step);
-    this.selectedStepBreadcrumbLabel = this.steps[0].name + ((this.steps.length > 1) ? '...' : '');
+    this.selectedStepBreadcrumbLabel = this.selectedSteps[0].name + ((this.selectedSteps.length > 1) ? '...' : '');
 
-    this.taskService.getTasksByStepIds(this.selectedStepIds).forEach(task => {
-      task.checked = this.selectedTaskIds.find(x => x === task.id) > 0;
-      this.tasks.push(task);
-    })
+    this.taskService.getStepTasks(this.selectedSteps).subscribe(tasks =>
+      tasks.forEach(task => {
+        task.checked = selectedTaskIds.find(x => x === task.id) > 0;
+        this.tasks.push(task);
+      }))
 
-    this.selectedTaskIds = this.selectedTaskIds.filter(id => this.tasks.map(task => task.id).includes(id))
+    this.selectedTasks = this.selectedTasks.filter(task => this.tasks.map(task => task.id).includes(task.id))
     this.initForm()
   }
 
   initForm() {
     const steps = new FormArray([]);
-    this.steps.forEach((step: Step) => {
+    console.log(this.steps)
+    this.selectedSteps.forEach((step: Step) => {
       const tasks = new FormArray([]);
       this.tasks.forEach((task: Task) => {
-        if (task.step_id === step.id)
+        if (task.step === step)
           tasks.push(new FormGroup({
             id: new FormControl(task.id),
             name: new FormControl(task.name),
@@ -99,16 +102,17 @@ export class TasksComponent implements OnInit {
   }
 
   get matchingTools(): Tool[] {
-    // let matchingTools: Tool[] = this.toolService.getToolsByTaskIds(this.selectedTaskIds)
+    let tools: Tool[] = []
+    this.toolService.getTaskTools(this.selectedTasks).subscribe(h => tools = h)
     // let currentStep: Step | undefined
-    // matchingTools.forEach((tool: Tool, index) => {
+    // tools.forEach((tool: Tool, index) => {
     //   if (index === 0) currentStep = tool.matching_step
     //   else if (currentStep === tool.matching_step)
     //     // tool.matching_step.name = ''
     //   // else
     //     currentStep = tool.matching_step
     // })
-    return this.toolService.getToolsByTaskIds(this.selectedTaskIds)
+    return tools
   }
 
   selectTool(tool: Tool) {
@@ -124,15 +128,15 @@ export class TasksComponent implements OnInit {
     return this.stepFormArray.at(stepIndex).get('tasks') as FormArray;
   }
 
-  setSelectedTaskIds() {
+  setSelectedTasks() {
     let selectedTaskIds: number[] = []
     this.stepFormArray.controls.forEach((stepGroup: FormGroup, index) => {
       this.getStepTaskArray(index).controls.forEach((taskGroup: FormGroup) => {
         if (taskGroup.controls['checked'].value) selectedTaskIds.push(taskGroup.controls['id'].value)
       })
     });
-    this.selectedTaskIds = selectedTaskIds
-    sessionStorage.setItem('selectedTaskIds', this.selectedTaskIds.toString())
+    this.taskService.getTasks().subscribe(tasks => tasks.forEach(task => this.selectedTasks.push(task)))
+    sessionStorage.setItem('selectedTaskIds', selectedTaskIds.toString())
   }
 
   private setListeners(): void {
@@ -143,7 +147,7 @@ export class TasksComponent implements OnInit {
         ).forEach((taskGroup: FormGroup) => {
           taskGroup.controls['checked'].setValue(value);
         });
-        this.setSelectedTaskIds();
+        this.setSelectedTasks();
       });
     });
   }

@@ -12,7 +12,7 @@
       </div>
       <ng-container *ngFor="let tool of this.matchingTools">
         <div class="grid-row">
-          <div class="grid-col-6">{{tool.matching_step.name}}</div>
+          <div class="grid-col-6">tool.matching_step.name</div>
           <div class="grid-col-6">
             <a rel="href" href="javascript:" (click)="selectToolEvent.emit(tool)" [innerHTML]="tool.short_name"></a>
           </div>

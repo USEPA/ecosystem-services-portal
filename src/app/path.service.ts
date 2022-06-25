@@ -8,9 +8,13 @@ import {Observable, of} from 'rxjs';
 })
 export class PathService {
 
-  paths: Path[] = (data as any).default;
+  private dataRows = (data as any).default;
+  paths: Path[] = [];
 
   constructor() {
+    for (let dataRow of this.dataRows) {
+      this.paths.push(<Path>{...dataRow});
+    }
   }
 
   getPaths(): Observable<Path[]> {
@@ -22,8 +26,8 @@ export class PathService {
     return of(path);
   }
 
-  getPathBySlug(slug: string): Path {
-    return this.paths.find(h => h.slug === slug)!;
+  getPathBySlug(slug: string): Observable<Path> {
+    return of(this.paths.find(h => h.slug === slug)!);
   }
 }
 

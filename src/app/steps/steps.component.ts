@@ -28,7 +28,7 @@ export class StepsComponent implements OnInit {
 
   ngOnInit() {
     const slug = String(this.route.snapshot.paramMap.get('slug'));
-    this.path = this.pathService.getPathBySlug(slug)
+    this.pathService.getPathBySlug(slug).subscribe((h => this.path = h))
     if (this.path) {
       sessionStorage.setItem('selectedPathId', this.path.id.toString())
     } else {
@@ -43,7 +43,7 @@ export class StepsComponent implements OnInit {
       this.selectedStepIds = []
     }
 
-    this.stepService.getStepsByPath(this.path).subscribe(step => this.steps = step);
+    this.stepService.getPathSteps(this.path).subscribe(step => this.steps = step);
 
     this.initForm()
   }

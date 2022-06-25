@@ -32,7 +32,7 @@ Your Selections:<br>
                     <ul class="task-list">
                       <li *ngFor="let task of getStepTaskArray(i).controls; let j = index" [formGroupName]="j"
                           class="task">
-                        <mat-checkbox id="task{{ i }}-{{ j }}" formControlName="checked" color="primary" (change)="setSelectedTaskIds()">
+                        <mat-checkbox id="task{{ i }}-{{ j }}" formControlName="checked" color="primary" (change)="setSelectedTasks()">
                           {{ task.value.name }}
                         </mat-checkbox>
                       </li>

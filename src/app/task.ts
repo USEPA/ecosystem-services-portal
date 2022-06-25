@@ -1,7 +1,10 @@
-export interface Task {
+import {Tool} from "./tool";
+import {Step} from "./step";
+
+export class Task {
   id: number;
   name: string;
-  step_id: number;
-  tool_id: number;
+  step: Step;
+  tools: Tool[];
   checked: boolean;
 }

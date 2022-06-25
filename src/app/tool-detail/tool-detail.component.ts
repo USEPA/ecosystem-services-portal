@@ -8,6 +8,7 @@ import {PathService} from "../path.service";
 import {TaskService} from "../task.service";
 import {Step} from "../step";
 import {StepService} from "../step.service";
+import {of} from "rxjs";
 
 @Component({
   selector: 'app-tool-detail',
@@ -38,8 +39,8 @@ export class ToolDetailComponent implements OnInit {
       const task_id = Number(this.route.snapshot.paramMap.get('task_id'));
       this.taskService.getTask(task_id).subscribe(task => this.task = task);
       if (this.task !== undefined) {
-        this.stepService.getStep(this.task.step_id).subscribe(step => this.step = step);
-        this.pathService.getPath(this.step.path_id).subscribe(path => this.path = path)
+        of(this.task.step).subscribe(step => this.step = step);
+        of(this.step.path).subscribe(path => this.path = path)
       }
       sessionStorage.setItem('selectedToolId', this.tool.id.toString())
       this.getPathSteps();
@@ -61,7 +62,8 @@ export class ToolDetailComponent implements OnInit {
   }
 
   getToolTasks(): void {
-    let tasks: Task[] = this.taskService.getTasksByToolId(this.tool.id);
+    let tasks: Task[] =[];
+    this.taskService.getToolTasks(this.tool).subscribe(h => tasks = h);
     let taskNames = tasks.map(task => task.name);
     this.tool.detail["Tasks it can help with:"] =
       taskNames.filter(function (elem, index, self) {
