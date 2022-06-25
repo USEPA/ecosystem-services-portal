@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {FormGroup, FormBuilder, FormArray, FormControl} from '@angular/forms';
+import {UntypedFormGroup, UntypedFormBuilder, UntypedFormArray, UntypedFormControl} from '@angular/forms';
 import {Router, ActivatedRoute} from '@angular/router';
 import {PathService} from '../path.service';
 import {StepService} from '../step.service';
@@ -21,7 +21,7 @@ import {Observable} from "rxjs";
 export class TasksComponent implements OnInit {
   path: Path | undefined;
   step: Step | undefined;
-  form: FormGroup = new FormGroup({});
+  form: UntypedFormGroup = new UntypedFormGroup({});
   steps: Step[] = [];
   tasks: Task[] = [];
   selectedSteps: Step[] = [];
@@ -34,7 +34,7 @@ export class TasksComponent implements OnInit {
               private stepService: StepService,
               private taskService: TaskService,
               private toolService: ToolService,
-              private fb: FormBuilder) {
+              private fb: UntypedFormBuilder) {
   }
 
   ngOnInit() {
@@ -72,23 +72,23 @@ export class TasksComponent implements OnInit {
   }
 
   initForm() {
-    const steps = new FormArray([]);
+    const steps = new UntypedFormArray([]);
     console.log(this.steps)
     this.selectedSteps.forEach((step: Step) => {
-      const tasks = new FormArray([]);
+      const tasks = new UntypedFormArray([]);
       this.tasks.forEach((task: Task) => {
         if (task.step === step)
-          tasks.push(new FormGroup({
-            id: new FormControl(task.id),
-            name: new FormControl(task.name),
-            checked: new FormControl(task.checked)
+          tasks.push(new UntypedFormGroup({
+            id: new UntypedFormControl(task.id),
+            name: new UntypedFormControl(task.name),
+            checked: new UntypedFormControl(task.checked)
           }))
       });
       steps.push(
-        new FormGroup({
-          id: new FormControl(step.id),
-          name: new FormControl(step.name),
-          checked: new FormControl(step.checked),
+        new UntypedFormGroup({
+          id: new UntypedFormControl(step.id),
+          name: new UntypedFormControl(step.name),
+          checked: new UntypedFormControl(step.checked),
           tasks,
         })
       );
@@ -120,18 +120,18 @@ export class TasksComponent implements OnInit {
     window.open(url, '_blank');
   }
 
-  get stepFormArray(): FormArray {
-    return this.form.get('steps') as FormArray;
+  get stepFormArray(): UntypedFormArray {
+    return this.form.get('steps') as UntypedFormArray;
   }
 
-  getStepTaskArray(stepIndex: number): FormArray {
-    return this.stepFormArray.at(stepIndex).get('tasks') as FormArray;
+  getStepTaskArray(stepIndex: number): UntypedFormArray {
+    return this.stepFormArray.at(stepIndex).get('tasks') as UntypedFormArray;
   }
 
   setSelectedTasks() {
     let selectedTaskIds: number[] = []
-    this.stepFormArray.controls.forEach((stepGroup: FormGroup, index) => {
-      this.getStepTaskArray(index).controls.forEach((taskGroup: FormGroup) => {
+    this.stepFormArray.controls.forEach((stepGroup: UntypedFormGroup, index) => {
+      this.getStepTaskArray(index).controls.forEach((taskGroup: UntypedFormGroup) => {
         if (taskGroup.controls['checked'].value) selectedTaskIds.push(taskGroup.controls['id'].value)
       })
     });
@@ -140,11 +140,11 @@ export class TasksComponent implements OnInit {
   }
 
   private setListeners(): void {
-    this.stepFormArray.controls.forEach((stepGroup: FormGroup) => {
+    this.stepFormArray.controls.forEach((stepGroup: UntypedFormGroup) => {
       stepGroup.controls['checked'].valueChanges.subscribe((value) => {
         (
-          (stepGroup.controls['tasks'] as FormArray).controls as FormGroup[]
-        ).forEach((taskGroup: FormGroup) => {
+          (stepGroup.controls['tasks'] as UntypedFormArray).controls as UntypedFormGroup[]
+        ).forEach((taskGroup: UntypedFormGroup) => {
           taskGroup.controls['checked'].setValue(value);
         });
         this.setSelectedTasks();

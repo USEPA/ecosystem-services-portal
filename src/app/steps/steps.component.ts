@@ -4,7 +4,7 @@ import {Path} from '../path';
 import {PathService} from '../path.service';
 import {Step} from '../step';
 import {StepService} from '../step.service';
-import {FormGroup, FormBuilder, FormArray, FormControl, ValidatorFn} from '@angular/forms';
+import {UntypedFormGroup, UntypedFormBuilder, UntypedFormArray, UntypedFormControl, ValidatorFn} from '@angular/forms';
 import {Task} from "../task";
 
 @Component({
@@ -15,7 +15,7 @@ import {Task} from "../task";
 export class StepsComponent implements OnInit {
   path: Path;
   step: Step;
-  form: FormGroup = new FormGroup({});
+  form: UntypedFormGroup = new UntypedFormGroup({});
   steps: Step[] = [];
   selectedStepIds: number[] = [];
 
@@ -23,7 +23,7 @@ export class StepsComponent implements OnInit {
               private route: ActivatedRoute,
               private pathService: PathService,
               private stepService: StepService,
-              private fb: FormBuilder) {
+              private fb: UntypedFormBuilder) {
   }
 
   ngOnInit() {
@@ -49,14 +49,14 @@ export class StepsComponent implements OnInit {
   }
 
   initForm() {
-    const steps = new FormArray([], minSelectedCheckboxes(1));
+    const steps = new UntypedFormArray([], minSelectedCheckboxes(1));
     this.steps.forEach((step: Step) => {
       steps.push(
-        new FormGroup({
-          id: new FormControl(step.id),
-          name: new FormControl(step.name),
-          checked: new FormControl(this.selectedStepIds.indexOf(step.id) >= 0),
-          rationale: new FormControl(step.rationale)
+        new UntypedFormGroup({
+          id: new UntypedFormControl(step.id),
+          name: new UntypedFormControl(step.name),
+          checked: new UntypedFormControl(this.selectedStepIds.indexOf(step.id) >= 0),
+          rationale: new UntypedFormControl(step.rationale)
         })
       );
     });
@@ -65,8 +65,8 @@ export class StepsComponent implements OnInit {
     })
   }
 
-  get stepFormArray(): FormArray {
-    return this.form.get('steps') as FormArray;
+  get stepFormArray(): UntypedFormArray {
+    return this.form.get('steps') as UntypedFormArray;
   }
 
   submit() {
@@ -79,7 +79,7 @@ export class StepsComponent implements OnInit {
 }
 
 function minSelectedCheckboxes(min = 1) {
-  const validator: ValidatorFn = (formArray: FormArray) => {
+  const validator: ValidatorFn = (formArray: UntypedFormArray) => {
     const totalSelected = formArray.controls
       .map(control => control.value.checked)
       .reduce((prev, next) => next ? prev + next : prev, 0);
