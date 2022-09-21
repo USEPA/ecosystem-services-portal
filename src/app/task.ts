@@ -1,7 +1,7 @@
 import {Tool} from "./tool";
 import {Step} from "./step";
 
-export class Task {
+export interface Task {
   id: number;
   name: string;
   step: Step;

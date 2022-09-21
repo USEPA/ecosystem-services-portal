@@ -7,15 +7,16 @@
 <div class="grid-row">
   <ng-container *ngFor="let path of paths">
     <div class="grid-col-4 grid-gap">
-      <a mat-stroked-button class="pathway" [style]="'border: solid ' + path.color" [routerLink]="[path.slug, 'steps']">
+      <a mat-stroked-button class="pathway" id="{{path.slug}}-button" [style]="'background: ' + path.color + ' '"  [routerLink]="[path.slug, 'steps']">
+        <img src="assets/images/{{path.slug}}-button.jpg" alt="{{path.name}}"><br>
         <b>{{path.name}}</b>
       </a>
 
-      <button mat-icon-button [mdePopoverTriggerFor]="appPopover"
+      <a mat-icon-button [mdePopoverTriggerFor]="appPopover"
               mdePopoverTriggerOn="click"
               #popoverTrigger="mdePopoverTrigger">
         <img src="assets/info-circle.svg">
-      </button>
+      </a>
       <mde-popover #appPopover="mdePopover" [mdePopoverOverlapTrigger]="false">
         <mat-card style="max-width: 300px">
           <mat-card-content [innerHTML]="path.description"></mat-card-content>
@@ -39,7 +40,7 @@
     <li>Clean water for drinking, bathing, and recreational uses like fishing</li>
     <li>Fertile, uncontaminated soil for raising crops</li>
     <li>Pollinators that pollinate those crops</li>
-    <li>Tree cover that provides cooling shade around homes.</li>
+    <li>Tree cover that provides cooling shade around homes</li>
   </ul>
   <p>Learn more about <a [routerLink]="['/paths']">Ecosystem Goods and Services</a></p>
   <p><a [routerLink]="['/paths']">Contact us</a> to ask a question, provide feedback, or report a

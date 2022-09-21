@@ -16,8 +16,11 @@
     flex-direction: column;
   }
 
+  .mat-icon-button {
+    background-color: #ffffff !important;
+  }
 }
 
-::ng-deep .progress-bar {
-  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%) !important;
-}
+//::ng-deep .progress-bar {
+//  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%) !important;
+//}

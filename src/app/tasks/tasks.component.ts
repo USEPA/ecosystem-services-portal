@@ -9,7 +9,6 @@ import {Path} from '../path';
 import {Step} from '../step';
 import {Task} from '../task';
 import {Tool} from "../tool";
-import {Observable} from "rxjs";
 
 
 @Component({
@@ -54,7 +53,7 @@ export class TasksComponent implements OnInit {
     }
     try {
       var selectedTaskIds = JSON.parse("[" + sessionStorage.getItem('selectedTaskIds') + "]");
-      this.taskService.getTasks().subscribe(tasks => tasks.forEach(task => selectedTaskIds.indexOf(task.id) ? this.selectedTasks.push(task) : null))
+      this.taskService.getTasks().subscribe(tasks => tasks.forEach(task => selectedTaskIds.indexOf(task.id) > -1 ? this.selectedTasks.push(task) : null))
     } catch (e) {
       sessionStorage.setItem('selectedTaskIds', '')
       this.selectedTasks = []
@@ -73,7 +72,6 @@ export class TasksComponent implements OnInit {
 
   initForm() {
     const steps = new UntypedFormArray([]);
-    console.log(this.steps)
     this.selectedSteps.forEach((step: Step) => {
       const tasks = new UntypedFormArray([]);
       this.tasks.forEach((task: Task) => {
@@ -104,14 +102,6 @@ export class TasksComponent implements OnInit {
   get matchingTools(): Tool[] {
     let tools: Tool[] = []
     this.toolService.getTaskTools(this.selectedTasks).subscribe(h => tools = h)
-    // let currentStep: Step | undefined
-    // tools.forEach((tool: Tool, index) => {
-    //   if (index === 0) currentStep = tool.matching_step
-    //   else if (currentStep === tool.matching_step)
-    //     // tool.matching_step.name = ''
-    //   // else
-    //     currentStep = tool.matching_step
-    // })
     return tools
   }
 
@@ -128,14 +118,20 @@ export class TasksComponent implements OnInit {
     return this.stepFormArray.at(stepIndex).get('tasks') as UntypedFormArray;
   }
 
-  setSelectedTasks() {
+  setSelectedTasks(): void {
+    this.selectedTasks.length = 0;
     let selectedTaskIds: number[] = []
     this.stepFormArray.controls.forEach((stepGroup: UntypedFormGroup, index) => {
       this.getStepTaskArray(index).controls.forEach((taskGroup: UntypedFormGroup) => {
-        if (taskGroup.controls['checked'].value) selectedTaskIds.push(taskGroup.controls['id'].value)
+        if (taskGroup.controls['checked'].value) selectedTaskIds.push(taskGroup.controls['id'].value);
       })
     });
-    this.taskService.getTasks().subscribe(tasks => tasks.forEach(task => this.selectedTasks.push(task)))
+    this.taskService.getTasks().subscribe((tasks) => {
+      tasks.forEach((task) => {
+        if (selectedTaskIds.indexOf(task.id) > -1) this.selectedTasks.push(task);
+      })
+    })
+
     sessionStorage.setItem('selectedTaskIds', selectedTaskIds.toString())
   }
 

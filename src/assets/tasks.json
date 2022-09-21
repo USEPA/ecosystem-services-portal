@@ -51,396 +51,365 @@
     "id": 9,
     "name": "Estimate stressors and impacts on ES",
     "step_id": 3,
-    "tool_ids": [3]
+    "tool_ids": [3,10]
   },
   {
     "id": 10,
-    "name": "Estimate stressors and impacts on ES",
-    "step_id": 3,
-    "tool_ids": [10]
-  },
-  {
-    "id": 11,
     "name": "Map ES and biodiversity",
     "step_id": 3,
     "tool_ids": [5]
   },
   {
-    "id": 12,
+    "id": 11,
     "name": "Map alternative land-use scenarios and ES, and impacts",
     "step_id": 3,
     "tool_ids": [7]
   },
   {
-    "id": 13,
+    "id": 12,
     "name": "Find models for estimating ES",
     "step_id": 3,
     "tool_ids": [6]
   },
   {
-    "id": 14,
+    "id": 13,
     "name": "Estimate stressors and impacts on ES",
     "step_id": 4,
-    "tool_ids": [3]
+    "tool_ids": [3,10,6]
   },
   {
-    "id": 15,
+    "id": 14,
     "name": "Map alternative land-use scenarios and ES, and impacts",
     "step_id": 4,
     "tool_ids": [7]
   },
   {
-    "id": 16,
-    "name": "Estimate stressors and impacts on ES",
+    "id": 15,
+    "name": "Map pollution sources and impacts",
     "step_id": 4,
-    "tool_ids": [10]
+    "tool_ids": [5]
+  },
+  {
+    "id": 16,
+    "name": "Examine ES risks and benefits to compare and communicate decision alternatives",
+    "step_id": 4,
+    "tool_ids": [9]
   },
   {
     "id": 17,
-    "name": "Map pollution sources and impacts",
+    "name": "Find strategies for incorporating ES into monitoring",
     "step_id": 4,
     "tool_ids": [5]
   },
   {
     "id": 18,
     "name": "Estimate stressors and impacts on ES",
-    "step_id": 4,
-    "tool_ids": [6]
+    "step_id": 5,
+    "tool_ids": [3,10]
   },
   {
     "id": 19,
-    "name": "Examine ES risks and benefits to compare and communicate decision alternatives",
-    "step_id": 4,
-    "tool_ids": [9]
-  },
-  {
-    "id": 20,
-    "name": "Estimate stressors and impacts on ES",
-    "step_id": 5,
-    "tool_ids": [3]
-  },
-  {
-    "id": 21,
     "name": "Identify established links between ES and human health",
     "step_id": 5,
     "tool_ids": [4]
   },
   {
-    "id": 22,
-    "name": "Estimate stressors and impacts on ES",
-    "step_id": 5,
-    "tool_ids": [10]
-  },
-  {
-    "id": 23,
+    "id": 20,
     "name": "Map alternative land-use scenarios and ES, and impacts",
     "step_id": 5,
     "tool_ids": [7]
   },
   {
-    "id": 24,
+    "id": 21,
     "name": "Identify most relevant and meaningful ES metrics",
     "step_id": 5,
     "tool_ids": [2]
   },
   {
-    "id": 25,
+    "id": 22,
     "name": "Identify and prioritize stakeholders and ES",
     "step_id": 5,
     "tool_ids": [1]
   },
   {
-    "id": 26,
+    "id": 23,
     "name": "Identify potential ES using clearly defined terms and a comprehensive list",
     "step_id": 5,
     "tool_ids": [8]
   },
   {
-    "id": 27,
+    "id": 24,
     "name": "Examine ES risks and benefits to compare and communicate decision alternatives",
     "step_id": 5,
-    "tool_ids": [11]
+    "tool_ids": [11,9]
   },
   {
-    "id": 28,
-    "name": "Examine ES risks and benefits to compare and communicate decision alternatives",
-    "step_id": 5,
-    "tool_ids": [9]
-  },
-  {
-    "id": 29,
+    "id": 25,
     "name": "Identify established links between ES and human health",
     "step_id": 6,
     "tool_ids": [4]
   },
   {
-    "id": 30,
+    "id": 26,
     "name": "Map ES and biodiversity",
     "step_id": 6,
     "tool_ids": [5]
   },
   {
-    "id": 31,
+    "id": 27,
     "name": "Identify and prioritize stakeholders and ES",
     "step_id": 6,
     "tool_ids": [1]
   },
   {
-    "id": 32,
+    "id": 28,
     "name": "Create conceptual model for how stressors impact ES",
     "step_id": 6,
     "tool_ids": [3]
   },
   {
-    "id": 33,
+    "id": 29,
     "name": "Identify potential ES using clearly defined terms and a comprehensive list",
     "step_id": 6,
     "tool_ids": [8]
   },
   {
-    "id": 34,
-    "name": "Estimate stressors and impacts on ES",
-    "step_id": 7,
-    "tool_ids": [3]
+    "id": 30,
+    "name": "Identify most relevant and meaningful ES metrics",
+    "step_id": 6,
+    "tool_ids": [2]
   },
   {
-    "id": 35,
+    "id": 31,
+    "name": "Identify established links between ES and human health",
+    "step_id": 7,
+    "tool_ids": [4]
+  },
+  {
+    "id": 32,
+    "name": "Identify most relevant and meaningful ES metrics",
+    "step_id": 7,
+    "tool_ids": [2]
+  },
+  {
+    "id": 33,
+    "name": "Estimate stressors and impacts on ES",
+    "step_id": 7,
+    "tool_ids": [3,10]
+  },
+  {
+    "id": 34,
     "name": "Map ES and biodiversity",
     "step_id": 7,
     "tool_ids": [5]
   },
   {
-    "id": 36,
+    "id": 35,
     "name": "Find models for estimating ES",
     "step_id": 7,
     "tool_ids": [6]
   },
   {
-    "id": 37,
-    "name": "Estimate stressors and impacts on ES",
-    "step_id": 7,
-    "tool_ids": [10]
-  },
-  {
-    "id": 38,
+    "id": 36,
     "name": "Identify and prioritize stakeholders and ES",
     "step_id": 7,
     "tool_ids": [1]
   },
   {
-    "id": 39,
+    "id": 37,
     "name": "Examine ES risks and benefits to compare and communicate decision alternatives",
     "step_id": 7,
     "tool_ids": [9]
   },
   {
-    "id": 40,
+    "id": 38,
     "name": "Examine ES risks and benefits to compare and communicate decision alternatives",
     "step_id": 8,
     "tool_ids": [11]
   },
   {
-    "id": 41,
+    "id": 39,
+    "name": "Map ES and biodiversity",
+    "step_id": 8,
+    "tool_ids": [5]
+  },
+  {
+    "id": 40,
     "name": "Identify most relevant and meaningful ES metrics",
-    "step_id": 9,
+    "step_id": 8,
     "tool_ids": [2]
+  },
+  {
+    "id": 41,
+    "name": "Identify and prioritize stakeholders and ES",
+    "step_id": 8,
+    "tool_ids": [1]
   },
   {
     "id": 42,
+    "name": "Identify most relevant and meaningful ES metrics",
+    "step_id": 9,
+    "tool_ids": [2]
+  },
+  {
+    "id": 43,
     "name": "Identify potential ES using clearly defined terms and a comprehensive list",
     "step_id": 9,
     "tool_ids": [8]
   },
   {
-    "id": 43,
+    "id": 44,
+    "name": "Identify and prioritize stakeholders and ES",
+    "step_id": 9,
+    "tool_ids": [1]
+  },  {
+    "id": 45,
     "name": "Identify most relevant and meaningful ES metrics",
     "step_id": 10,
     "tool_ids": [2]
   },
   {
-    "id": 44,
+    "id": 46,
     "name": "Identify potential ES using clearly defined terms and a comprehensive list",
     "step_id": 10,
     "tool_ids": [8]
   },
   {
-    "id": 45,
+    "id": 47,
     "name": "Examine ES risks and benefits to compare and communicate decision alternatives",
     "step_id": 10,
     "tool_ids": [11]
   },
   {
-    "id": 46,
+    "id": 48,
     "name": "Identify and prioritize stakeholders and ES",
     "step_id": 11,
     "tool_ids": [1]
   },
   {
-    "id": 47,
+    "id": 49,
     "name": "Identify potential ES using clearly defined terms and a comprehensive list",
     "step_id": 11,
     "tool_ids": [8]
   },
   {
-    "id": 48,
+    "id": 50,
     "name": "Find strategies for identifying relevant ES objectives and impacts",
     "step_id": 11,
     "tool_ids": [11]
   },
   {
-    "id": 49,
+    "id": 51,
     "name": "Identify established links between ES and human health",
     "step_id": 12,
     "tool_ids": [4]
   },
   {
-    "id": 50,
+    "id": 52,
     "name": "Identify most relevant and meaningful ES metrics",
     "step_id": 12,
     "tool_ids": [2]
   },
   {
-    "id": 51,
+    "id": 53,
     "name": "Identify potential ES using clearly defined terms and a comprehensive list",
     "step_id": 12,
     "tool_ids": [8]
   },
   {
-    "id": 52,
+    "id": 54,
     "name": "Identify and prioritize stakeholders and ES",
     "step_id": 12,
     "tool_ids": [1]
   },
   {
-    "id": 53,
+    "id": 55,
     "name": "Find strategies for identifying relevant ES objectives and impacts",
     "step_id": 12,
     "tool_ids": [11]
   },
   {
-    "id": 54,
+    "id": 56,
     "name": "Identify potential ES using clearly defined terms and a comprehensive list",
     "step_id": 13,
     "tool_ids": [11]
   },
   {
-    "id": 55,
+    "id": 57,
     "name": "Identify established links between ES and human health",
     "step_id": 14,
     "tool_ids": [4]
   },
   {
-    "id": 56,
+    "id": 58,
     "name": "Map people and built spaces",
     "step_id": 14,
     "tool_ids": [5]
   },
   {
-    "id": 57,
+    "id": 59,
     "name": "Find models for estimating ES",
     "step_id": 14,
     "tool_ids": [6]
   },
   {
-    "id": 58,
+    "id": 60,
     "name": "Create conceptual model for how stressors impact ES",
     "step_id": 14,
     "tool_ids": [3]
   },
   {
-    "id": 59,
+    "id": 61,
     "name": "Estimate stressors and impacts on ES",
     "step_id": 14,
     "tool_ids": [10]
   },
   {
-    "id": 60,
+    "id": 62,
     "name": "Map alternative land-use scenarios and ES, and impacts",
     "step_id": 14,
     "tool_ids": [7]
   },
   {
-    "id": 61,
+    "id": 63,
     "name": "Examine ES risks and benefits to compare and communicate decision alternatives",
     "step_id": 14,
     "tool_ids": [9]
   },
   {
-    "id": 62,
+    "id": 64,
     "name": "Find strategies for evaluating ES tradeoffs",
     "step_id": 15,
     "tool_ids": [11]
   },
   {
-    "id": 63,
+    "id": 65,
     "name": "Identify and prioritize stakeholders and ES",
     "step_id": 15,
     "tool_ids": [1]
   },
   {
-    "id": 64,
+    "id": 66,
     "name": "Identify most relevant and meaningful ES metrics",
     "step_id": 16,
     "tool_ids": [2]
   },
   {
-    "id": 65,
+    "id": 67,
     "name": "Identify potential ES using clearly defined terms and a comprehensive list",
     "step_id": 16,
     "tool_ids": [8]
   },
   {
-    "id": 66,
+    "id": 68,
     "name": "Find strategies for incorporating ES into monitoring",
     "step_id": 16,
     "tool_ids": [11]
   },
   {
-    "id": 67,
-    "name": "Find strategies for incorporating ES into monitoring",
+    "id": 69,
+    "name": "Map ES and biodiversity",
     "step_id": 4,
     "tool_ids": [5]
-  },
-  {
-    "id": 67,
-    "name": "Identify most relevant and meaningful ES metrics",
-    "step_id": 6,
-    "tool_ids": [2]
-  },
-  {
-    "id": 68,
-    "name": "Identify established links between ES and human health",
-    "step_id": 7,
-    "tool_ids": [4]
-  },
-  {
-    "id": 67,
-    "name": "Identify most relevant and meaningful ES metrics",
-    "step_id": 7,
-    "tool_ids": [2]
-  },
-  {
-    "id": 68,
-    "name": "Map ES and biodiversity",
-    "step_id": 8,
-    "tool_ids": [5]
-  },
-  {
-    "id": 69,
-    "name": "Identify most relevant and meaningful ES metrics",
-    "step_id": 8,
-    "tool_ids": [2]
-  },
-  {
-    "id": 70,
-    "name": "Identify and prioritize stakeholders and ES",
-    "step_id": 8,
-    "tool_ids": [1]
-  },
-  {
-    "id": 71,
-    "name": "Identify and prioritize stakeholders and ES",
-    "step_id": 9,
-    "tool_ids": [1]
   }
 ]

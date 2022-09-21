@@ -1,16 +1,153 @@
-@import '~@angular/material/theming';
+@use '@angular/material' as mat;
 
-@include mat-core();
+@include mat.core();
 
-$my-theme-primary: mat-palette($mat-light-blue, 800, 300, 900);
-$my-theme-accent: mat-palette($mat-light-blue);
-$my-theme-warn: mat-palette($mat-deep-orange, A200);
-
-// create theme (use mat-dark-theme for themes with dark backgrounds)
-$epa-theme: mat-light-theme(
-    $my-theme-primary,
-    $my-theme-accent,
-    $my-theme-warn
+$ecological-risk-assessments-palette: (
+  50: #1a4480,
+  100: #005ea2,
+  200: #4f97d1,
+  300: #005ea2,
+  400: #1a4480,
+  500: #162e51,
+  600: #1a4480,
+  700: #1a4480,
+  800: #1a4480,
+  900: #1a4480,
+  contrast: (
+    50: white,
+    100: white,
+    200: white,
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+  )
 );
 
-@include angular-material-theme($epa-theme);
+$contaminated-site-cleanup-palette: (
+  50: #ffbe2e,
+  100: #faf3d1,
+  200: #faf3d1,
+  300: #fee685,
+  400: #ffbe2e,
+  500: #e5a000,
+  600: #936f38,
+  700: #ffbe2e,
+  800: #ffbe2e,
+  900: #ffbe2e,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: rgba(black, 0.87),
+    500: rgba(black, 0.87),
+    600: rgba(black, 0.87),
+    700: rgba(black, 0.87),
+    800: rgba(black, 0.87),
+    900: rgba(black, 0.87),
+  )
+);
+$other-decision-making-contexts-palette: (
+  50: #4d8055,
+  100: #5e9f69,
+  200: #dbebde,
+  300: #86b98e,
+  400: #4d8055,
+  500: #37493b,
+  600: #4d8055,
+  700: #4d8055,
+  800: #4d8055,
+  900: #4d8055,
+  contrast: (
+    50: white,
+    100: white,
+    200: white,
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+  )
+);
+
+
+// Define the ecological-risk-assessments theme
+$light-primary: mat.define-palette($ecological-risk-assessments-palette, 400, 100, 800);
+$light-accent: mat.define-palette($contaminated-site-cleanup-palette, 400, 100, 800);
+$ecological-risk-assessments-theme: mat.define-light-theme((
+  color: (
+    primary: $light-primary,
+    accent: $light-accent,
+  )
+));
+
+// Define the contaminated-site-cleanup theme
+$light-primary: mat.define-palette($contaminated-site-cleanup-palette, 400, 100, 800);
+$light-accent: mat.define-palette($ecological-risk-assessments-palette, 400, 100, 800);
+$contaminated-site-cleanup-theme: mat.define-light-theme((
+  color: (
+    primary: $light-primary,
+    accent: $light-accent,
+  )
+));
+
+// Define the other-decision-making-contexts theme
+$light-primary: mat.define-palette($other-decision-making-contexts-palette, 400, 100, 800);
+$light-accent: mat.define-palette($contaminated-site-cleanup-palette, 400, 100, 800);
+$other-decision-making-contexts-theme: mat.define-light-theme((
+  color: (
+    primary: $light-primary,
+    accent: $light-accent,
+  )
+));
+
+//$my-primary: mat.define-palette(mat.$indigo-palette, 500);
+//$my-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+//$my-warn: mat.define-palette(mat.$red-palette);
+//$my-theme: mat.define-light-theme((
+//  color: (
+//    primary: $my-primary,
+//    accent: $my-accent,
+//    warn: $my-warn,
+//  )
+//));
+
+@include mat.core-theme($ecological-risk-assessments-theme);
+
+
+@include mat.button-theme($ecological-risk-assessments-theme);
+@include mat.checkbox-theme($ecological-risk-assessments-theme);
+@include mat.dialog-theme($ecological-risk-assessments-theme);
+
+//.ecological-risk-assessments {
+//  @include mat.button-theme($ecological-risk-assessments-theme);
+//  @include mat.checkbox-theme($ecological-risk-assessments-theme);
+//  @include mat.dialog-theme($ecological-risk-assessments-theme);
+//}
+//
+.ecological-risk-assessments {
+  @include mat.core-color($ecological-risk-assessments-theme);
+  @include mat.button-color($ecological-risk-assessments-theme);
+  @include mat.checkbox-color($ecological-risk-assessments-theme);
+  @include mat.dialog-color($ecological-risk-assessments-theme);
+}
+
+.contaminated-site-cleanup {
+  @include mat.core-color($contaminated-site-cleanup-theme);
+  @include mat.button-color($contaminated-site-cleanup-theme);
+  @include mat.checkbox-color($contaminated-site-cleanup-theme);
+  @include mat.dialog-color($contaminated-site-cleanup-theme);
+}
+
+.other-decision-making-contexts {
+  @include mat.core-color($other-decision-making-contexts-theme);
+  @include mat.button-color($other-decision-making-contexts-theme);
+  @include mat.checkbox-color($other-decision-making-contexts-theme);
+  @include mat.dialog-color($other-decision-making-contexts-theme);
+}

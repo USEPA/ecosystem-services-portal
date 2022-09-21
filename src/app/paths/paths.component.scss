@@ -5,19 +5,20 @@ a.pathway {
   font-size: medium;
   margin-bottom: 15px;
   text-align: center;
-  //border: solid; //#469f39 #0071bc
-  border-radius: 1em;
+  border-radius: 2em;
+  img {
+    height: 184px;
+    width: 100%;
+    margin-top: 15px !important;
+    border-radius: 2em;
+  }
 }
 
-//a.pathway b {
-//  margin-left: -8px;
-//}
+#ecological-risk-assessments-button, #ecological-risk-assessments-button:visited { color: #ffffff}
 
-a.pathway:visited { color: #000000}
+#other-decision-making-contexts-button, #other-decision-making-contexts-button:visited { color: #ffffff}
 
-//rect.step4 {
-//  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
-//}
+#contaminated-site-cleanup-button, #contaminated-site-cleanup-button:visited { color: #000000}
 
 .mat-icon-button {
   vertical-align: top;

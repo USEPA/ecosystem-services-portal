@@ -1,10 +1,11 @@
+@use '@angular/material' as mat;
 @import 'theme.scss';
 
-// specify theme class eg: <body class="my-theme"> ... </body>
-.epa-theme {
-  // use our theme with angular-material-theme mixin
-  @include angular-material-theme($epa-theme);
-}
+//// specify theme class eg: <body class="my-theme"> ... </body>
+//.epa-theme {
+//  // use our theme with angular-material-theme mixin
+//  @include angular-material-theme($my-theme);
+//}
 
 app-root {
   margin-left: auto;
@@ -21,14 +22,47 @@ mat-card-content a {
   outline: none !important;
 }
 
-button.mat-flat-button {
-  margin-top: 12px;
-  margin-right: 8px;
-  font-size: 14px;
-  font-weight: bold;
-  font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif
-}
-
 mat-card-content a {
   font-weight: bold !important;
+}
+
+mat-card, mat-dialog-container {
+  background-color: white;
+  border: 1px solid;
+  border-radius: 1em;
+  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
+}
+
+button.mat-flat-button {
+  font-family: Source Sans Pro Web, "Noto Sans Arabic", "Noto Sans BN homepage", "Noto Sans GU homepage", "Noto Sans KR homepage", "Noto Sans SC homepage", "Noto Sans BN", "Noto Sans GU", "Noto Sans KR", "Noto Sans SC", "Noto Sans TC", "Helvetica Neue", Helvetica, Arial, sans;
+  font-size: 1.06rem;
+  line-height: .9;
+  color: #fff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  border-radius: .25rem;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  margin-right: .5rem;
+  padding: .75rem 1.25rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+h4.ecological-risk-assessments {
+  background: mat.get-color-from-palette($ecological-risk-assessments-palette, 400);
+  color: white;
+}
+
+h4.contaminated-site-cleanup {
+  background: mat.get-color-from-palette($contaminated-site-cleanup-palette, 400);
+  color: black;
+}
+
+h4.other-decision-making-contexts {
+  background: mat.get-color-from-palette($other-decision-making-contexts-palette, 400);
+  color: white;
 }

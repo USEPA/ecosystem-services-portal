@@ -1,5 +1,5 @@
 <div id="matchingTools" [hidden]="matchingTools.length==0">
-  <h4>Your Tool Matches</h4>
+  <h4 [ngClass]="path.slug">Your Tool Matches</h4>
     <div>
       Click on a matched tool to view details,
       or view <app-path-tools></app-path-tools>
@@ -12,7 +12,7 @@
       </div>
       <ng-container *ngFor="let tool of this.matchingTools">
         <div class="grid-row">
-          <div class="grid-col-6">tool.matching_step.name</div>
+          <div class="grid-col-6" [innerHTML]="tool.matching_step.name"></div>
           <div class="grid-col-6">
             <a rel="href" href="javascript:" (click)="selectToolEvent.emit(tool)" [innerHTML]="tool.short_name"></a>
           </div>
