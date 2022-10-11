@@ -13,6 +13,7 @@ export class ProgressBarComponent implements OnChanges {
 
   unfilledColor = '#ffffff';
   fillColor = '#e3e4e5';
+  textColor = '#000000';
 
   step1 = this.unfilledColor;
   step2 = this.unfilledColor;
@@ -29,6 +30,17 @@ export class ProgressBarComponent implements OnChanges {
 
   constructor(private route: ActivatedRoute) {
     this.slug = String(this.route.snapshot.paramMap.get('slug'));
+    if (this.slug == 'ecological-risk-assessments') {
+      this.fillColor = '#85a4ff'
+      this.textColor = '#ffffff'
+    } else if (this.slug == 'contaminated-site-cleanup') {
+      this.fillColor = '#ffe5c6'
+      this.textColor = '#ffffff'
+    } else if (this.slug == 'other-decision-making-contexts') {
+      this.fillColor = '#96ffa3'
+      this.textColor = '#000000'
+    }
+
     this.step1 = this.fillColor;
     if (this.route.snapshot.url.find(h => h.path === 'steps')) {
       this.step2 = this.fillColor;
