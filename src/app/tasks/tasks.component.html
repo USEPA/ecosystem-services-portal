@@ -7,7 +7,7 @@ Your Selections:<br>
   </span>
 <br><br>
 
-<p>What do you need help doing with Ecosystem Services (ES)?</p>
+<h4>What do you need help doing with Ecosystem Services (ES)?</h4>
 
 <div class="grid-row grid-gap">
   <div class="grid-col-5">
@@ -54,7 +54,7 @@ Your Selections:<br>
   </div>
 </div>
 <div class="grid-col-6 margin-top-3 margin-bottom-3" [ngClass]="path.slug">
-  <button mat-flat-button [ngClass]="'usa-button'" [routerLink]="['/paths', path.slug, 'steps']" color="primary">< Back </button>
+  <button mat-raised-button [ngClass]="'usa-button'" [routerLink]="['/paths', path.slug, 'steps']" color="primary">< Back </button>
 </div>
 <div class="grid-col-6">
   <app-progress-bar [matchingTools]="matchingTools" [ngClass]="path.slug"></app-progress-bar>

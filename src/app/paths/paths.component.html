@@ -4,12 +4,12 @@
 
 <h4>I'm looking for help with...</h4>
 
-<div class="grid-row">
+<div class="grid-row grid-gap">
   <ng-container *ngFor="let path of paths">
-    <div class="grid-col-4 grid-gap">
-      <a mat-stroked-button class="pathway" id="{{path.slug}}-button" [style]="'background: ' + path.color + ' '"  [routerLink]="[path.slug, 'steps']">
-        <img src="assets/images/{{path.slug}}-button.jpg" alt="{{path.name}}"><br>
-        <b>{{path.name}}</b>
+    <div class="grid-col-4">
+      <a mat-raised-button class="pathway" id="{{path.slug}}-button" [class]="path.slug"  [routerLink]="[path.slug, 'steps']">
+        <img src="assets/{{path.slug}}-icon.svg" alt="{{path.name}}">
+        {{path.name}}
       </a>
 
       <a mat-icon-button [mdePopoverTriggerFor]="appPopover"
@@ -43,7 +43,7 @@
     <li>Tree cover that provides cooling shade around homes</li>
   </ul>
   <p>Learn more about <a [routerLink]="['/paths']">Ecosystem Goods and Services</a></p>
-  <p><a [routerLink]="['/paths']">Contact us</a> to ask a question, provide feedback, or report a
+  <p><a href="https://www.epa.gov/eco-research/forms/contact-us-about-ecosystems-research">Contact us</a> to ask a question, provide feedback, or report a
     problem. This Portal includes a limited selection of curated tools. Please contact us to suggest including
     additional tools for specific phases and tasks.</p>
 </div>

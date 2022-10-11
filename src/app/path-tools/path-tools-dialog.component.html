@@ -8,7 +8,7 @@
             <div class="grid-col-4"><b>Task Labels</b></div>
           </div>
           <ng-container *ngFor="let tool of this.matchingTools; let i = index">
-            <div class="grid-row row-{{i}}" [style]="'background: ' + tool.matching_step.color">
+            <div [class]="'grid-row row-' + i + ' ' +path.slug + '-' + (i+1)">
               <div class="grid-col-4 item" [innerHTML]="(tool.matching_step.id - offset) + ' - ' + tool.matching_step.name"></div>
               <div class="grid-col-4 item" [innerHTML]="tool.short_name"></div>
               <div class="grid-col-4 item" [innerHTML]="tool.matching_task.name"></div>

@@ -3,83 +3,109 @@
 @include mat.core();
 
 $ecological-risk-assessments-palette: (
-  50: #1a4480,
-  100: #005ea2,
-  200: #4f97d1,
-  300: #005ea2,
-  400: #1a4480,
-  500: #162e51,
-  600: #1a4480,
-  700: #1a4480,
-  800: #1a4480,
-  900: #1a4480,
-  contrast: (
-    50: white,
-    100: white,
-    200: white,
-    300: white,
-    400: white,
-    500: white,
-    600: white,
-    700: white,
-    800: white,
-    900: white,
-  )
+    50 : #e4e9f0,
+    100 : #bac7d9,
+    200 : #8da2c0,
+    300 : #5f7ca6,
+    400 : #3c6093,
+    500 : #1a4480,
+    600 : #173e78,
+    700 : #13356d,
+    800 : #0f2d63,
+    900 : #081f50,
+    A100 : #85a4ff,
+    A200 : #527eff,
+    A400 : #1f58ff,
+    A700 : #0546ff,
+    contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #000000,
+      500 : #ffffff,
+      600 : #ffffff,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #ffffff,
+      A400 : #ffffff,
+      A700 : #ffffff,
+    )
 );
 
 $contaminated-site-cleanup-palette: (
-  50: #ffbe2e,
-  100: #faf3d1,
-  200: #faf3d1,
-  300: #fee685,
-  400: #ffbe2e,
-  500: #e5a000,
-  600: #936f38,
-  700: #ffbe2e,
-  800: #ffbe2e,
-  900: #ffbe2e,
-  contrast: (
-    50: rgba(black, 0.87),
-    100: rgba(black, 0.87),
-    200: rgba(black, 0.87),
-    300: rgba(black, 0.87),
-    400: rgba(black, 0.87),
-    500: rgba(black, 0.87),
-    600: rgba(black, 0.87),
-    700: rgba(black, 0.87),
-    800: rgba(black, 0.87),
-    900: rgba(black, 0.87),
-  )
-);
+    50 : #fff7e6,
+    100 : #ffecc0,
+    200 : #ffdf97,
+    300 : #ffd26d,
+    400 : #ffc84d,
+    500 : #ffbe2e,
+    600 : #ffb829,
+    700 : #ffaf23,
+    800 : #ffa71d,
+    900 : #ff9912,
+    A100 : #ffffff,
+    A200 : #fffcf9,
+    A400 : #ffe5c6,
+    A700 : #ffd9ad,
+    contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #000000,
+      500 : #000000,
+      600 : #000000,
+      700 : #000000,
+      800 : #000000,
+      900 : #000000,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+    )
+  );
+
 $other-decision-making-contexts-palette: (
-  50: #4d8055,
-  100: #5e9f69,
-  200: #dbebde,
-  300: #86b98e,
-  400: #4d8055,
-  500: #37493b,
-  600: #4d8055,
-  700: #4d8055,
-  800: #4d8055,
-  900: #4d8055,
-  contrast: (
-    50: white,
-    100: white,
-    200: white,
-    300: white,
-    400: white,
-    500: white,
-    600: white,
-    700: white,
-    800: white,
-    900: white,
-  )
-);
+    50 : #eaf0eb,
+    100 : #cad9cc,
+    200 : #a6c0aa,
+    300 : #82a688,
+    400 : #68936f,
+    500 : #4d8055,
+    600 : #46784e,
+    700 : #3d6d44,
+    800 : #34633b,
+    900 : #25502a,
+    A100 : #96ffa3,
+    A200 : #63ff76,
+    A400 : #30ff4a,
+    A700 : #17ff33,
+    contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #ffffff,
+      500 : #ffffff,
+      600 : #ffffff,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+    )
+  );
+
 
 
 // Define the ecological-risk-assessments theme
-$light-primary: mat.define-palette($ecological-risk-assessments-palette, 400, 100, 800);
-$light-accent: mat.define-palette($contaminated-site-cleanup-palette, 400, 100, 800);
+$light-primary: mat.define-palette($ecological-risk-assessments-palette, 500, 100, 800);
+$light-accent: mat.define-palette($ecological-risk-assessments-palette, A400, A100, A700);
 $ecological-risk-assessments-theme: mat.define-light-theme((
   color: (
     primary: $light-primary,
@@ -88,8 +114,8 @@ $ecological-risk-assessments-theme: mat.define-light-theme((
 ));
 
 // Define the contaminated-site-cleanup theme
-$light-primary: mat.define-palette($contaminated-site-cleanup-palette, 400, 100, 800);
-$light-accent: mat.define-palette($ecological-risk-assessments-palette, 400, 100, 800);
+$light-primary: mat.define-palette($contaminated-site-cleanup-palette, 500, 100, 800);
+$light-accent: mat.define-palette($contaminated-site-cleanup-palette, A400, A100, A700);
 $contaminated-site-cleanup-theme: mat.define-light-theme((
   color: (
     primary: $light-primary,
@@ -98,8 +124,8 @@ $contaminated-site-cleanup-theme: mat.define-light-theme((
 ));
 
 // Define the other-decision-making-contexts theme
-$light-primary: mat.define-palette($other-decision-making-contexts-palette, 400, 100, 800);
-$light-accent: mat.define-palette($contaminated-site-cleanup-palette, 400, 100, 800);
+$light-primary: mat.define-palette($other-decision-making-contexts-palette, 500, 100, 800);
+$light-accent: mat.define-palette($other-decision-making-contexts-palette, A400, A100, A700);
 $other-decision-making-contexts-theme: mat.define-light-theme((
   color: (
     primary: $light-primary,
@@ -107,30 +133,12 @@ $other-decision-making-contexts-theme: mat.define-light-theme((
   )
 ));
 
-//$my-primary: mat.define-palette(mat.$indigo-palette, 500);
-//$my-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
-//$my-warn: mat.define-palette(mat.$red-palette);
-//$my-theme: mat.define-light-theme((
-//  color: (
-//    primary: $my-primary,
-//    accent: $my-accent,
-//    warn: $my-warn,
-//  )
-//));
-
 @include mat.core-theme($ecological-risk-assessments-theme);
-
 
 @include mat.button-theme($ecological-risk-assessments-theme);
 @include mat.checkbox-theme($ecological-risk-assessments-theme);
 @include mat.dialog-theme($ecological-risk-assessments-theme);
 
-//.ecological-risk-assessments {
-//  @include mat.button-theme($ecological-risk-assessments-theme);
-//  @include mat.checkbox-theme($ecological-risk-assessments-theme);
-//  @include mat.dialog-theme($ecological-risk-assessments-theme);
-//}
-//
 .ecological-risk-assessments {
   @include mat.core-color($ecological-risk-assessments-theme);
   @include mat.button-color($ecological-risk-assessments-theme);

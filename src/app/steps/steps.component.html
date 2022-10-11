@@ -1,9 +1,12 @@
-<div class="grid-row">
-  <div class="grid-col-6">
+<div class="grid-row grid-gap">
+  <div class="grid-col-12">
     Your Selections:<br>
     <a [routerLink]="['/paths']">{{ path.name }}</a> > Select Process Phases<br><br>
-    <p>I want help incorporating Ecosystem Services into...</p>
-
+  </div>
+</div>
+<div class="grid-row grid-gap">
+  <div class="grid-col-6">
+    <h4>I want help incorporating Ecosystem Services into...</h4>
     <form [formGroup]="form" [ngClass]="path.slug">
       <ul>
         <ng-container formArrayName="steps" *ngFor="let step of this.stepFormArray.controls; let i = index"
@@ -27,8 +30,10 @@
           </li>
         </ng-container>
       </ul>
-      <button mat-flat-button [ngClass]="'usa-button'"  [routerLink]="['/paths']" color="primary">< Back</button>
-      <button mat-flat-button [ngClass]="'usa-button margin-left-1'" [disabled]="!form.valid" (click)="submit()" color="primary">Next ></button>
+      <button mat-raised-button [ngClass]="'usa-button'" [routerLink]="['/paths']" color="primary">< Back</button>
+      <button mat-raised-button [ngClass]="'usa-button margin-left-1'" [disabled]="!form.valid" (click)="submit()"
+              color="primary">Next >
+      </button>
     </form>
     <div class="grid-col-12">&nbsp;</div>
     <div class="grid-row grid-col-12" [innerHTML]="path.moreinfo"></div>
@@ -38,7 +43,7 @@
     </div>
   </div>
   <div class="grid-col-6 {{path.slug}}">
-    <img src="assets/images/{{path.slug}}.png" alt="{{path.name}} process illustration">
+    <img src="assets/images/{{path.slug}}.jpg" alt="{{path.name}} process illustration">
   </div>
 </div>
 

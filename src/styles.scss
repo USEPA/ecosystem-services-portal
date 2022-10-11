@@ -1,11 +1,7 @@
 @use '@angular/material' as mat;
+@use '@angular/material/theming' as theming;
 @import 'theme.scss';
 
-//// specify theme class eg: <body class="my-theme"> ... </body>
-//.epa-theme {
-//  // use our theme with angular-material-theme mixin
-//  @include angular-material-theme($my-theme);
-//}
 
 app-root {
   margin-left: auto;
@@ -33,7 +29,7 @@ mat-card, mat-dialog-container {
   box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
 }
 
-button.mat-flat-button {
+button.mat-flat-button, button.mat-raised-button {
   font-family: Source Sans Pro Web, "Noto Sans Arabic", "Noto Sans BN homepage", "Noto Sans GU homepage", "Noto Sans KR homepage", "Noto Sans SC homepage", "Noto Sans BN", "Noto Sans GU", "Noto Sans KR", "Noto Sans SC", "Noto Sans TC", "Helvetica Neue", Helvetica, Arial, sans;
   font-size: 1.06rem;
   line-height: .9;
@@ -52,17 +48,28 @@ button.mat-flat-button {
   text-decoration: none;
 }
 
-h4.ecological-risk-assessments {
-  background: mat.get-color-from-palette($ecological-risk-assessments-palette, 400);
-  color: white;
-}
+$paths: ecological-risk-assessments $ecological-risk-assessments-palette,
+contaminated-site-cleanup $contaminated-site-cleanup-palette,
+other-decision-making-contexts $other-decision-making-contexts-palette;
+$hues: 50 200 400 600 800 100 300 500 700 900;
 
-h4.contaminated-site-cleanup {
-  background: mat.get-color-from-palette($contaminated-site-cleanup-palette, 400);
-  color: black;
-}
+@each $path in $paths {
+  a.#{nth($path,1)}, a.#{nth($path,1)}:visited, h4.#{nth($path,1)} {
+    background: mat.get-color-from-palette(nth($path, 2), 500);
+    color: mat.get-contrast-color-from-palette(nth($path, 2), 500);
+    svg path {
+      fill: mat.get-contrast-color-from-palette(nth($path, 2), 500);
+    }
+  }
 
-h4.other-decision-making-contexts {
-  background: mat.get-color-from-palette($other-decision-making-contexts-palette, 400);
-  color: white;
+  @for $i from 1 through length($hues) {
+    $contrast: #{nth($hues,$i)}+'-contrast';
+    div.#{nth($path,1)}-#{$i},
+    div.#{nth($path,1)}-#{$i + 10},
+    div.#{nth($path,1)}-#{$i + 20},
+    div.#{nth($path,1)}-#{$i + 30} {
+      background: mat.get-color-from-palette(nth($path, 2), nth($hues, $i));
+      color: mat.get-contrast-color-from-palette(nth($path, 2), nth($hues, $i));
+    }
+  }
 }
