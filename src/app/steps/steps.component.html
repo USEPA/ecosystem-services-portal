@@ -1,11 +1,11 @@
 <div class="grid-row grid-gap">
-  <div class="grid-col-12">
+  <div class="grid-col">
     Your Selections:<br>
     <a [routerLink]="['/paths']">{{ path.name }}</a> > Select Process Phases<br><br>
   </div>
 </div>
 <div class="grid-row grid-gap">
-  <div class="grid-col-6">
+  <div class="tablet:grid-col">
     <h4>I want help incorporating Ecosystem Services into...</h4>
     <form [formGroup]="form" [ngClass]="path.slug">
       <ul>

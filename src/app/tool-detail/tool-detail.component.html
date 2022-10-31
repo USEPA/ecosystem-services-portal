@@ -11,18 +11,18 @@
   <h2>{{tool.short_name}}</h2>
 </ng-template>
 
-<div class="grid-row margin-top-6">
+<div class="grid-row margin-top-6 margin-bottom-3">
   <div class="grid-col-12" [innerHTML]="tool.description"></div>
 </div>
 
-<div class="margin-top-3">
+<div [ngClass]="path.slug">
   <div class="grid-row grid-gap">
-    <div class="grid-col-6">
+    <div class="tablet:grid-col margin-bottom-2">
       <mat-accordion multi="true">
         <div *ngFor="let pathStep of this.pathSteps">
           <ng-container *ngIf="pathStep.related_steps.length > 0">
             <mat-expansion-panel [expanded]="path && pathStep.id === path.id">
-              <mat-expansion-panel-header>Steps in {{pathStep.name}} this Tool is Suited for
+              <mat-expansion-panel-header [ngClass]="pathStep.slug">Steps in {{pathStep.name}} this Tool is Suited for
               </mat-expansion-panel-header>
               <div *ngFor="let step of pathStep.related_steps; let i = index">
               <span class="text-green">
@@ -37,13 +37,13 @@
         </div>
       </mat-accordion>
     </div>
-    <div class="grid-col-6" style="text-align: center">
+    <div class="tablet:grid-col" style="text-align: center">
       <a href="{{tool.url}}" target="_blank"><img src="{{'/assets/images/' + tool.image_file}}"
                                                   alt="{{tool.name}}"></a>
     </div>
   </div>
-  <div class="grid-row margin-top-3">
-    <div class="grid mat-expansion-panel">
+  <div class="grid-row margin-top-3 margin-bottom-3">
+    <div class="grid mat-expansion-panel margin-bottom-3">
       <ng-container *ngFor="let col1 of this.objectKeys(this.tool.detail)">
         <ng-container *ngFor="let value of this.tool.detail[col1]; let i = index">
           <div class="grid-row">
@@ -85,16 +85,16 @@
         </ng-container>
       </ng-container>
     </div>
+  </div>
 
     <ng-template [ngIf]="path" [ngIfElse]="noPathSelection">
-      <button class="usa-button margin-top-3" [routerLink]="['/paths', path.slug, 'steps','tasks']">
+      <button mat-raised-button [ngClass]="'usa-button'" [routerLink]="['/paths', path.slug, 'steps','tasks']" color="primary">
         < Return To Decision Path
       </button>
     </ng-template>
     <ng-template #noPathSelection>
-      <button class="usa-button margin-top-3" [routerLink]="['/paths']">
+      <button mat-raised-button [ngClass]="'usa-button'" [routerLink]="['/paths']" color="primary">
         < Return To Decision Path
       </button>
     </ng-template>
-  </div>
 </div>

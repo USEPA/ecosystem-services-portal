@@ -51,23 +51,30 @@ button.mat-flat-button, button.mat-raised-button {
 $paths: ecological-risk-assessments $ecological-risk-assessments-palette,
 contaminated-site-cleanup $contaminated-site-cleanup-palette,
 other-decision-making-contexts $other-decision-making-contexts-palette;
-$hues: 50 200 400 600 800 100 300 500 700 900;
+$hues: 100 200 300 400 500 700 900;
 
 @each $path in $paths {
-  a.#{nth($path,1)}, a.#{nth($path,1)}:visited, h4.#{nth($path,1)} {
-    background: mat.get-color-from-palette(nth($path, 2), 500);
+  a.#{nth($path,1)},
+  a.#{nth($path,1)}:visited,
+  h4.#{nth($path,1)},
+  div.grid div.#{nth($path,1)},
+  mat-accordion mat-expansion-panel-header.#{nth($path,1)} {
+    background: mat.get-color-from-palette(nth($path, 2), 500) !important;
     color: mat.get-contrast-color-from-palette(nth($path, 2), 500);
     svg path {
       fill: mat.get-contrast-color-from-palette(nth($path, 2), 500);
     }
   }
 
+  div.grid div.#{nth($path,1)}-light {
+    background: mat.get-color-from-palette(nth($path, 2), 50);
+  }
+
+
+
   @for $i from 1 through length($hues) {
     $contrast: #{nth($hues,$i)}+'-contrast';
-    div.#{nth($path,1)}-#{$i},
-    div.#{nth($path,1)}-#{$i + 10},
-    div.#{nth($path,1)}-#{$i + 20},
-    div.#{nth($path,1)}-#{$i + 30} {
+    div.#{nth($path,1)}-#{$i} {
       background: mat.get-color-from-palette(nth($path, 2), nth($hues, $i));
       color: mat.get-contrast-color-from-palette(nth($path, 2), nth($hues, $i));
     }

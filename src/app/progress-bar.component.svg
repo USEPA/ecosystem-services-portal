@@ -1,8 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 664.28 47">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 664.28 47" color="#ffffff">
   <defs>
     <style>
       text {
-        fill: #343a44;
         font-size: 20px;
         font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
       }
@@ -15,29 +14,29 @@
   </defs>
   <g id="b">
     <g id="c">
-      <rect id="step4" x="408.25" y=".5" width="255.53" height="46" [attr.fill]="step4"/>
+      <rect id="step4" x="408.25" y=".5" width="255.53" height="46" [attr.fill]="step4_color"/>
       <polygon id="step3" points="408.78 46.5 273.25 46.5 273.25 .5 408.78 .5 427.5 23.5 408.78 46.5"
-               [attr.fill]="step3"/>
+               [attr.fill]="step3_color"/>
       <a [routerLink]="['/paths', slug, 'steps']" *ngIf="step2_href; else step2_elseblock">
         <polygon id="step2" points="271.78 46.5 136.25 46.5 136.25 .5 271.78 .5 290.5 23.5 271.78 46.5"
-                 [attr.fill]="step2"/>
-        <text class="step2" x="190" y="30" [attr.font-weight]="step2_weight">Step 2</text>
+                 [attr.fill]="step2_color"/>
+        <text class="step2" x="190" y="30" [attr.font-weight]="step2_weight" [attr.fill]="step2_text_color">Step 2</text>
       </a>
       <ng-template #step2_elseblock>
         <polygon id="step2" points="271.78 46.5 136.25 46.5 136.25 .5 271.78 .5 290.5 23.5 271.78 46.5"
-                 [attr.fill]="step2"/>
-        <text class="step2" x="190" y="30" [attr.font-weight]="step2_weight">Step 2</text>
+                 [attr.fill]="step2_color"/>
+        <text class="step2" x="190" y="30" [attr.font-weight]="step2_weight"  [attr.fill]="step2_text_color">Step 2</text>
       </ng-template>
       <a [routerLink]="['/paths']" *ngIf="step1_href; else step1_elseblock">
-        <polygon id="step1" points="136.03 46.5 .5 46.5 .5 .5 136.03 .5 154.75 23.5 136.03 46.5" [attr.fill]="step1"/>
-        <text class="step1" x="30" y="30" [attr.font-weight]="step1_weight">Step 1</text>
+        <polygon id="step1" points="136.03 46.5 .5 46.5 .5 .5 136.03 .5 154.75 23.5 136.03 46.5" [attr.fill]="step1_color"/>
+        <text class="step1" x="40" y="30" [attr.font-weight]="step1_weight" [attr.fill]="step1_text_color">Step 1</text>
       </a>
       <ng-template #step1_elseblock>
-        <polygon id="step1" points="136.03 46.5 .5 46.5 .5 .5 136.03 .5 154.75 23.5 136.03 46.5" [attr.fill]="step1"/>
-        <text class="step1" x="30" y="30" [attr.font-weight]="step1_weight">Step 1</text>
+        <polygon id="step1" points="136.03 46.5 .5 46.5 .5 .5 136.03 .5 154.75 23.5 136.03 46.5" [attr.fill]="step1_color"/>
+        <text class="step1" x="40" y="30" [attr.font-weight]="step1_weight" [attr.fill]="step1_text_color">Step 1</text>
       </ng-template>
-      <text class="step3" x="320" y="30" [attr.font-weight]="step3_weight">Step 3</text>
-      <text class="step4" x="450" y="30" [attr.font-weight]="step4_weight">Matching Tools</text>
+      <text class="step3" x="320" y="30" [attr.font-weight]="step3_weight" [attr.fill]="step3_text_color">Step 3</text>
+      <text class="step4" x="480" y="30" [attr.font-weight]="step4_weight" [attr.fill]="step4_text_color">Matching Tools</text>
     </g>
   </g>
 </svg>

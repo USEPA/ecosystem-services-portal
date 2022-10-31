@@ -10,7 +10,7 @@ Your Selections:<br>
 <h4>What do you need help doing with Ecosystem Services (ES)?</h4>
 
 <div class="grid-row grid-gap">
-  <div class="grid-col-5">
+  <div class="desktop:grid-col-5 margin-bottom-2">
     <form [formGroup]="form" #espForm="ngForm" [ngClass]="path.slug">
       <mat-card style="min-height: 300px;">
         <mat-card-content>
@@ -48,7 +48,7 @@ Your Selections:<br>
       </mat-card>
     </form>
   </div>
-  <div class="grid-col-7">
+  <div class="desktop:grid-col-7">
     <app-task-tools (selectToolEvent)="selectTool($event)" [matchingTools]="matchingTools"
                     [path]="path"></app-task-tools>
   </div>

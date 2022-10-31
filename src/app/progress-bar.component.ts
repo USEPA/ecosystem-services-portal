@@ -11,14 +11,20 @@ export class ProgressBarComponent implements OnChanges {
   @Input() matchingTools: Tool[] = []
   slug: String
 
-  unfilledColor = '#ffffff';
-  fillColor = '#e3e4e5';
-  textColor = '#000000';
+  unfilledColor = '#e3e4e5';
+  fillColor = '#616161';
+  unfilledTextColor = '#000000';
+  fillTextColor = 'currentColor';
 
-  step1 = this.unfilledColor;
-  step2 = this.unfilledColor;
-  step3 = this.unfilledColor;
-  step4 = this.unfilledColor;
+  step1_color = this.unfilledColor;
+  step2_color = this.unfilledColor;
+  step3_color = this.unfilledColor;
+  step4_color = this.unfilledColor;
+
+  step1_text_color = this.unfilledTextColor;
+  step2_text_color = this.unfilledTextColor;
+  step3_text_color = this.unfilledTextColor;
+  step4_text_color = this.unfilledTextColor;
 
   step1_weight = 'normal';
   step2_weight = 'normal';
@@ -31,24 +37,33 @@ export class ProgressBarComponent implements OnChanges {
   constructor(private route: ActivatedRoute) {
     this.slug = String(this.route.snapshot.paramMap.get('slug'));
     if (this.slug == 'ecological-risk-assessments') {
-      this.fillColor = '#85a4ff'
-      this.textColor = '#ffffff'
+      this.unfilledColor = '#aacdea'
+      this.fillColor = '#1a4480'
     } else if (this.slug == 'contaminated-site-cleanup') {
-      this.fillColor = '#ffe5c6'
-      this.textColor = '#ffffff'
+      this.unfilledColor = '#fee685'
+      this.fillColor = '#e5a000'
     } else if (this.slug == 'other-decision-making-contexts') {
-      this.fillColor = '#96ffa3'
-      this.textColor = '#000000'
+      this.unfilledColor = '#dbebde'
+      this.fillColor = '#4d8055'
     }
 
-    this.step1 = this.fillColor;
-    if (this.route.snapshot.url.find(h => h.path === 'steps')) {
-      this.step2 = this.fillColor;
-    }
+    this.step1_color = this.unfilledColor;
+    this.step2_color = this.unfilledColor;
+    this.step3_color = this.unfilledColor;
+    this.step4_color = this.unfilledColor;
+
     if (this.route.snapshot.url.find(h => h.path === 'tasks')) {
-      this.step3 = this.fillColor;
+      this.step3_color = this.fillColor;
+      this.step3_text_color = this.fillTextColor
+    } else if (this.route.snapshot.url.find(h => h.path === 'steps')) {
+      this.step2_color = this.fillColor;
+      this.step2_text_color = this.fillTextColor
+    } else {
+      this.step1_color = this.fillColor;
+      this.step1_text_color = this.fillTextColor
     }
-    let thisUrlSegment = this.route.snapshot.url[this.route.snapshot.url.length-1].toString()
+
+    let thisUrlSegment = this.route.snapshot.url[this.route.snapshot.url.length - 1].toString()
     if (thisUrlSegment === 'tasks') {
       this.step3_weight = 'bold';
       this.step2_href = true;
@@ -62,12 +77,18 @@ export class ProgressBarComponent implements OnChanges {
   }
 
   ngOnChanges(): void {
-    if (this.matchingTools.length > 0 ) {
-      this.step4 = this.fillColor;
+    if (this.matchingTools.length > 0) {
+      this.step4_color = this.fillColor;
+      this.step3_color = this.unfilledColor;
+      this.step3_text_color = this.unfilledTextColor;
+      this.step4_text_color = this.fillTextColor;
       this.step3_weight = 'normal';
       this.step4_weight = 'bold';
     } else {
-      this.step4 = this.unfilledColor;
+      this.step4_color = this.unfilledColor;
+      this.step3_color = this.fillColor;
+      this.step3_text_color = this.fillTextColor;
+      this.step4_text_color = this.unfilledTextColor;
       this.step3_weight = 'bold';
       this.step4_weight = 'normal';
     }

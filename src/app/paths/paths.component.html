@@ -6,7 +6,7 @@
 
 <div class="grid-row grid-gap">
   <ng-container *ngFor="let path of paths">
-    <div class="grid-col-4">
+    <div class="tablet:grid-col">
       <a mat-raised-button class="pathway" id="{{path.slug}}-button" [class]="path.slug"  [routerLink]="[path.slug, 'steps']">
         <img src="assets/{{path.slug}}-icon.svg" alt="{{path.name}}">
         {{path.name}}

@@ -1,3 +1,5 @@
+@use '@angular/material' as mat;
+
 a.pathway {
   flex: 1 1 100%;
   width: 80%;
@@ -9,18 +11,16 @@ a.pathway {
   margin-bottom: 15px;
   text-align: center;
   border-radius: 2em;
+  height: 286px;
+  @include mat.elevation(8);
   img {
+    fill: white;
     width: 90%;
     padding-bottom: 15px;
     margin-top: 15px;
+    height: 216px;
   }
 }
-
-//#ecological-risk-assessments-button, #ecological-risk-assessments-button:visited { color: #ffffff}
-//
-//#other-decision-making-contexts-button, #other-decision-making-contexts-button:visited { color: #ffffff}
-//
-//#contaminated-site-cleanup-button, #contaminated-site-cleanup-button:visited { color: #ffffff}
 
 .mat-icon-button {
   vertical-align: top;
