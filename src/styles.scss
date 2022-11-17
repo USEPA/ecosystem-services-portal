@@ -70,8 +70,6 @@ $hues: 100 200 300 400 500 700 900;
     background: mat.get-color-from-palette(nth($path, 2), 50);
   }
 
-
-
   @for $i from 1 through length($hues) {
     $contrast: #{nth($hues,$i)}+'-contrast';
     div.#{nth($path,1)}-#{$i} {
