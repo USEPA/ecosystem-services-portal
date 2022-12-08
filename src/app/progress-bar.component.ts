@@ -13,18 +13,19 @@ export class ProgressBarComponent implements OnChanges {
 
   unfilledColor = '#e3e4e5';
   fillColor = '#616161';
-  unfilledTextColor = '#000000';
-  fillTextColor = 'currentColor';
 
   step1_color = this.unfilledColor;
   step2_color = this.unfilledColor;
   step3_color = this.unfilledColor;
   step4_color = this.unfilledColor;
 
-  step1_text_color = this.unfilledTextColor;
-  step2_text_color = this.unfilledTextColor;
-  step3_text_color = this.unfilledTextColor;
-  step4_text_color = this.unfilledTextColor;
+  inactiveTextColor = 'rgba(0, 0, 0, 0.26)';
+  previousTextColor = '#000000';
+  fillTextColor = 'currentColor';
+  step1_text_color = this.inactiveTextColor;
+  step2_text_color = this.inactiveTextColor;
+  step3_text_color = this.inactiveTextColor;
+  step4_text_color = this.inactiveTextColor;
 
   step1_weight = 'normal';
   step2_weight = 'normal';
@@ -54,9 +55,12 @@ export class ProgressBarComponent implements OnChanges {
 
     if (this.route.snapshot.url.find(h => h.path === 'tasks')) {
       this.step3_color = this.fillColor;
+      this.step1_text_color = this.previousTextColor
+      this.step2_text_color = this.previousTextColor
       this.step3_text_color = this.fillTextColor
     } else if (this.route.snapshot.url.find(h => h.path === 'steps')) {
       this.step2_color = this.fillColor;
+      this.step1_text_color = this.previousTextColor
       this.step2_text_color = this.fillTextColor
     } else {
       this.step1_color = this.fillColor;
@@ -80,7 +84,7 @@ export class ProgressBarComponent implements OnChanges {
     if (this.matchingTools.length > 0) {
       this.step4_color = this.fillColor;
       this.step3_color = this.unfilledColor;
-      this.step3_text_color = this.unfilledTextColor;
+      this.step3_text_color = this.previousTextColor;
       this.step4_text_color = this.fillTextColor;
       this.step3_weight = 'normal';
       this.step4_weight = 'bold';
@@ -88,7 +92,7 @@ export class ProgressBarComponent implements OnChanges {
       this.step4_color = this.unfilledColor;
       this.step3_color = this.fillColor;
       this.step3_text_color = this.fillTextColor;
-      this.step4_text_color = this.unfilledTextColor;
+      this.step4_text_color = this.inactiveTextColor;
       this.step3_weight = 'bold';
       this.step4_weight = 'normal';
     }

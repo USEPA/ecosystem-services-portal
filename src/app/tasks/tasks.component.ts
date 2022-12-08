@@ -102,6 +102,7 @@ export class TasksComponent implements OnInit {
   get matchingTools(): Tool[] {
     let tools: Tool[] = []
     this.toolService.getTaskTools(this.selectedTasks).subscribe(h => tools = h)
+    console.log("get matchingTools()", tools)
     return tools
   }
 

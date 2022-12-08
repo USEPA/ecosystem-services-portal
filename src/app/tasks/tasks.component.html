@@ -47,15 +47,26 @@ Your Selections:<br>
         </mat-card-content>
       </mat-card>
     </form>
+
+    <div class="margin-top-3 margin-bottom-3 display-none desktop:display-block" [ngClass]="path.slug">
+      <button mat-raised-button [ngClass]="'usa-button'" [routerLink]="['/paths', path.slug, 'steps']" color="primary">< Back </button>
+    </div>
+
   </div>
   <div class="desktop:grid-col-7">
-    <app-task-tools (selectToolEvent)="selectTool($event)" [matchingTools]="matchingTools"
+    <app-task-tools (selectToolEvent)="selectTool($event)"
+                    [matchingTools]="matchingTools"
+                    [hidden]="matchingTools.length==0"
                     [path]="path"></app-task-tools>
   </div>
 </div>
-<div class="grid-col-6 margin-top-3 margin-bottom-3" [ngClass]="path.slug">
+
+<div class="margin-top-3 margin-bottom-3 display-block desktop:display-none" [ngClass]="path.slug">
   <button mat-raised-button [ngClass]="'usa-button'" [routerLink]="['/paths', path.slug, 'steps']" color="primary">< Back </button>
 </div>
-<div class="grid-col-6">
-  <app-progress-bar [matchingTools]="matchingTools" [ngClass]="path.slug"></app-progress-bar>
+
+<div class="grid-row">
+  <div class="grid-col">
+    <app-progress-bar [matchingTools]="matchingTools" [ngClass]="path.slug"></app-progress-bar>
+  </div>
 </div>

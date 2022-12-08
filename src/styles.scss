@@ -2,6 +2,9 @@
 @use '@angular/material/theming' as theming;
 @import 'theme.scss';
 
+app-progress-bar svg {
+  max-height: 36px !important;
+}
 
 app-root {
   margin-left: auto;
@@ -49,26 +52,90 @@ button.mat-flat-button, button.mat-raised-button {
 }
 
 $paths: ecological-risk-assessments $ecological-risk-assessments-palette,
-contaminated-site-cleanup $contaminated-site-cleanup-palette,
-other-decision-making-contexts $other-decision-making-contexts-palette;
+        contaminated-site-cleanup $contaminated-site-cleanup-palette,
+        other-decision-making-contexts $other-decision-making-contexts-palette;
 $hues: 100 200 300 400 500 700 900;
 
 @each $path in $paths {
+
+  $base-color: mat.get-color-from-palette(nth($path, 2), 500);
+  $base-light-color: mat.get-color-from-palette(nth($path, 2), 400);
+  $base-extra-light-color: mat.get-color-from-palette(nth($path, 2), 100);
+  $base-dark-color: mat.get-color-from-palette(nth($path, 2), 900);
+  $contrast-color: mat.get-contrast-color-from-palette(nth($path, 2), 500);
+
   a.#{nth($path,1)},
   a.#{nth($path,1)}:visited,
   h4.#{nth($path,1)},
   div.grid div.#{nth($path,1)},
   mat-accordion mat-expansion-panel-header.#{nth($path,1)} {
-    background: mat.get-color-from-palette(nth($path, 2), 500) !important;
-    color: mat.get-contrast-color-from-palette(nth($path, 2), 500);
+    background:$base-color !important;
+    color: $contrast-color;
     svg path {
-      fill: mat.get-contrast-color-from-palette(nth($path, 2), 500);
+      fill: $contrast-color;
     }
+  }
+
+  h4.#{nth($path,1)} {
+    border-radius: 1em;
   }
 
   div.grid div.#{nth($path,1)}-light {
     background: mat.get-color-from-palette(nth($path, 2), 50);
   }
+
+  ##{nth($path,1) + '-button'}  {
+    flex: 1 1 100%;
+    width: 80%;
+    line-height: 20px;
+    font-size: large;
+    font-weight: bold;
+    white-space: normal;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    text-align: center;
+    border-radius: 2em;
+    height: 286px;
+    max-width: 256px !important;
+    margin-left: auto;
+    margin-right: auto;
+    color: $contrast-color;
+    svg path {
+      fill: $contrast-color;
+    }
+
+    box-shadow:inset 0px 0px 12px 4px $base-extra-light-color;
+    background-color:$base-color;
+    border:1px solid $base-dark-color;
+
+
+    &:hover {
+      //background:linear-gradient(to bottom, $base-light-color 2%, $base-color 100%);
+      background-color:$base-light-color !important;
+    }
+    &:active {
+      position:relative;
+      top:1px;
+    }
+
+    //@include mat.elevation(8);
+    img {
+      fill: white;
+      width: 90%;
+      padding-bottom: 15px;
+      margin-top: 15px;
+      height: 216px;
+    }
+  }
+
+
+
+
+
+
+
+
+
 
   @for $i from 1 through length($hues) {
     $contrast: #{nth($hues,$i)}+'-contrast';

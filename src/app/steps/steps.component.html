@@ -5,8 +5,8 @@
   </div>
 </div>
 <div class="grid-row grid-gap">
-  <div class="tablet:grid-col">
-    <h4>I want help incorporating Ecosystem Services into...</h4>
+  <div class="tablet:grid-col-6">
+    <h3>I want help incorporating Ecosystem Services into...</h3>
     <form [formGroup]="form" [ngClass]="path.slug">
       <ul>
         <ng-container formArrayName="steps" *ngFor="let step of this.stepFormArray.controls; let i = index"
@@ -36,15 +36,15 @@
       </button>
     </form>
     <div class="grid-col-12">&nbsp;</div>
-    <div class="grid-row grid-col-12" [innerHTML]="path.moreinfo"></div>
-    <div class="grid-col-12">&nbsp;</div>
-    <div class="grid-col-12">
-      <app-progress-bar></app-progress-bar>
-    </div>
+    <div class="grid-col-12" [innerHTML]="path.moreinfo"></div>
   </div>
-  <div class="grid-col-6 {{path.slug}}">
+  <div class="tablet:grid-col-6 {{path.slug}}">
     <img src="assets/images/{{path.slug}}.jpg" alt="{{path.name}} process illustration">
   </div>
 </div>
 
-
+<div class="grid-row margin-top-3">
+  <div class="grid-col">
+    <app-progress-bar [ngClass]="path.slug"></app-progress-bar>
+  </div>
+</div>

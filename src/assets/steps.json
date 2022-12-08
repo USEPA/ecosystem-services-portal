@@ -38,21 +38,21 @@
     "id": 6,
     "name": "Site Assessment",
     "path_id": 2,
-    "rationale": "A site assessment focuses on evaluating the risk of a release of hazardous substances or threat to people and the environment. Preliminary determinations are made regarding need for immediate or further actions required.  Historical background information is collected, including information pertaining to past environmental investigations, as is information pertaining to the site's environmental setting and potentially impacted populations and habitats.",
+    "rationale": "A site assessment focuses on evaluating the risk of a release of hazardous substances or threat to people and the environment. Preliminary determinations are made regarding need for immediate or further actions required.  Historical background information is collected, including information pertaining to past environmental investigations, as is information pertaining to the site's environmental setting and potentially impacted populations and habitats. The planned reuse of the site as well as proposed future zoning may also be relevant.",
     "color": "#4d8055"
   },
   {
     "id": 7,
     "name": "Site Investigation and Alternatives Evaluation",
     "path_id": 2,
-    "rationale": "More integrated and in-depth site characterizations, including risk assessments, are made (e.g., Remedial Investigation/Feasibility Study [CERCLA], Phase II Environmental Site Assessments [Brownfield], Facility Investigations [RCRA]. Remediation alternatives are evaluated.",
+    "rationale": "More integrated and in-depth site characterizations, including risk assessments, are made (e.g., Remedial Investigation/Feasibility Study [CERCLA], Phase II Environmental Site Assessments [Brownfield], Facility Investigations [RCRA]. Remediation alternatives are evaluated. The planned reuse of the site, institutional controls, as well as proposed future zoning may also be relevant.",
     "color": "#709976"
   },
   {
     "id": 8,
     "name": "Remedy Selection",
     "path_id": 2,
-    "rationale": "Formal selection of remedies for cleanup are defined in this stage (e.g., Record of Decision [CERCLA], Remedial Action Plan [Brownfeld], Statement of Basis [RCRA]).",
+    "rationale": "Formal selection of remedies for cleanup are defined in this stage (e.g., Record of Decision [CERCLA], Remedial Action Plan [Brownfeld], Statement of Basis [RCRA]). Sites enrolled in State/Tribal programs will follow their rules and requirements.",
     "color": "#94b299"
   },
   {
