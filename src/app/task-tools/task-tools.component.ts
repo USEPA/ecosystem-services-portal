@@ -11,7 +11,7 @@ import {ToolService} from "../tool.service";
 })
 export class TaskToolsComponent implements OnChanges {
   @Input() matchingTools: Tool[] = []
-  @Input() path: Path | undefined;
+  @Input() path: Path;
   @Output() selectToolEvent = new EventEmitter<Tool>();
 
   constructor(private router: Router,

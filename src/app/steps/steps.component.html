@@ -1,53 +1,50 @@
-Your Selections:<br>
-<a [routerLink]="['/paths']">{{ path.name }}</a> > Select Process Phases<br><br>
-<p>I want help incorporating Ecosystem Services into...</p>
-
-<form [formGroup]="form">
-  <ul>
-    <ng-container formArrayName="steps" *ngFor="let step of this.stepFormArray.controls; let i = index" class="step">
-      <li [formGroupName]="i">
-        <mat-checkbox id="step{{i}}" formControlName="checked" color="primary">
-          {{ step.value.name }}
-        </mat-checkbox>
-        <button mat-icon-button [mdePopoverTriggerFor]="appPopover"
-                mdePopoverPositionX="after"
-                mdePopoverPositionY="above"
-                mdePopoverTriggerOn="click"
-                #popoverTrigger="mdePopoverTrigger">
-          <img alt="information icon" src="assets/info-circle.svg">
-        </button>
-        <mde-popover #appPopover="mdePopover" [mdePopoverOverlapTrigger]="false">
-          <mat-card style="max-width: 300px">
-            <mat-card-content [innerHTML]="step.value.rationale"></mat-card-content>
-          </mat-card>
-        </mde-popover>
-      </li>
-    </ng-container>
-  </ul>
-  <button class="usa-button" [routerLink]="['/paths']">< Back</button>
-  <button class="usa-button margin-left-1" [disabled]="!form.valid" (click)="submit()">Next ></button>
-</form>
-
-<div class="grid-row">
-  <div class="grid-col-6" [innerHTML]="path.moreinfo"></div>
-  <div class="grid-col-1">
-    <button mat-icon-button [mdePopoverTriggerFor]="appPopover"
-            mdePopoverPositionX="after"
-            mdePopoverTriggerOn="click"
-            #popoverTrigger="mdePopoverTrigger">
-      <img src="assets/info-circle.svg">
-    </button>
-    <mde-popover #appPopover="mdePopover" [mdePopoverOverlapTrigger]="false">
-      <mat-card>
-        <mat-card-content>
-          <img src="assets/images/{{path.slug}}.png" alt="{{path.name}} process illustration">
-        </mat-card-content>
-      </mat-card>
-    </mde-popover>
+<div class="grid-row grid-gap">
+  <div class="grid-col">
+    Your Selections:<br>
+    <a [routerLink]="['/paths']">{{ path.name }}</a> > Select Process Phases<br><br>
   </div>
 </div>
-<div class="grid-col-6 margin-top-3">
-  <app-progress-bar></app-progress-bar>
+<div class="grid-row grid-gap">
+  <div class="tablet:grid-col-6">
+    <h3>I want help incorporating Ecosystem Services into...</h3>
+    <form [formGroup]="form" [ngClass]="path.slug">
+      <ul>
+        <ng-container formArrayName="steps" *ngFor="let step of this.stepFormArray.controls; let i = index"
+                      class="step">
+          <li [formGroupName]="i">
+            <mat-checkbox id="step{{i}}" formControlName="checked" color="primary">
+              {{ step.value.name }}
+            </mat-checkbox>
+            <a mat-icon-button [mdePopoverTriggerFor]="appPopover"
+               mdePopoverPositionX="after"
+               mdePopoverPositionY="above"
+               mdePopoverTriggerOn="click"
+               #popoverTrigger="mdePopoverTrigger">
+              <img alt="information icon" src="assets/info-circle.svg">
+            </a>
+            <mde-popover #appPopover="mdePopover" [mdePopoverOverlapTrigger]="false">
+              <mat-card style="max-width: 300px">
+                <mat-card-content [innerHTML]="step.value.rationale"></mat-card-content>
+              </mat-card>
+            </mde-popover>
+          </li>
+        </ng-container>
+      </ul>
+      <button mat-raised-button [ngClass]="'usa-button'" [routerLink]="['/paths']" color="primary">< Back</button>
+      <button mat-raised-button [ngClass]="'usa-button margin-left-1'" [disabled]="!form.valid" (click)="submit()"
+              color="primary">Next >
+      </button>
+    </form>
+    <div class="grid-col-12">&nbsp;</div>
+    <div class="grid-col-12" [innerHTML]="path.moreinfo"></div>
+  </div>
+  <div class="tablet:grid-col-6 {{path.slug}}">
+    <img src="assets/images/{{path.slug}}.jpg" alt="{{path.name}} process illustration">
+  </div>
 </div>
 
-
+<div class="grid-row margin-top-3">
+  <div class="grid-col">
+    <app-progress-bar [ngClass]="path.slug"></app-progress-bar>
+  </div>
+</div>

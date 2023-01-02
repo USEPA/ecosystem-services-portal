@@ -2,20 +2,21 @@
   weigh the impact of decisions. This tool portal helps select the best tools for your scenario. Choose a path below
   and follow the steps to find the tools that match your needs.</p>
 
-<h4>I'm looking for help with...</h4>
+<h3>I'm looking for help with...</h3>
 
-<div class="grid-row">
+<div class="grid-row grid-gap">
   <ng-container *ngFor="let path of paths">
-    <div class="grid-col-4 grid-gap">
-      <a mat-stroked-button class="pathway" [style]="'border: solid ' + path.color" [routerLink]="[path.slug, 'steps']">
-        <b>{{path.name}}</b>
+    <div class="desktop:grid-col">
+      <a mat-raised-button id="{{path.slug}}-button"  [routerLink]="[path.slug, 'steps']">
+        <img src="assets/{{path.slug}}-icon.svg" alt="{{path.name}}"><br>
+        {{path.name}}
       </a>
 
-      <button mat-icon-button [mdePopoverTriggerFor]="appPopover"
+      <a mat-icon-button [mdePopoverTriggerFor]="appPopover"
               mdePopoverTriggerOn="click"
               #popoverTrigger="mdePopoverTrigger">
         <img src="assets/info-circle.svg">
-      </button>
+      </a>
       <mde-popover #appPopover="mdePopover" [mdePopoverOverlapTrigger]="false">
         <mat-card style="max-width: 300px">
           <mat-card-content [innerHTML]="path.description"></mat-card-content>
@@ -25,7 +26,7 @@
     </div>
   </ng-container>
 </div>
-<div class="grid-col-6">
+<div class="grid-col">
   <app-progress-bar></app-progress-bar>
 </div>
 
@@ -39,10 +40,10 @@
     <li>Clean water for drinking, bathing, and recreational uses like fishing</li>
     <li>Fertile, uncontaminated soil for raising crops</li>
     <li>Pollinators that pollinate those crops</li>
-    <li>Tree cover that provides cooling shade around homes.</li>
+    <li>Tree cover that provides cooling shade around homes</li>
   </ul>
   <p>Learn more about <a [routerLink]="['/paths']">Ecosystem Goods and Services</a></p>
-  <p><a [routerLink]="['/paths']">Contact us</a> to ask a question, provide feedback, or report a
+  <p><a href="https://www.epa.gov/eco-research/forms/contact-us-about-ecosystems-research">Contact us</a> to ask a question, provide feedback, or report a
     problem. This Portal includes a limited selection of curated tools. Please contact us to suggest including
     additional tools for specific phases and tasks.</p>
 </div>

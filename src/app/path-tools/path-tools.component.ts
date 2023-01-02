@@ -1,14 +1,19 @@
-import {Component, Inject, OnInit, Optional} from '@angular/core';
+import {Component, Inject, OnInit, Optional, ViewEncapsulation} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialog} from '@angular/material/dialog';
 import {Tool} from '../tool'
 import {Path} from "../path";
 import {ToolService} from "../tool.service";
 import {ActivatedRoute} from "@angular/router";
 import {PathService} from "../path.service";
+import {Step} from "../step";
+import {Task} from "../task";
+import {StepService} from "../step.service";
+import {TaskService} from "../task.service";
 
 @Component({
   selector: 'app-path-tools',
   templateUrl: './path-tools.component.html',
+  encapsulation: ViewEncapsulation.None
 })
 export class PathToolsComponent {
   path: Path;
@@ -30,7 +35,8 @@ export class PathToolsComponent {
 @Component({
   selector: 'path-tools-component-dialog',
   templateUrl: './path-tools-dialog.component.html',
-  styleUrls: ['./path-tools.component.scss']
+  styleUrls: ['./path-tools.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class PathToolsComponentDialog implements OnInit {
   path: Path
@@ -38,12 +44,18 @@ export class PathToolsComponentDialog implements OnInit {
   offset: number = 0;
 
   constructor(private toolService: ToolService,
+              private taskService: TaskService,
+              private stepService: StepService,
               public dialog: MatDialog,
               @Optional() @Inject(MAT_DIALOG_DATA) public data: any
   ) {
-    console.log(data.path)
     this.path = data.path
-    this.toolService.getPathTools(this.path).subscribe(h => this.matchingTools = h)
+    let steps: Step[] = []
+    let tasks: Task[] = []
+    this.stepService.getPathSteps(this.path).subscribe(h => steps = h)
+    this.taskService.getStepTasks(steps).subscribe(h => tasks = h)
+    this.toolService.getTaskTools(tasks).subscribe(h => this.matchingTools = h)
+    this.matchingTools.sort((a, b) => a.matching_step.id > b.matching_step.id ? 1 : -1)
     this.offset = this.matchingTools[0].matching_step.id - 1
   }
 

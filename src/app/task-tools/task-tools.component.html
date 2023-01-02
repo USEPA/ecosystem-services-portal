@@ -1,26 +1,28 @@
-<div id="matchingTools" [hidden]="matchingTools.length==0">
-  <h4>Your Tool Matches</h4>
+<div id="matchingTools"  class="grid-row">
+  <div class="grid-col-12">
+  <h4 [ngClass]="path.slug">Your Tool Matches</h4>
     <div>
       Click on a matched tool to view details,
       or view <app-path-tools></app-path-tools>
     </div>
+  </div>
   <div class="grid-col-12">
-    <div class="grid mat-expansion-panel">
-      <div class="grid-row">
+    <div class="grid mat-typography">
+      <div  [class]="'grid-row ' + path.slug">
         <div class="grid-col-6"><b>Process Phase</b></div>
         <div class="grid-col-6"><b>Recommended Ecosystem Services Tools</b></div>
       </div>
       <ng-container *ngFor="let tool of this.matchingTools">
         <div class="grid-row">
-          <div class="grid-col-6">tool.matching_step.name</div>
+          <div class="grid-col-6" [innerHTML]="tool.matching_step.name"></div>
           <div class="grid-col-6">
-            <a rel="href" href="javascript:" (click)="selectToolEvent.emit(tool)" [innerHTML]="tool.short_name"></a>
+            <a rel="href" href="javascript:" (click)="selectToolEvent.emit(tool)" [innerHTML]="tool.name"></a>
           </div>
         </div>
       </ng-container>
     </div>
-    <div class="grid-col-12 margin-top-6">
-      <a [routerLink]="['/paths']">Contact us</a> to let us know if you have additional tool needs not addressed by
+    <div class="grid-col-12 margin-top-3 margin-bottom-3">
+      <a href="https://www.epa.gov/eco-research/forms/contact-us-about-ecosystems-research">Contact us</a> to let us know if you have additional tool needs not addressed by
       these tools or to submit ideas for future tools. This Portal includes a limited selection of curated tools.
       Please contact us to suggest including additional tools for specific phases and tasks.
     </div>

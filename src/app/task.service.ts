@@ -15,7 +15,8 @@ export class TaskService {
   private dataRows = (data as any).default;
   tasks: Task[] = [];
 
-  constructor(private toolService: ToolService, private stepService: StepService) {
+  constructor(private toolService: ToolService,
+              private stepService: StepService) {
     for (let dataRow of this.dataRows) {
       this.stepService.getStep(dataRow.step_id as number).subscribe(step => dataRow.step = step);
       this.toolService.getTools(dataRow.tool_ids as number[]).subscribe(tools => dataRow.tools = tools);
