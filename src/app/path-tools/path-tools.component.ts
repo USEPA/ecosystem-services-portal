@@ -33,7 +33,6 @@ export class PathToolsComponent {
 }
 
 @Component({
-  selector: 'path-tools-component-dialog',
   templateUrl: './path-tools-dialog.component.html',
   styleUrls: ['./path-tools.component.scss'],
   encapsulation: ViewEncapsulation.None

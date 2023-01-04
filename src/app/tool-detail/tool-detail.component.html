@@ -8,7 +8,9 @@
   </div>
 </ng-template>
 <ng-template #noSelection>
-  <h2>{{tool.short_name}}</h2>
+<!--  <ng-template [ngIf]="!dialogTool">-->
+    <h2>{{tool.short_name}}</h2>
+<!--  </ng-template>-->
 </ng-template>
 
 <div class="grid-row margin-top-6 margin-bottom-3">
@@ -87,6 +89,7 @@
     </div>
   </div>
 
+  <ng-template [ngIf]="!dialogTool">
     <ng-template [ngIf]="path" [ngIfElse]="noPathSelection">
       <button mat-raised-button [ngClass]="'usa-button'" [routerLink]="['/paths', path.slug, 'steps','tasks']" color="primary">
         < Return To Decision Path
@@ -97,4 +100,5 @@
         < Return To Decision Path
       </button>
     </ng-template>
+  </ng-template>
 </div>

@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
 import {Router, ActivatedRoute} from '@angular/router';
 import {Tool} from "../tool";
 import {Path} from "../path";
@@ -31,10 +31,13 @@ export class ToolDetailComponent implements OnInit {
               private stepService: StepService,
               private pathService: PathService,) {
   }
+  @Input() dialogTool: Tool = null;
+  @Input() dialogPath: Path = null;
 
   ngOnInit() {
     const slug = String(this.route.snapshot.paramMap.get('slug'));
-    this.tool = this.toolService.getToolBySlug(slug);
+    this.path = this.dialogPath ?? undefined;
+    this.tool = this.dialogTool ?? this.toolService.getToolBySlug(slug);
     if (this.tool !== undefined) {
       const task_id = Number(this.route.snapshot.paramMap.get('task_id'));
       this.taskService.getTask(task_id).subscribe(task => this.task = task);

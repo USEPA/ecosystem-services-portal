@@ -16,7 +16,7 @@
         <div class="grid-row">
           <div class="grid-col-6" [innerHTML]="tool.matching_step.name"></div>
           <div class="grid-col-6">
-            <a rel="href" href="javascript:" (click)="selectToolEvent.emit(tool)" [innerHTML]="tool.name"></a>
+            <a rel="script" href="javascript:" (mousedown)="openDialog(tool)" [innerHTML]="tool.name"></a>
           </div>
         </div>
       </ng-container>

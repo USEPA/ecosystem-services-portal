@@ -10,7 +10,7 @@ import {AppComponent} from './app.component';
 import {PathsComponent} from './paths/paths.component';
 import {StepsComponent} from './steps/steps.component';
 import {TasksComponent} from './tasks/tasks.component';
-import {TaskToolsComponent} from './task-tools/task-tools.component';
+import {TaskToolsComponent, TaskToolsComponentDialog} from './task-tools/task-tools.component';
 import {PathToolsComponent, PathToolsComponentDialog} from './path-tools/path-tools.component';
 import {ToolDetailComponent} from './tool-detail/tool-detail.component';
 import {AppRoutingModule} from './app-routing.module';
@@ -21,6 +21,7 @@ import {MatTableModule} from "@angular/material/table";
 import {MatExpansionModule} from "@angular/material/expansion";
 import {ProgressBarComponent} from "./progress-bar.component";
 import {MatDialogModule} from "@angular/material/dialog";
+import {DragDropModule} from "@angular/cdk/drag-drop";
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import {MatDialogModule} from "@angular/material/dialog";
     StepsComponent,
     TasksComponent,
     TaskToolsComponent,
+    TaskToolsComponentDialog,
     PathToolsComponent,
     PathToolsComponentDialog,
     ToolDetailComponent,
@@ -45,6 +47,7 @@ import {MatDialogModule} from "@angular/material/dialog";
     MatCardModule,
     MatTableModule,
     MatDialogModule,
+    DragDropModule,
     MdePopoverModule,
     AppRoutingModule,
     RouterModule.forRoot([
