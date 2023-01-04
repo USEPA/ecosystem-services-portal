@@ -1,8 +1,8 @@
 <ng-template [ngIf]="task" [ngIfElse]="noSelection">
   <div>
     Your Selections:<br>
-    <a [routerLink]="['/paths']" [innerHTML]="path.name"></a> >
-    <a [routerLink]="['/paths', path.slug, 'steps']" [innerHTML]="step.name"></a> >
+    <a [routerLink]="['/paths']">ES Portal Home</a> >
+    <a [routerLink]="['/paths', path.slug, 'steps']" [innerHTML]="path.name + ': ' + step.name"></a> >
     <a [routerLink]="['/paths', path.slug, 'steps','tasks']" [innerHTML]="task.name"></a> >
     <span [innerHTML]="tool.short_name"></span>
   </div>
