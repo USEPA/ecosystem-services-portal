@@ -1,27 +1,34 @@
-<h2 mat-dialog-title>Matching Tools for All {{path.name}} Steps</h2>
-<mat-dialog-content class="mat-typography">
-        <div class="grid">
-          <div [class]="'grid-row ' + path.slug">
-            <div class="grid-col item"><b>{{path.name}} Step</b></div>
-            <div class="grid-col item"><b>Tool Name</b></div>
-            <div class="grid-col item"><b>Task Label</b></div>
-          </div>
-          <ng-container *ngFor="let tool of this.matchingTools; let i = index">
-            <div [class]="'grid-row row-' + i">
-              <div [class]="'grid-col item ' + path.slug + '-' + ((tool.matching_step.id - offset) + 1)"
-                   [innerHTML]="(tool.matching_step.id - offset) + ' - ' + tool.matching_step.name">
-
+<h3>Matching Tools for All {{path.name}} Steps</h3>
+<div mat-dialog-content class="mat-typography">
+  <div class="grid">
+    <div [class]="'grid-row ' + path.slug">
+      <div class="grid-col item"><b>{{path.name}} Step</b></div>
+      <div class="grid-col item"><b>Tool Name</b></div>
+      <div class="grid-col item"><b>Task Label</b></div>
+    </div>
+    <ng-container *ngFor="let step of this.matchingSteps; let i = index">
+      <div [class]="'grid-row row-' + i">
+        <div [class]="'grid-col-4 item ' + path.slug + '-' + ((step.id - offset) + 1)"
+             [innerHTML]="(step.id - offset) + ' - ' + step.name">
+        </div>
+        <div class="grid-col-8">
+          <ng-container *ngFor="let tool of this.matchingTools; let j = index">
+            <ng-template [ngIf]="tool.matching_step == step">
+              <div [class]="'grid-row'">
+                <div [class]="'grid-col item ' + ((i % 2 == 0) ? 'even' : path.slug + '-light')"
+                     [innerHTML]="tool.name">
+                </div>
+                <div [class]="'grid-col item ' + ((i % 2 == 0) ? 'even' : path.slug + '-light')"
+                     [innerHTML]="tool.matching_task.name">
+                </div>
               </div>
-              <div [class]="'grid-col item ' + ((i % 2 == 0) ? 'even' : path.slug + '-light')"
-                   [innerHTML]="tool.name">
-              </div>
-              <div [class]="'grid-col item ' + ((i % 2 == 0) ? 'even' : path.slug + '-light')"
-                   [innerHTML]="tool.matching_task.name">
-              </div>
-            </div>
+            </ng-template>
           </ng-container>
         </div>
-</mat-dialog-content>
-<mat-dialog-actions align="end">
-  <button mat-button mat-dialog-close>Close</button>
-</mat-dialog-actions>
+      </div>
+    </ng-container>
+  </div>
+</div>
+<div mat-dialog-actions align="end" [ngClass]="path.slug">
+  <button mat-raised-button color="primary" mat-dialog-close>Close</button>
+</div>

@@ -13,7 +13,7 @@ import {TaskService} from "../task.service";
 @Component({
   selector: 'app-path-tools',
   templateUrl: './path-tools.component.html',
-  encapsulation: ViewEncapsulation.None
+  // encapsulation: ViewEncapsulation.None
 })
 export class PathToolsComponent {
   path: Path;
@@ -40,6 +40,7 @@ export class PathToolsComponent {
 export class PathToolsComponentDialog implements OnInit {
   path: Path
   matchingTools: Tool[] = [];
+  matchingSteps: Step[] = [];
   offset: number = 0;
 
   constructor(private toolService: ToolService,
@@ -48,11 +49,10 @@ export class PathToolsComponentDialog implements OnInit {
               public dialog: MatDialog,
               @Optional() @Inject(MAT_DIALOG_DATA) public data: any
   ) {
-    this.path = data.path
-    let steps: Step[] = []
     let tasks: Task[] = []
-    this.stepService.getPathSteps(this.path).subscribe(h => steps = h)
-    this.taskService.getStepTasks(steps).subscribe(h => tasks = h)
+    this.path = data.path
+    this.stepService.getPathSteps(this.path).subscribe(h => this.matchingSteps = h)
+    this.taskService.getStepTasks(this.matchingSteps).subscribe(h => tasks = h)
     this.toolService.getTaskTools(tasks).subscribe(h => this.matchingTools = h)
     this.matchingTools.sort((a, b) => a.matching_step.id > b.matching_step.id ? 1 : -1)
     this.offset = this.matchingTools[0].matching_step.id - 1

@@ -14,7 +14,7 @@ import {of} from "rxjs";
   selector: 'app-tool-detail',
   templateUrl: './tool-detail.component.html',
   styleUrls: ['./tool-detail.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  // encapsulation: ViewEncapsulation.None
 })
 export class ToolDetailComponent implements OnInit {
   tool: Tool;

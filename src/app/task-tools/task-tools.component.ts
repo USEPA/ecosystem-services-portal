@@ -50,7 +50,7 @@ export class TaskToolsComponent implements OnChanges {
 @Component({
   templateUrl: '../task-tools/task-tools-dialog.component.html',
   styleUrls: ['../task-tools/task-tools.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  // encapsulation: ViewEncapsulation.None
 })
 export class TaskToolsComponentDialog implements OnInit {
   tool: Tool;
