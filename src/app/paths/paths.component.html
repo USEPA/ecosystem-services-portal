@@ -7,10 +7,10 @@
 <div class="grid-row grid-gap">
   <ng-container *ngFor="let path of paths">
     <div class="desktop:grid-col">
-      <a mat-raised-button id="{{path.slug}}-button"  [routerLink]="[path.slug, 'steps']">
+      <button mat-raised-button id="{{path.slug}}-button"  [routerLink]="[path.slug, 'steps']">
         <img src="assets/{{path.slug}}-icon.svg" alt="{{path.name}}"><br>
         {{path.name}}
-      </a>
+      </button>
 
       <a mat-icon-button [mdePopoverTriggerFor]="appPopover"
               mdePopoverTriggerOn="click"

@@ -91,10 +91,11 @@ $hues: 100 200 300 400 500 700 900;
     font-size: large;
     font-weight: bold;
     white-space: normal;
-    padding-bottom: 15px;
+    padding-top: 0 !important;
+    padding-bottom: 25px;
     margin-bottom: 25px;
     text-align: center;
-    border-radius: 2em;
+    border-radius: 14px; //2em;
     height: 286px;
     max-width: 256px !important;
     margin-left: auto;
@@ -104,9 +105,41 @@ $hues: 100 200 300 400 500 700 900;
       fill: $contrast-color;
     }
 
-    box-shadow:inset 0px 0px 12px 4px $base-extra-light-color;
+    text-shadow: 0 0 2px rgba(0,0,0,.3);
+    font-family: sans-serif;
+    box-shadow:
+      inset 0 0 2px 0 rgba(255,255,255,.6),
+      inset 0 0 5px 0 rgba(0,0,0,.8),
+      inset 0 0 3px 4px rgba(0,0,0,.05),
+      inset 0 0 5px 0 rgba(0,0,0,.2),
+      2px 2px 4px 0 rgba(0,0,0,.25);
+
+    :before, :after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 8px;
+      right: 8px;
+      height: 4px;
+    }
+
+    :before {
+      top: 0;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      background: rgba(255,255,255,.4);
+      box-shadow: 0 1px 2px 0 rgba(255,255,255,.6);
+    }
+    :after {
+      bottom: 0;
+      border-top-left-radius: 14px;
+      border-top-right-radius: 14px;
+      background: rgba(0,0,0,.15);
+      box-shadow: 0 -1px 2px 1px rgba(0,0,0,.15);
+    }
+
     background-color:$base-color;
-    border:1px solid $base-dark-color;
+    //border:1px solid $base-dark-color;
 
 
     &:hover {
@@ -127,14 +160,6 @@ $hues: 100 200 300 400 500 700 900;
       height: 216px;
     }
   }
-
-
-
-
-
-
-
-
 
 
   @for $i from 1 through length($hues) {
