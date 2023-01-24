@@ -11,9 +11,12 @@ div.grid > div.grid-row:nth-of-type(even) {
   padding: .5em;
 }
 
-mat-accordion mat-expansion-panel-header {
-  //background: #e0e0e0;
+.mat-accordion .mat-expansion-panel-header {
   min-height: 32px !important;
+}
+
+.mat-expansion-panel-spacing {
+  margin: 8px 0 0 0 !important
 }
 
 mat-accordion mat-expansion-panel-header.mat-expanded {
@@ -25,8 +28,11 @@ mat-accordion mat-expansion-panel-header.mat-expanded {
 
 mat-accordion div.mat-expansion-panel-body {
   line-height: 32px !important;
-  padding: 4px 24px 4px 48px !important;
+  padding: 0 24px 4px 48px !important;
   white-space: normal !important;
   font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: 16px;
+}
+.mat-expansion-panel-content > .mat-expansion-panel-body {
+  margin-top: 8px !important;
 }

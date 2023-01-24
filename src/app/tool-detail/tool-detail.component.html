@@ -24,7 +24,7 @@
         <div *ngFor="let pathStep of this.pathSteps">
           <ng-container *ngIf="pathStep.related_steps.length > 0">
             <mat-expansion-panel [expanded]="path && pathStep.id === path.id">
-              <mat-expansion-panel-header [ngClass]="pathStep.slug">Steps in {{pathStep.name}} this Tool is Suited for
+              <mat-expansion-panel-header [ngClass]="pathStep.slug" class="mat-expansion-panel-spacing">Steps in {{pathStep.name}} this Tool is Suited for
               </mat-expansion-panel-header>
               <div *ngFor="let step of pathStep.related_steps; let i = index">
               <span class="text-green">

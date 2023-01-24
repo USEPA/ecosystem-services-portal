@@ -14,7 +14,7 @@ import {of} from "rxjs";
   selector: 'app-tool-detail',
   templateUrl: './tool-detail.component.html',
   styleUrls: ['./tool-detail.component.scss'],
-  // encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None
 })
 export class ToolDetailComponent implements OnInit {
   tool: Tool;
@@ -39,7 +39,7 @@ export class ToolDetailComponent implements OnInit {
     this.path = this.dialogPath ?? undefined;
     this.tool = this.dialogTool ?? this.toolService.getToolBySlug(slug);
     if (this.tool !== undefined) {
-      const task_id = Number(this.route.snapshot.paramMap.get('task_id'));
+      const task_id = this.tool.matching_task?.id ?? Number(this.route.snapshot.paramMap.get('task_id'));
       this.taskService.getTask(task_id).subscribe(task => this.task = task);
       if (this.task !== undefined) {
         of(this.task.step).subscribe(step => this.step = step);
