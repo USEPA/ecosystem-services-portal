@@ -4,16 +4,26 @@
 >
   <ol class="usa-step-indicator__segments">
     <li class="usa-step-indicator__segment" [ngClass]="step1_class">
-      <span class="usa-step-indicator__segment-label">Step 1</span>
+      <a [routerLink]="['/paths']" *ngIf="step1_href; else step1_elseblock">
+        <span class="usa-step-indicator__segment-label">Step 1: Select Path</span>
+      </a>
+      <ng-template #step1_elseblock>
+        <span class="usa-step-indicator__segment-label">Step 1: Select Path</span>
+      </ng-template>
     </li>
     <li class="usa-step-indicator__segment" [ngClass]="step2_class">
-      <span class="usa-step-indicator__segment-label">Step 2</span>
+      <a [routerLink]="['/paths', slug, 'steps']" *ngIf="step2_href; else step2_elseblock">
+        <span class="usa-step-indicator__segment-label">Step 2: Select Process Phases</span>
+      </a>
+      <ng-template #step2_elseblock>
+        <span class="usa-step-indicator__segment-label">Step 2: Select Process Phases</span>
+      </ng-template>
     </li>
     <li class="usa-step-indicator__segment" [ngClass]="step3_class">
-      <span class="usa-step-indicator__segment-label">Step 3</span>
+      <span class="usa-step-indicator__segment-label">Step 3: Select Tasks</span>
     </li>
     <li class="usa-step-indicator__segment" [ngClass]="step4_class">
-      <span class="usa-step-indicator__segment-label">Matching Tools</span>
+      <span class="usa-step-indicator__segment-label">Step 4: View Matching Tools</span>
     </li>
   </ol>
 </div>
