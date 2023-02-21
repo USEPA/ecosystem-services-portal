@@ -8,15 +8,18 @@
   </div>
   <div class="grid-col-12">
     <div class="grid mat-typography">
-      <div  [class]="'grid-row ' + path.slug">
-        <div class="grid-col-6"><b>Process Phase</b></div>
-        <div class="grid-col-6"><b>Recommended Ecosystem Services Tools</b></div>
+      <div [class]="'grid-row'">
+        <div [class]="'grid-col item ' + path.slug + '-light'"><b>Process Phase</b></div>
+        <div [class]="'grid-col item ' + path.slug + '-light'"><b>Recommended Ecosystem Services Tools</b></div>
       </div>
-      <ng-container *ngFor="let tool of this.matchingTools">
+      <ng-container *ngFor="let tool of this.matchingTools; let i = index">
         <div class="grid-row">
-          <div class="grid-col-6" [innerHTML]="tool.matching_step.name"></div>
-          <div class="grid-col-6">
-            <a rel="script" href="javascript:" (mousedown)="openDialog(tool)" [innerHTML]="tool.name"></a>
+          <div class="grid-col"
+               [class]="'grid-col item ' + ((i % 2 == 0) ? 'even' : path.slug + '-light')"
+               [innerHTML]="tool.matching_step.name"></div>
+          <div class="grid-col"
+               [class]="'grid-col item ' + ((i % 2 == 0) ? 'even' : path.slug + '-light')">
+            <a rel="script" href="javascript:" (mousedown)="openDialog(tool)" (keydown.enter)="openDialog(tool)" [innerHTML]="tool.name"></a>
           </div>
         </div>
       </ng-container>

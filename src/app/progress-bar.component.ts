@@ -11,10 +11,10 @@ export class ProgressBarComponent implements OnChanges {
   @Input() matchingTools: Tool[] = []
   slug: String
 
-  step1_class = "usa-step-indicator__segment--current"
-  step2_class = "usa-step-indicator__segment"
-  step3_class = "usa-step-indicator__segment"
-  step4_class = "usa-step-indicator__segment"
+  step1_status = "current"
+  step2_status = ""
+  step3_status = ""
+  step4_status = ""
 
   step1_href = false;
   step2_href = false;
@@ -22,15 +22,15 @@ export class ProgressBarComponent implements OnChanges {
   constructor(private route: ActivatedRoute) {
     this.slug = String(this.route.snapshot.paramMap.get('slug'));
     if (this.route.snapshot.url.find(h => h.path === 'tasks')) {
-      this.step1_class = "usa-step-indicator__segment--complete"
-      this.step2_class = "usa-step-indicator__segment--complete"
-      this.step3_class = "usa-step-indicator__segment--current"
+      this.step1_status = "complete"
+      this.step2_status = "complete"
+      this.step3_status = "current"
     } else if (this.route.snapshot.url.find(h => h.path === 'steps')) {
-      this.step1_class = "usa-step-indicator__segment--complete"
-      this.step2_class = "usa-step-indicator__segment--current"
-      this.step3_class = "usa-step-indicator__segment"
+      this.step1_status = "complete"
+      this.step2_status = "current"
+      this.step3_status = ""
     } else {
-      this.step1_class = "usa-step-indicator__segment--current"
+      this.step1_status = "current"
     }
 
     let thisUrlSegment = this.route.snapshot.url[this.route.snapshot.url.length - 1].toString()
@@ -87,11 +87,11 @@ export class ProgressBarComponent implements OnChanges {
 
   ngOnChanges(): void {
     if (this.matchingTools.length > 0) {
-      this.step3_class = "usa-step-indicator__segment--complete"
-      this.step4_class = "usa-step-indicator__segment--current"
+      this.step3_status = "complete"
+      this.step4_status = "current"
     } else {
-      this.step3_class = "usa-step-indicator__segment--current"
-      this.step4_class = "usa-step-indicator__segment"
+      this.step3_status = "current"
+      this.step4_status = ""
     }
     // if (this.matchingTools.length > 0) {
     //   this.step4_color = this.fillColor;

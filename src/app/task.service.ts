@@ -38,8 +38,7 @@ export class TaskService {
   }
 
   getToolTasks(tool: Tool): Observable<Task[]> {
-    console.log("tool",tool,"this.tasks.filter(h => h.tools.indexOf(tool) >= 0)",this.tasks.filter(h => {h.tools.indexOf(tool) >= 0; console.log(h.tools,h.tools.indexOf(tool))}))
-    return of(this.tasks.filter(h => h.tools.indexOf(tool) >= 0)!);
+    return of(this.tasks.filter(h => h.tools.map(tool => tool.id).indexOf(tool.id) >= 0)!)
   }
 }
 

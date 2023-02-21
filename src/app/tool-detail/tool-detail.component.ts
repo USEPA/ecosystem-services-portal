@@ -13,8 +13,7 @@ import {of} from "rxjs";
 @Component({
   selector: 'app-tool-detail',
   templateUrl: './tool-detail.component.html',
-  styleUrls: ['./tool-detail.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./tool-detail.component.scss']
 })
 export class ToolDetailComponent implements OnInit {
   tool: Tool;

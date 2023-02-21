@@ -1,4 +1,4 @@
-import {Component, OnInit, Input} from '@angular/core';
+import {Component, OnInit, Input, ViewChildren, QueryList} from '@angular/core';
 import {Router, ActivatedRoute} from '@angular/router';
 import {Path} from '../path';
 import {PathService} from '../path.service';
@@ -6,6 +6,7 @@ import {Step} from '../step';
 import {StepService} from '../step.service';
 import {UntypedFormGroup, UntypedFormBuilder, UntypedFormArray, UntypedFormControl, ValidatorFn} from '@angular/forms';
 import {Task} from "../task";
+import {MdePopoverTrigger} from "@material-extended/mde";
 
 @Component({
   selector: 'app-steps',
@@ -18,6 +19,7 @@ export class StepsComponent implements OnInit {
   form: UntypedFormGroup = new UntypedFormGroup({});
   steps: Step[] = [];
   selectedStepIds: number[] = [];
+  @ViewChildren(MdePopoverTrigger) trigger: QueryList<MdePopoverTrigger>;
 
   constructor(private router: Router,
               private route: ActivatedRoute,
@@ -76,6 +78,11 @@ export class StepsComponent implements OnInit {
     sessionStorage.setItem('selectedStepIds', this.selectedStepIds.toString())
     this.router.navigate(['/paths', this.path.slug, 'steps', 'tasks', {}]);
   }
+
+  openAppPopover(id: number) {
+    this.trigger.toArray()[id - 1].togglePopover();
+  }
+
 }
 
 function minSelectedCheckboxes(min = 1) {

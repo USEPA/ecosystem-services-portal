@@ -1,7 +1,7 @@
 <div class="grid-row grid-gap">
   <div class="grid-col">
     Your Selections:<br>
-    <a [routerLink]="['/paths']">ES Portal Home</a> > {{ path.name }}: Select Process Phases<br><br>
+    <a [routerLink]="['/paths']" tabindex="0">ES Portal Home</a> > {{ path.name }}: Select Process Phases<br><br>
   </div>
 </div>
 <div class="grid-row grid-gap">
@@ -19,8 +19,9 @@
                mdePopoverPositionX="after"
                mdePopoverPositionY="above"
                mdePopoverTriggerOn="click"
-               #popoverTrigger="mdePopoverTrigger">
-              <img alt="information icon" src="assets/info-circle.svg">
+               #popoverTrigger="mdePopoverTrigger"
+               (keyup.enter)="openAppPopover(i);">
+            <img alt="Additional Information" src="assets/info-circle.svg" tabindex="0">
             </a>
             <mde-popover #appPopover="mdePopover" [mdePopoverOverlapTrigger]="false">
               <mat-card style="max-width: 300px">
@@ -30,8 +31,8 @@
           </li>
         </ng-container>
       </ul>
-      <button mat-raised-button [ngClass]="'usa-button'" [routerLink]="['/paths']" color="primary">< Back</button>
-      <button mat-raised-button [ngClass]="'usa-button margin-left-1'" [disabled]="!form.valid" (click)="submit()"
+      <button mat-raised-button [ngClass]="'usa-button'" [routerLink]="['/paths']" color="primary" tabindex="0" aria-label="Back">< Back</button>
+      <button mat-raised-button [ngClass]="'usa-button margin-left-1'" [disabled]="!form.valid" (click)="submit()" tabindex="0" aria-label="Next"
               color="primary">Next >
       </button>
     </form>
@@ -39,7 +40,7 @@
     <div class="grid-col-12" [innerHTML]="path.moreinfo"></div>
   </div>
   <div class="tablet:grid-col-6 {{path.slug}}">
-    <img src="assets/images/{{path.slug}}.jpg" alt="{{path.name}} process illustration">
+    <img src="assets/images/{{path.slug}}.jpg" alt='{{path.name}} process diagram - for a description visit {{path.moreinfourl}}'>
   </div>
 </div>
 

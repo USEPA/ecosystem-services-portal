@@ -1,29 +1,42 @@
 <div
   class="usa-step-indicator usa-step-indicator--counters"
-  aria-label="progress"
->
-  <ol class="usa-step-indicator__segments">
-    <li class="usa-step-indicator__segment" [ngClass]="step1_class">
-      <a [routerLink]="['/paths']" *ngIf="step1_href; else step1_elseblock">
-        <span class="usa-step-indicator__segment-label">Step 1: Select Path</span>
+  aria-label="progress">
+  <ol class="usa-step-indicator__segments" aria-hidden="true">
+    <li class="usa-step-indicator__segment"
+        [ngClass]="'usa-step-indicator__segment--' + step1_status"
+        [attr.aria-current]="step1_status=='current'">
+      <a [routerLink]="['/paths']" tabindex="0" *ngIf="step1_href; else step1_elseblock">
+        <span class="usa-step-indicator__segment-label"
+              [attr.aria-label]="'Step 1 Select Path ' + step1_status">Step 1: Select Path</span>
       </a>
       <ng-template #step1_elseblock>
-        <span class="usa-step-indicator__segment-label">Step 1: Select Path</span>
+        <span class="usa-step-indicator__segment-label"
+              [attr.aria-label]="'Step 1 Select Path ' + step1_status">Step 1: Select Path</span>
       </ng-template>
     </li>
-    <li class="usa-step-indicator__segment" [ngClass]="step2_class">
-      <a [routerLink]="['/paths', slug, 'steps']" *ngIf="step2_href; else step2_elseblock">
-        <span class="usa-step-indicator__segment-label">Step 2: Select Process Phases</span>
+    <li class="usa-step-indicator__segment"
+        [ngClass]="'usa-step-indicator__segment--' + step2_status"
+        [attr.aria-current]="step2_status=='current'">
+      <a [routerLink]="['/paths', slug, 'steps']" tabindex="0" *ngIf="step2_href; else step2_elseblock">
+        <span class="usa-step-indicator__segment-label"
+              [attr.aria-label]="'Step 2 Select Process Phases ' + step2_status">Step 2: Select Process Phases</span>
       </a>
       <ng-template #step2_elseblock>
-        <span class="usa-step-indicator__segment-label">Step 2: Select Process Phases</span>
+        <span class="usa-step-indicator__segment-label"
+              [attr.aria-label]="'Step 2: Select Process Phases ' + step2_status">Step 2: Select Process Phases</span>
       </ng-template>
     </li>
-    <li class="usa-step-indicator__segment" [ngClass]="step3_class">
-      <span class="usa-step-indicator__segment-label">Step 3: Select Tasks</span>
+    <li class="usa-step-indicator__segment"
+        [ngClass]="'usa-step-indicator__segment--' + step3_status"
+        [attr.aria-current]="step3_status=='current'">
+      <span class="usa-step-indicator__segment-label"
+            [attr.aria-label]="'Step 3 Select Tasks ' + step3_status">Step 3: Select Tasks</span>
     </li>
-    <li class="usa-step-indicator__segment" [ngClass]="step4_class">
-      <span class="usa-step-indicator__segment-label">Step 4: View Matching Tools</span>
+    <li class="usa-step-indicator__segment"
+        [ngClass]="'usa-step-indicator__segment--' + step4_status"
+        [attr.aria-current]="step4_status=='current'">
+      <span class="usa-step-indicator__segment-label"
+            [attr.aria-label]="'Step 4 View Matching Tools ' + step4_status">Step 4: View Matching Tools</span>
     </li>
   </ol>
 </div>

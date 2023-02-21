@@ -1,6 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, QueryList, ViewChildren} from '@angular/core';
 import {Path} from "../path";
 import {PathService} from "../path.service";
+import {MdePopoverTrigger} from "@material-extended/mde";
 
 @Component({
   selector: 'app-paths',
@@ -9,6 +10,7 @@ import {PathService} from "../path.service";
 })
 export class PathsComponent implements OnInit {
   paths: Path[] = []
+  @ViewChildren(MdePopoverTrigger) trigger: QueryList<MdePopoverTrigger>;
 
   constructor(private pathService: PathService) {
   }
@@ -24,5 +26,8 @@ export class PathsComponent implements OnInit {
       .subscribe(paths => this.paths = paths.slice(0, 3));
   }
 
+  openAppPopover(id: number) {
+    this.trigger.toArray()[id - 1].togglePopover();
+  }
 
 }

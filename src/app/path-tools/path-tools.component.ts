@@ -34,8 +34,7 @@ export class PathToolsComponent {
 
 @Component({
   templateUrl: './path-tools-dialog.component.html',
-  styleUrls: ['./path-tools.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  styleUrls: ['./path-tools.component.scss']
 })
 export class PathToolsComponentDialog implements OnInit {
   path: Path

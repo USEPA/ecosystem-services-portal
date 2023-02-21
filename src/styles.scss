@@ -12,15 +12,6 @@ app-root {
   max-width: 1040px;
 }
 
-input:not([disabled]):focus,
-select:not([disabled]):focus,
-textarea:not([disabled]):focus,
-button:not([disabled]):focus,
-a:not([disabled]):focus,
-mat-card-content a {
-  outline: none !important;
-}
-
 mat-card-content a {
   font-weight: bold !important;
 }
@@ -51,9 +42,14 @@ button.mat-flat-button, button.mat-raised-button {
   text-decoration: none;
 }
 
+.mat-button-disabled {
+  color: #ffffff !important;
+  background-color: #c9c9c9 !important;
+}
+
 $paths: ecological-risk-assessments $ecological-risk-assessments-palette,
-        contaminated-site-cleanup $contaminated-site-cleanup-palette,
-        other-decision-making-contexts $other-decision-making-contexts-palette;
+contaminated-site-cleanup $contaminated-site-cleanup-palette,
+other-decision-making-contexts $other-decision-making-contexts-palette;
 $hues: 100 200 300 400 500 700 900;
 
 @each $path in $paths {
@@ -64,13 +60,48 @@ $hues: 100 200 300 400 500 700 900;
   $base-dark-color: mat.get-color-from-palette(nth($path, 2), 900);
   $contrast-color: mat.get-contrast-color-from-palette(nth($path, 2), 500);
 
+
+
+  .#{nth($path,1)} .usa-step-indicator__segment--complete {
+    &::before {
+      background-color: $base-dark-color;
+      //color: color($step-indicator-background-color);
+    }
+  }
+
+  .#{nth($path,1)} .usa-step-indicator__segment--current {
+    &::before {
+      background-color: $base-color;
+      //color: color($step-indicator-background-color);
+    }
+  }
+
+  .#{nth($path,1)} .usa-step-indicator__segment--current {
+    &::after {
+      background-color: $base-color;
+    }
+    .usa-step-indicator__segment-label {
+      color: $base-color;
+    }
+  }
+
+  .#{nth($path,1)} .usa-step-indicator__segment--complete {
+    &::after {
+      background-color: $base-dark-color;
+    }
+    .usa-step-indicator__segment-label {
+      color: $base-dark-color;
+    }
+  }
+
   a.#{nth($path,1)},
   a.#{nth($path,1)}:visited,
   h4.#{nth($path,1)},
   div.grid div.#{nth($path,1)},
   mat-accordion mat-expansion-panel-header.#{nth($path,1)} {
-    background:$base-color !important;
+    background: $base-color !important;
     color: $contrast-color;
+
     svg path {
       fill: $contrast-color;
     }
@@ -84,7 +115,7 @@ $hues: 100 200 300 400 500 700 900;
     background: mat.get-color-from-palette(nth($path, 2), 50);
   }
 
-  ##{nth($path,1) + '-button'}  {
+  ##{nth($path,1) + '-button'} {
     flex: 1 1 100%;
     width: 80%;
     line-height: 20px;
@@ -101,18 +132,18 @@ $hues: 100 200 300 400 500 700 900;
     margin-left: auto;
     margin-right: auto;
     color: $contrast-color;
+
     svg path {
       fill: $contrast-color;
     }
 
-    text-shadow: 0 0 2px rgba(0,0,0,.3);
+    text-shadow: 0 0 2px rgba(0, 0, 0, .3);
     font-family: sans-serif;
-    box-shadow:
-      inset 0 0 2px 0 rgba(255,255,255,.6),
-      inset 0 0 5px 0 rgba(0,0,0,.8),
-      inset 0 0 3px 4px rgba(0,0,0,.05),
-      inset 0 0 5px 0 rgba(0,0,0,.2),
-      2px 2px 4px 0 rgba(0,0,0,.25);
+    box-shadow: inset 0 0 2px 0 rgba(255, 255, 255, .6),
+    inset 0 0 5px 0 rgba(0, 0, 0, .8),
+    inset 0 0 3px 4px rgba(0, 0, 0, .05),
+    inset 0 0 5px 0 rgba(0, 0, 0, .2),
+    2px 2px 4px 0 rgba(0, 0, 0, .25);
 
     :before, :after {
       content: '';
@@ -127,31 +158,29 @@ $hues: 100 200 300 400 500 700 900;
       top: 0;
       border-bottom-left-radius: 8px;
       border-bottom-right-radius: 8px;
-      background: rgba(255,255,255,.4);
-      box-shadow: 0 1px 2px 0 rgba(255,255,255,.6);
+      background: rgba(255, 255, 255, .4);
+      box-shadow: 0 1px 2px 0 rgba(255, 255, 255, .6);
     }
+
     :after {
       bottom: 0;
       border-top-left-radius: 14px;
       border-top-right-radius: 14px;
-      background: rgba(0,0,0,.15);
-      box-shadow: 0 -1px 2px 1px rgba(0,0,0,.15);
+      background: rgba(0, 0, 0, .15);
+      box-shadow: 0 -1px 2px 1px rgba(0, 0, 0, .15);
     }
 
-    background-color:$base-color;
-    //border:1px solid $base-dark-color;
-
+    background-color: $base-color;
 
     &:hover {
-      //background:linear-gradient(to bottom, $base-light-color 2%, $base-color 100%);
-      background-color:$base-light-color !important;
-    }
-    &:active {
-      position:relative;
-      top:1px;
+      background-color: $base-light-color !important;
     }
 
-    //@include mat.elevation(8);
+    &:active {
+      position: relative;
+      top: 1px;
+    }
+
     img {
       fill: white;
       width: 90%;

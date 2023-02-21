@@ -1,4 +1,4 @@
-<ng-template [ngIf]="task" [ngIfElse]="noSelection">
+<ng-template [ngIf]="this.task !== undefined" [ngIfElse]="noSelection">
   <div>
     Your Selections:<br>
     <a [routerLink]="['/paths']">ES Portal Home</a> >
@@ -8,9 +8,7 @@
   </div>
 </ng-template>
 <ng-template #noSelection>
-<!--  <ng-template [ngIf]="!dialogTool">-->
     <h2>{{tool.short_name}}</h2>
-<!--  </ng-template>-->
 </ng-template>
 
 <div class="grid-row margin-top-6 margin-bottom-3">

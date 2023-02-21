@@ -1,6 +1,6 @@
 Your Selections:<br>
-<a [routerLink]="['/paths']">ES Portal Home</a>
-> <a [routerLink]="['/paths', path.slug, 'steps']"> {{ path.name }}: {{ selectedStepBreadcrumbLabel }}</a>
+<a [routerLink]="['/paths']" tabindex="0">ES Portal Home</a>
+> <a [routerLink]="['/paths', path.slug, 'steps']" tabindex="0"> {{ path.name }}: {{ selectedStepBreadcrumbLabel }}</a>
 > Select Tasks
 <span [hidden]="matchingTools.length==0">
   > Your Tool Matches
