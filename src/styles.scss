@@ -65,14 +65,12 @@ $hues: 100 200 300 400 500 700 900;
   .#{nth($path,1)} .usa-step-indicator__segment--complete {
     &::before {
       background-color: $base-dark-color;
-      //color: color($step-indicator-background-color);
     }
   }
 
   .#{nth($path,1)} .usa-step-indicator__segment--current {
     &::before {
       background-color: $base-color;
-      //color: color($step-indicator-background-color);
     }
   }
 
@@ -81,7 +79,7 @@ $hues: 100 200 300 400 500 700 900;
       background-color: $base-color;
     }
     .usa-step-indicator__segment-label {
-      color: $base-color;
+      color: rgba(0, 0, 0, .87);
     }
   }
 
@@ -90,7 +88,7 @@ $hues: 100 200 300 400 500 700 900;
       background-color: $base-dark-color;
     }
     .usa-step-indicator__segment-label {
-      color: $base-dark-color;
+      color: rgba(0, 0, 0, .87);
     }
   }
 
@@ -202,4 +200,8 @@ $hues: 100 200 300 400 500 700 900;
 
 .usa-step-indicator__segment a {
   text-decoration: none;
+}
+
+h2 {
+  font-size: 1.34rem;
 }

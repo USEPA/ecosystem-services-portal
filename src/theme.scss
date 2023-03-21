@@ -3,7 +3,7 @@
 @include mat.core();
 
 $ecological-risk-assessments-palette: (
-    50 : #e4e9f0,
+    50 : #f1f4f7,
     100 : #8da2c0,
     200 : #8da2c0,
     300 : #5f7ca6,
@@ -20,7 +20,7 @@ $ecological-risk-assessments-palette: (
     contrast: (
       50 : rgba(black, 0.87),
       100 : rgba(black, 0.87),
-      200 : #ffffff,
+      200 : rgba(black, 0.87),
       300 : #ffffff,
       400 : #ffffff,
       500 : #ffffff,
@@ -69,7 +69,7 @@ $contaminated-site-cleanup-palette: (
   );
 
 $other-decision-making-contexts-palette: (
-    50 : #eaf0eb,
+    50 : #f4f7f4,
     100 : #cad9cc,
     200 : #a6c0aa,
     300 : #82a688,
@@ -85,8 +85,8 @@ $other-decision-making-contexts-palette: (
     A700 : #17ff33,
     contrast: (
       50 : rgba(black, 0.87),
-      100 : #ffffff,
-      200 : #ffffff,
+      100 : rgba(black, 0.87),
+      200 : rgba(black, 0.87),
       300 : #ffffff,
       400 : #ffffff,
       500 : #ffffff,

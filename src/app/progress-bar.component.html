@@ -1,30 +1,23 @@
 <div
+  [mdePopoverTriggerFor]="appPopover"
+  mdePopoverPositionX="after"
+  mdePopoverPositionY="above"
+  mdePopoverTriggerOn="click"
+  #popoverTrigger="mdePopoverTrigger"
   class="usa-step-indicator usa-step-indicator--counters"
   aria-label="progress">
   <ol class="usa-step-indicator__segments" aria-hidden="true">
     <li class="usa-step-indicator__segment"
         [ngClass]="'usa-step-indicator__segment--' + step1_status"
         [attr.aria-current]="step1_status=='current'">
-      <a [routerLink]="['/paths']" tabindex="0" *ngIf="step1_href; else step1_elseblock">
         <span class="usa-step-indicator__segment-label"
               [attr.aria-label]="'Step 1 Select Path ' + step1_status">Step 1: Select Path</span>
-      </a>
-      <ng-template #step1_elseblock>
-        <span class="usa-step-indicator__segment-label"
-              [attr.aria-label]="'Step 1 Select Path ' + step1_status">Step 1: Select Path</span>
-      </ng-template>
     </li>
     <li class="usa-step-indicator__segment"
         [ngClass]="'usa-step-indicator__segment--' + step2_status"
         [attr.aria-current]="step2_status=='current'">
-      <a [routerLink]="['/paths', slug, 'steps']" tabindex="0" *ngIf="step2_href; else step2_elseblock">
-        <span class="usa-step-indicator__segment-label"
-              [attr.aria-label]="'Step 2 Select Process Phases ' + step2_status">Step 2: Select Process Phases</span>
-      </a>
-      <ng-template #step2_elseblock>
         <span class="usa-step-indicator__segment-label"
               [attr.aria-label]="'Step 2: Select Process Phases ' + step2_status">Step 2: Select Process Phases</span>
-      </ng-template>
     </li>
     <li class="usa-step-indicator__segment"
         [ngClass]="'usa-step-indicator__segment--' + step3_status"
@@ -40,3 +33,8 @@
     </li>
   </ol>
 </div>
+<mde-popover #appPopover="mdePopover" [mdePopoverOverlapTrigger]="false">
+  <mat-card style="max-width: 300px">
+    <mat-card-content>Please select one of the options above to progress to the next step.</mat-card-content>
+  </mat-card>
+</mde-popover>

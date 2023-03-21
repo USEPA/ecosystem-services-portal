@@ -96,12 +96,6 @@
     "tool_ids": [9]
   },
   {
-    "id": 17,
-    "name": "Find strategies for incorporating ES into monitoring",
-    "step_id": 4,
-    "tool_ids": [5]
-  },
-  {
     "id": 18,
     "name": "Estimate stressors and impacts on ES",
     "step_id": 5,

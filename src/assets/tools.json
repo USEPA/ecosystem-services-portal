@@ -6,7 +6,7 @@
     "slug": "fegs_scoping",
     "description": "The <a href=\"https://www.epa.gov/eco-research/final-ecosystem-goods-and-services-fegs-scoping-tool\" target=\"_blank\"><b>FEGS Scoping Tool</b></a> provides a transparent, repeatable, and documented approach for identifying and prioritizing stakeholders, the ways they benefit from the environment, and the aspects of the environment necessary for realizing those benefits for a specific decision or decision context.",
     "url": "https://www.epa.gov/eco-research/final-ecosystem-goods-and-services-fegs-scoping-tool",
-    "image_file": "fegs_scoping.jpg",
+    "image_file": "fegs_scoping.png",
     "related_steps": {
       "1": [
         "Planning & Scoping",
@@ -127,7 +127,7 @@
     "slug": "caddis",
     "description": "<a href=\"https://www.epa.gov/caddis\" target=\"_blank\"><b>CADDIS (Causal Analysis/Diagnosis Decision Information System)</b></a> is an on-line application designed to help users' causal assessments, primarily in stream ecosystems. It provides a logical, step-by-step framework for stressor identification based on the U.S. EPA's Stressor Identification Guidance Document. The CADDIS application also provides additional information and tools that can be used in these assessments.",
     "url": "https://www.epa.gov/caddis",
-    "image_file": "caddis.jpg",
+    "image_file": "caddis.png",
     "related_steps": {
       "1": [
         "Problem Formulation",
@@ -473,7 +473,7 @@
     "slug": "rbi",
     "description": "The <a href=\"https://www.epa.gov/water-research/rapid-benefit-indicators-rbi-approach\" target=\"_blank\"><b>Rapid Benefit Indicator (RBI) approach</b></a> allows users to quickly estimate and quantify benefits to people around an ecological restoration site with several components. It includes a fillable checklist and a spatial analysis toolset to help users develop and summarize indicators.",
     "url": "https://www.epa.gov/water-research/rapid-benefit-indicators-rbi-approach",
-    "image_file": "rbi.jpg",
+    "image_file": "rbi.png",
     "related_steps": {
       "1": [
         "Risk Characterization",
@@ -584,7 +584,7 @@
     "slug": "practical_strategies",
     "description": "<a href=\"https://cfpub.epa.gov/si/si_public_record_report.cfm?dirEntryId=337461&Lab=NHEERL\" target=\"_blank\"><b>Practical Strategies (for Integrating Final Ecosystem Goods and Services into Community Decision-Making)</b></a> is a synthesis report describing the U.S. EPA's Office of Research and Development's (ORD) research to incorporate ES benefits into community-scale decisions across the U.S.<br><br>You can learn how community-based studies have previously utilized ecosystem services to inform aspects of their decision making, to identify best practices that may be transferred to other communities, and to identify gaps in those practices.",
     "url": "https://cfpub.epa.gov/si/si_public_record_report.cfm?dirEntryId=337461&Lab=NHEERL",
-    "image_file": "practical_strategies.jpg",
+    "image_file": "practical_strategies.png",
     "related_steps": {
       "1": [
         "Risk Communication"
