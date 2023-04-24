@@ -1,10 +1,10 @@
 div.grid {
   width: 100%;
-  border: 12px solid #e0e0e0;
+  border: 12px solid #f3f3f3;
 }
 
 div.grid > div.grid-row:nth-of-type(even) {
-  background: #e0e0e0;
+  background: #f3f3f3;
 }
 
 .grid > .grid-row {
