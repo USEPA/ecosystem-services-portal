@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import * as data from '../assets/tasks.json';
+import * as data from '../assets/data/tasks.json';
 import {Observable, of} from 'rxjs';
 import {Task} from "./task";
 import {Tool} from "./tool";

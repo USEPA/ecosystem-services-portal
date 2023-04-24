@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Step} from "./step";
-import * as data from '../assets/steps.json';
+import * as data from '../assets/data/steps.json';
 import {Observable, of} from 'rxjs';
 import {Path} from "./path";
 import {PathService} from "./path.service";

@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Path} from "./path";
-import * as data from '../assets/paths.json';
+import * as data from '../assets/data/paths.json';
 import {Observable, of} from 'rxjs';
 
 @Injectable({

@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Observable, of} from 'rxjs';
-import * as data from "../assets/tools.json";
+import * as data from "../assets/data/tools.json";
 import {Tool} from "./tool";
 import {Task} from "./task";
 
