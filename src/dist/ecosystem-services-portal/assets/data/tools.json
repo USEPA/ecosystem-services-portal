@@ -1,0 +1,633 @@
+[
+  {
+    "id": 1,
+    "name": "Final Ecosystem Goods and Services (FEGS) Scoping Tool",
+    "short_name": "FEGS Scoping Tool",
+    "slug": "fegs_scoping",
+    "description": "The <a href=\"https://www.epa.gov/eco-research/final-ecosystem-goods-and-services-fegs-scoping-tool\" target=\"_blank\"><b>FEGS Scoping Tool</b></a> provides a transparent, repeatable, and documented approach for identifying and prioritizing stakeholders, the ways they benefit from the environment, and the aspects of the environment necessary for realizing those benefits for a specific decision or decision context.",
+    "url": "https://www.epa.gov/eco-research/final-ecosystem-goods-and-services-fegs-scoping-tool",
+    "image_file": "fegs_scoping.png",
+    "related_steps": {
+      "1": [
+        "Planning & Scoping",
+        "Problem Formulation",
+        "Risk Communication"
+      ],
+      "2": [
+        "Site Assessment",
+        "Site Investigation and Alternatives Evaluation",
+        "Remedy Selection",
+        "Remedy Implementation"
+      ],
+      "3": [
+        "Clarifying Decision Context",
+        "Defining Objectives",
+        "Evaluating Trade-offs and Select"
+      ]
+    },
+    "detail": {
+      "Level of expertise needed:": [
+        "Low – No technical expertise is necessary to use the tool, only familiarity with the community and its stakeholder groups."
+      ],
+      "Level of effort needed:": [
+        [
+          "<b>Approach</b>",
+          "<b>Effort Needed</b>"
+        ],
+        [
+          "Tool Orientation",
+          "30 minutes"
+        ],
+        [
+          "An individual or group using the tool alone",
+          "2-4 hours"
+        ],
+        [
+          "One or more groups using the tool in consultation with stakeholders",
+          "Time varies based on method of consultation and the number of groups involved, could range from a single workshop to a series of conversations/meetings"
+        ]
+      ],
+      "Questions it might answer:": [
+        "How are stakeholder groups benefiting from the environment?",
+        "What aspects of the environment are necessary for those benefits?",
+        "What interests do different groups have in common?"
+      ],
+      "Tasks it can help with:": [],
+      "Resources:": [
+        "<a href=\"https://cfpub.epa.gov/si/si_public_record_Report.cfm?dirEntryId=350722&Lab=CEMM\" target=\"_blank\">Prioritizing Stakeholders, Beneficiaries, and Environmental Attributes: A Tool for Ecosystem-Based Management</a> (2020)",
+        "<a href=\"https://www.epa.gov/eco-research/fegs-scoping-tool-installation\" target=\"_blank\">FEGS Scoping Tool Installation</a>",
+        "<a href=\"https://www.epa.gov/eco-research/fegs-scoping-tool-user-manual\" target=\"_blank\">FEGS Scoping Tool User Manual</a>"
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "name": "Final Ecosystem Goods and Services (FEGS) Metrics Report",
+    "short_name": "FEGS Metrics Report",
+    "slug": "fegs_metrics",
+    "description": "The <a href=\"https://www.epa.gov/eco-research/final-ecosystem-goods-and-services-fegs-metrics-report\" target=\"_blank\"><b>FEGS Metrics Report</b></a> provides a transparent, repeatable, and defendable approach for selecting relevant environmental attributes in the context of decision making and for developing user specific metrics for those attributes.<br><br>The report guides users through over 200 metrics for 45 different ways in which people directly benefit from ecosystems to help answer the question, \"How can I identify and develop metrics for new ecosystems or beneficial uses?\"",
+    "url": "https://www.epa.gov/eco-research/final-ecosystem-goods-and-services-fegs-metrics-report",
+    "image_file": "fegs_metrics.jpg",
+    "related_steps": {
+      "1": [
+        "Risk Communication"
+      ],
+      "2": [
+        "Site Assessment",
+        "Site Investigation and Alternatives Evaluation",
+        "Remedy Selection",
+        "Remedy Implementation",
+        "Post-Construction Activities"
+      ],
+      "3": [
+        "Defining Objectives",
+        "Implementing, Monitoring, and Reviewing"
+      ]
+    },
+    "detail": {
+      "Level of expertise needed:": [
+        "Low – No technical expertise is necessary to use the report."
+      ],
+      "Level of effort needed:": [
+        [
+          "<b>Approach</b>",
+          "<b>Effort Needed</b>"
+        ],
+        [
+          "Tool Orientation and Learning about FEGS",
+          "5-10 minutes"
+        ],
+        [
+          "To explore the FEGS Metrics Spreadsheet",
+          "A couple of hours"
+        ],
+        [
+          "Read the full report",
+          "109 pages"
+        ]
+      ],
+      "Questions it might answer:": [
+        "What metrics should I use to measure final ecosystem goods and services?",
+        "What are suggested data sources for these metrics at regional and national scales?",
+        "Are there remotely sensed datasets or models available for these metrics at regional and national scales?"
+      ],
+      "Tasks it can help with:": [],
+      "Resources:": [
+        "<a href=\"https://www.epa.gov/eco-research/final-ecosystem-goods-and-services-fegs-metrics-report\" target=\"_blank\">Learn about Final Ecosystem Goods and Services (FEGS)</a>",
+        "<a href=\"https://nepis.epa.gov/Exe/ZyPDF.cgi/P1010Y7B.PDF?Dockey=P1010Y7B.PDF\" target=\"_blank\">FEGS Metrics Report</a>",
+        "<a href=\"https://ofmpub.epa.gov/eims/eimscomm.getfile?p_download_id=542522\" target=\"_blank\">FEGS Metrics Spreadsheet (PDF)</a>",
+        "<a href=\"https://ofmpub.epa.gov/eims/eimscomm.getfile?p_download_id=542523\" target=\"_blank\">FEGS Metrics Spreadsheet (xlsx)</a>"
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "name": "Causal Analysis/Diagnosis Decision Information System",
+    "short_name": "CADDIS",
+    "slug": "caddis",
+    "description": "<a href=\"https://www.epa.gov/caddis\" target=\"_blank\"><b>CADDIS (Causal Analysis/Diagnosis Decision Information System)</b></a> is an on-line application designed to help users' causal assessments, primarily in stream ecosystems. It provides a logical, step-by-step framework for stressor identification based on the U.S. EPA's Stressor Identification Guidance Document. The CADDIS application also provides additional information and tools that can be used in these assessments.",
+    "url": "https://www.epa.gov/caddis",
+    "image_file": "caddis.png",
+    "related_steps": {
+      "1": [
+        "Problem Formulation",
+        "Analysis",
+        "Risk Characterization",
+        "Risk Communication"
+      ],
+      "2": [
+        "Site Assessment",
+        "Site Investigation and Alternatives Evaluation"
+      ],
+      "3": [
+        "Estimating Consequences"
+      ]
+    },
+    "detail": {
+      "Level of expertise needed:": [
+        "Medium – CADDIS is designed to be used by scientists and engineers familiar with ecological and environmental stressor data"
+      ],
+      "Level of effort needed:": [
+        [
+          "<b>Approach</b>",
+          "<b>Effort Needed</b>"
+        ],
+        [
+          "Tool Orientation",
+          "1 hour"
+        ],
+        [
+          "An individual or group using the tool alone",
+          "Time varies but at least a week--this is an iterative process that may require new data"
+        ],
+        [
+          "One or more groups using the tool in consultation with stakeholders",
+          "Time varies based on method of consultation and the number of groups involved. It could range from a single workshop to a series of conversations/meetings"
+        ]
+      ],
+      "Questions it might answer:": [
+        "What stressors could be impacting ecosystem services at my site?",
+        "What are the sources (land uses or entities) that directly or indirectly result in stressors at my site?",
+        "What data analysis approaches can help me understand stressors at my site?"
+      ],
+      "Tasks it can help with:": [],
+      "Resources:": [
+        "<a href=\"https://www.epa.gov/caddis/basic-information-about-caddis\" target=\"_blank\">Learn About CADDIS</a>",
+        "<a href=\"https://www.epa.gov/caddis-vol5/cadlink\" target=\"_blank\">CADDIS Literature Database (CADLink)</a>",
+        "<a href=\"https://www.epa.gov/causal-analysisdiagnosis-decision-information-system-caddis/caddis-publications\" target=\"_blank\">CADDIS Publications</a>"
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "name": "Eco-Health Relationship Browser",
+    "short_name": "Eco-Health Relationship Browser",
+    "slug": "ecohealth",
+    "description": "The <a href=\"https://enviroatlas.epa.gov/enviroatlas/Tools/EcoHealth_RelationshipBrowser\" target=\"_blank\"><b>Eco-Health Relationship Browser</b></a> illustrates scientific evidence for linkages between human health and ecosystem services.<br><br>This interactive tool provides information about several ecosystems (i.e., agro-ecosystems, drylands, forests, urban ecosystems, and wetlands), the services they provide, and how those services, or their degradation and loss, may affect people.",
+    "url": "https://enviroatlas.epa.gov/enviroatlas/Tools/EcoHealth_RelationshipBrowser",
+    "image_file": "ecohealth.jpg",
+    "related_steps": {
+      "1": [
+        "Planning & Scoping",
+        "Risk Communication"
+      ],
+      "2": [
+        "Site Assessment",
+        "Site Investigation and Alternatives Evaluation"
+      ],
+      "3": [
+        "Defining Objectives",
+        "Estimating Consequences"
+      ]
+    },
+    "detail": {
+      "Level of expertise needed:": [
+        "Low – Familiarity with using an on-line interactive series of pathways."
+      ],
+      "Level of effort needed:": [
+        [
+          "<b>Approach</b>",
+          "<b>Effort Needed</b>"
+        ],
+        [
+          "Tool Orientation",
+          "5-10 minutes"
+        ],
+        [
+          "Explore the tool and learn about Eco-Health Relationships",
+          "15 minutes to several hours depending upon how many topics you would like to learn about"
+        ]
+      ],
+      "Questions it might answer:": [
+        "What scientific evidence is available on linkages between human health and ecosystem services?",
+        "How can urban green spaces such as parks, urban forests, and public and private gardens improve human health?",
+        "How can greening an area (for example, planting trees) affect air quality, water quality, and heat hazard mitigation?"
+      ],
+      "Tasks it can help with:": [],
+      "Resources:": [
+        "<a href=\"https://www.epa.gov/enviroatlas/enviroatlas-eco-health-relationship-browser-fact-sheet\" target=\"_blank\">Fact sheet</a>",
+        "<a href=\"https://cfpub.epa.gov/si/si_public_record_report.cfm?Lab=NHEERL&dirEntryId=260857\" target=\"_blank\">Linking Ecosystem Services and Human Health: The Eco-Health Relationship Browser (paper) </a>",
+        "<a href=\"https://youtu.be/bxjD7LcPYZ8\" target=\"_blank\">Demo Video </a>",
+        "<a href=\"https://www.epa.gov/enviroatlas/connecting-ecosystems-and-human-health?\" target=\"_blank\">Connecting Ecosystems and Human Health (Grades 4 - 12+) lesson plan </a>"
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "name": "EnviroAtlas",
+    "short_name": "EnviroAtlas",
+    "slug": "enviroatlas",
+    "description": "<a href=\"https://www.epa.gov/enviroatlas\" target=\"_blank\"><b>EnviroAtlas</b></a> is an interactive web-based tool containing more than 400 environmental and social geospatial data layers that decision-makers can use to inform policy and planning in the places where people live, learn, work and play.",
+    "url": "https://www.epa.gov/enviroatlas",
+    "image_file": "enviroatlas.png",
+    "related_steps": {
+      "1": [
+        "Planning & Scoping",
+        "Problem Formulation",
+        "Analysis",
+        "Risk Characterization"
+      ],
+      "2": [
+        "Site Assessment",
+        "Site Investigation and Alternatives Evaluation",
+        "Remedy Selection"
+      ],
+      "3": [
+        "Estimating Consequences"
+      ]
+    },
+    "detail": {
+      "Level of expertise needed:": [
+        "Low – Familiarity with using on-line geospatial maps, selecting and viewing different data layers."
+      ],
+      "Level of effort needed:": [
+        [
+          "<b>Approach</b>",
+          "<b>Effort Needed</b>"
+        ],
+        [
+          "Tool Orientation",
+          "30 minutes"
+        ],
+        [
+          "To find your site",
+          "5 minutes; a few hours to explore the suite of data layers"
+        ],
+        [
+          "Explore different data layers related to ecosystem services, their chemical and non-chemical stressors, and human health",
+          "Time varies depending upon your interest"
+        ]
+      ],
+      "Questions it might answer:": [
+        "What national, community, and demographic datasets can I map at my site?",
+        "How do the natural environment and ecosystem services vary around my site?",
+        "How can EnviroAtlas maps and tools help me tell the story about the status of local environments, populations, and contaminated sites needing improvement?"
+      ],
+      "Tasks it can help with:": [],
+      "Resources:": [
+        "<a href=\"https://www.epa.gov/enviroatlas/tutorials\" target=\"_blank\">Interactive Tutorial Story Map</a>",
+        "<a href=\"https://www.epa.gov/enviroatlas/enviroatlas-interactive-map\" target=\"_blank\">EnviroAtlas Interactive Map</a>",
+        "<a href=\"https://www.epa.gov/enviroatlas/enviroatlas-brownfields\" target=\"_blank\">EnviroAtlas & Brownfields</a>",
+        "<a href=\"https://cfpub.epa.gov/si/si_public_record_report.cfm?dirEntryId=342398&Lab=NHEERL\" target=\"_blank\">Ecosystem goods and services case studies and models support community decision making using the EnviroAtlas (Report) </a>"
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "name": "EcoService Models Library",
+    "short_name": "ESML",
+    "slug": "esml",
+    "description": "<a href=\"https://www.epa.gov/eco-research/ecoservice-models-library\" target=\"_blank\"><b>EcoService Models Library (ESML)</b></a> is an online database for finding, examining and comparing ecological models that may be useful for quantifying ecosystem goods and services.",
+    "url": "https://www.epa.gov/eco-research/ecoservice-models-library",
+    "image_file": "esml.jpg",
+    "related_steps": {
+      "1": [
+        "Analysis",
+        "Risk Characterization"
+      ],
+      "2": [
+        "Site Investigation and Alternatives Evaluation"
+      ],
+      "3": [
+        "Estimating Consequences"
+      ]
+    },
+    "detail": {
+      "Level of expertise needed:": [
+        "Medium – Familiarity with ecological modeling concepts and ability to search an online database."
+      ],
+      "Level of effort needed:": [
+        [
+          "<b>Approach</b>",
+          "<b>Effort Needed</b>"
+        ],
+        [
+          "Tool Orientation",
+          "15 minutes"
+        ],
+        [
+          "An individual or group using the tool alone",
+          "2-4 hours"
+        ],
+        [
+          "One or more groups using the tool in consultation with stakeholders",
+          "8-12 hours"
+        ]
+      ],
+      "Questions it might answer:": [
+        "What models are available for specific ecosystem services?",
+        "What models are available for specific environment type?",
+        "What models are available for specific Ecological Assessment Endpoints?"
+      ],
+      "Tasks it can help with:": [],
+      "Resources:": [
+        "<a href=\"https://www.epa.gov/eco-research/ecoservice-models-library\" target=\"_blank\">EPA Landing Page</a>",
+        "<a href=\"https://esml.epa.gov\" target=\"_blank\">Online database</a>",
+        "<a href=\"https://www.epa.gov/eco-research/epas-ecoservice-models-library-fact-sheet\" target=\"_blank\">Fact Sheet</a>",
+        "<a href=\"https://esml.epa.gov/secondary/readPGESAE\" target=\"_blank\">ESML and Hazardous Waste Site ERA</a>"
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "name": "EPA H<sub>2</sub>O",
+    "short_name": "EPA H<sub>2</sub>O",
+    "slug": "epa_h20",
+    "description": "<a href=\"https://www.epa.gov/water-research/ecosystem-services-scenario-assessment-using-epa-h2o\" target=\"_blank\"><b>EPA H<sub>2</sub>O</b></a> is a GIS tool for mapping and calculating a suite of ecosystem services under different land use scenarios. Users can map ecosystem goods and services at regional to local scales, complete spatial queries along hydrological networks, and generate customized reports for scenario comparisons. This tool was originally developed for the Tampa Bay area, but can be applied to other areas, by users who have expertise using GIS.",
+    "url": "https://www.epa.gov/water-research/ecosystem-services-scenario-assessment-using-epa-h2o",
+    "image_file": "epa_h20.jpg",
+    "related_steps": {
+      "1": [
+        "Analysis",
+        "Risk Characterization",
+        "Risk Communication"
+      ],
+      "2": [
+      ],
+      "3": [
+        "Estimating Consequences"
+      ]
+    },
+    "detail": {
+      "Level of expertise needed:": [
+        "Medium - The tool has a Basic Module and an Advanced Module. The Basic Module is intended for users with no experience with GIS software and can be used to generate maps and reports for areas within the Tampa Bay Region. The Advanced Module is for users who are comfortable working with spatial datasets to substitute in data from other locations and more customized scenarios."
+      ],
+      "Level of effort needed:": [
+        [
+          "<b>Approach</b>",
+          "<b>Effort Needed</b>"
+        ],
+        [
+          "Tool Orientation",
+          "30 minutes"
+        ],
+        [
+          "To create a Green Value Analysis Report (Basic Module)",
+          "A few hours"
+        ],
+        [
+          "Create maps and reports for a custom site (outside of Tampa Bay Region)",
+          "Several days"
+        ]
+      ],
+      "Questions it might answer:": [
+        "How do land-use scenarios at my site affect services (for example, flood protection and natural removal of pollution from the air and water)?",
+        "How do land-use scenarios affect costs (for example, health care, waste water treatment, and stormwater infrastructure)?",
+        "How do land-use scenarios at my site affect flood protection?"
+      ],
+      "Tasks it can help with:": [],
+      "Resources:": [
+        "<a href=\"https://www.epa.gov/water-research/ecosystem-services-scenario-assessment-using-epa-h2o\" target=\"_blank\">Download Tool</a>",
+        "<a href=\"https://www.epa.gov/sites/default/files/2016-10/documents/day2_russell_epa_h20_v2.pdf\" target=\"_blank\">Presentation on \"Assessing Ecosystem Value: Restoration Scenarios on Tribal Lands using the EPA H<sub>2</sub>O Tool\"</a>",
+        "<a href=\"https://cfpub.epa.gov/si/si_public_record_report.cfm?Lab=NHEERL&dirEntryId=301663\" target=\"_blank\">Poster Abstract for \"The use of a new ecosystem services assessment tool, EPA H<sub>2</sub>O, for identifying, quantifying, and valuing ecosystem services production.\"</a>",
+        "<a href=\"https://cfpub.epa.gov/si/si_public_record_report.cfm?Lab=CEMM&dirEntryId=354598\" target=\"_blank\">EPA H<sub>2</sub>O User Manual</a>"
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "name": "National Ecosystem Services Classification System",
+    "short_name": "NESCS Plus",
+    "slug": "nescs_plus",
+    "description": "The <a href=\"https://www.epa.gov/eco-research/national-ecosystem-services-classification-system-nescs-plus\" target=\"_blank\"><b>National Ecosystem Services Classification System (NESCS Plus)</b></a> serves as a framework for analyzing how changes to ecosystems impact human welfare. This classification system provides standardized vocabulary, classes, and codes. The aim is for this classification system to serve as a common language to improve communication, integration, and synthesis. For example, NESCS Plus has been linked to multiple EPA tools (e.g., <a href=\"tools/fegs_scoping\">FEGS Scoping Tool</a>, <a href=\"tools/enviroatlas\">EnviroAtlas</a> and the <a href=\"tools/esml\">EcoService Models Library</a>)",
+    "url": "https://www.epa.gov/eco-research/national-ecosystem-services-classification-system-nescs-plus",
+    "image_file": "nescs_plus.jpg",
+    "related_steps": {
+      "1": [
+        "Planning & Scoping",
+        "Problem Formulation",
+        "Risk Communication"
+      ],
+      "2": [
+        "Site Assessment",
+        "Remedy Implementation",
+        "Post-Construction Activities"
+      ],
+      "3": [
+        "Clarifying Decision Context",
+        "Defining Objectives",
+        "Implementing, Monitoring, and Reviewing"
+      ]
+    },
+    "detail": {
+      "Level of expertise needed:": [
+        "Low – Familiarity with using an on-line, interactive database."
+      ],
+      "Level of effort needed:": [
+        [
+          "<b>Approach</b>",
+          "<b>Effort Needed</b>"
+        ],
+        [
+          "Tool Orientation",
+          "15 minutes"
+        ],
+        [
+          "An individual or group using the tool alone",
+          "2-4 hours"
+        ],
+        [
+          "Decision makers plus consultation with stakeholders",
+          "8-12 hours"
+        ]
+      ],
+      "Questions it might answer:": [
+        "What components of nature (e.g., water, fauna, flora, etc.) are being directly used or appreciated by people?",
+        "Who are the people and economic sectors that benefit from ecosystem services?",
+        "How do these people benefit (e.g., direct use, existence value, etc.) from ecosystem services?"
+      ],
+      "Tasks it can help with:": [],
+      "Resources:": [
+        "<a href=\"https://www.epa.gov/eco-research/national-ecosystem-services-classification-system-nescs-plus\" target=\"_blank\">Informational site</a>",
+        "<a href=\"https://geopub.epa.gov/nescs\" target=\"_blank\">Webtool</a>",
+        "<a href=\"https://cfpub.epa.gov/si/si_public_record_Report.cfm?dirEntryId=350613&Lab=CEMM\" target=\"_blank\">Report</a>",
+        "<a href=\"https://www.epa.gov/eco-research/national-ecosystem-services-classification-system-nescs-plus-case-studies\" target=\"_blank\">Case Studies</a>",
+        "<a href=\"https://ofmpub.epa.gov/sor_internet/registry/termreg/searchandretrieve/glossariesandkeywordlists/search.do?details=&vocabName=NESCS%20Plus%20Glossary\" target=\"_blank\">NESCS Plus Glossary</a>"
+      ]
+    }
+  },
+  {
+    "id": 9,
+    "name": "Rapid Benefit Indicators (RBI) Approach",
+    "short_name": "RBI",
+    "slug": "rbi",
+    "description": "The <a href=\"https://www.epa.gov/water-research/rapid-benefit-indicators-rbi-approach\" target=\"_blank\"><b>Rapid Benefit Indicator (RBI) approach</b></a> allows users to quickly estimate and quantify benefits to people around an ecological restoration site with several components. It includes a fillable checklist and a spatial analysis toolset to help users develop and summarize indicators.",
+    "url": "https://www.epa.gov/water-research/rapid-benefit-indicators-rbi-approach",
+    "image_file": "rbi.png",
+    "related_steps": {
+      "1": [
+        "Risk Characterization",
+        "Risk Communication"
+      ],
+      "2": [
+        "Site Investigation and Alternatives Evaluation"
+      ],
+      "3": [
+        "Estimating Consequences"
+      ]
+    },
+    "detail": {
+      "Level of expertise needed:": [
+        "Low – Medium. The tool requires familiarity with or knowledge of the sites and surrounding area. The tool contains a checklist format as well as a Spatial Analysis Toolset. No technical expertise is necessary to use the checklist, but familiarity with ESRI’s desktop software, ArcMap, or ArcCatalog is needed for the Spatial Analysis Toolset."
+      ],
+      "Level of effort needed:": [
+        [
+          "<b>Approach</b>",
+          "<b>Effort Needed</b>"
+        ],
+        [
+          "Tool Orientation",
+          "15 minutes"
+        ],
+        [
+          "To use the Checklist Tool",
+          "1-4 hours"
+        ],
+        [
+          "To use the Spatial Analysis Tool",
+          "Multiple hours"
+        ]
+      ],
+      "Questions it might answer:": [
+        "How do I prioritize restoration sites and projects?",
+        "How can I assess who may benefit most from a project?",
+        "How can I evaluate tradeoffs?"
+      ],
+      "Tasks it can help with:": [],
+      "Resources:": [
+        "<a href=\"https://cfpub.epa.gov/si/si_public_record_report.cfm?Lab=NHEERL&direntryid=335869\" target=\"_blank\">Fact Sheet</a>",
+        "<a href=\"https://cfpub.epa.gov/si/si_public_record_Report.cfm?Lab=NHEERL&dirEntryId=331110\" target=\"_blank\">Checklist Tool & Quick Start Manual</a>",
+        "<a href=\"https://cfpub.epa.gov/si/si_public_record_Report.cfm?Lab=NHEERL&dirEntryId=338471\" target=\"_blank\">Spatial Analysis Tool & Manual</a>",
+        "<a href=\"https://cfpub.epa.gov/si/si_public_record_Report.cfm?Lab=NHEERL&dirEntryId=325010\" target=\"_blank\">RBI Approach Guidebook</a>. The guidebook presents the RBI Approach using an example application to wetland restoration."
+      ]
+    }
+  },
+  {
+    "id": 10,
+    "name": "Visualizing Ecosystem Land Management Assessments (VELMA) Model",
+    "short_name": "VELMA",
+    "slug": "velma",
+    "description": "<a href=\"https://www.epa.gov/water-research/visualizing-ecosystem-land-management-assessments-velma-model-20\" target=\"_blank\"><b>VELMA (Visualizing Ecosystem Land Management Assessments)</b></a> can be used to help decision makers improve the water quality of streams, rivers, and estuaries by making better use of both natural and engineered green infrastructure to control loadings from nonpoint sources of pollution. It is designed to help users assess green infrastructure options for controlling the fate and transport of water, nutrients, and contaminants across multiple spatial and temporal scales for different ecoregions and present and future climates. VELMA was designed for use by communities, land managers, policy makers, and scientists and engineers.",
+    "url": "https://www.epa.gov/water-research/visualizing-ecosystem-land-management-assessments-velma-model-20",
+    "image_file": "velma.png",
+    "related_steps": {
+      "1": [
+        "Risk Characterization",
+        "Risk Communication",
+        "Analysis"
+      ],
+      "2": [
+        "Site Investigation and Alternatives Evaluation"
+      ],
+      "3": [
+        "Estimating Consequences"
+      ]
+    },
+    "detail": {
+      "Level of expertise needed:": [
+        "High – Familiarity with concepts of geospatial mathematical modeling concepts."
+      ],
+      "Level of effort needed:": [
+        [
+          "<b>Approach</b>",
+          "<b>Effort Needed</b>"
+        ],
+        [
+          "Tool Orientation",
+          "1 hour"
+        ],
+        [
+          "To learn a quick example",
+          "12 pages"
+        ],
+        [
+          "Learning and running VELMA",
+          "At least several weeks"
+        ]
+      ],
+      "Questions it might answer:": [
+        "How can green infrastructure impact water quality and contaminants at my site?",
+        "How do climate scenarios affect ecosystem services at my site?",
+        "How resilient will my green infrastructure solution be over time?"
+      ],
+      "Tasks it can help with:": [],
+      "Resources:": [
+        "<a href=\"https://www.epa.gov/water-research/visualizing-ecosystem-land-management-assessments-velma-model#downloads\" target=\"_blank\">VELMA User Manual and Model</a>",
+        "<a href=\"https://www.epa.gov/water-research/visualizing-ecosystem-land-management-assessments-velma-model#publications\" target=\"_blank\">Publications</a>"
+      ]
+    }
+  },
+  {
+    "id": 11,
+    "name": "Practical Strategies (for Integrating Final Ecosystem Goods and Services into Community Decision-Making)",
+    "short_name": "Practical Strategies",
+    "slug": "practical_strategies",
+    "description": "<a href=\"https://cfpub.epa.gov/si/si_public_record_report.cfm?dirEntryId=337461&Lab=NHEERL\" target=\"_blank\"><b>Practical Strategies (for Integrating Final Ecosystem Goods and Services into Community Decision-Making)</b></a> is a synthesis report describing the U.S. EPA's Office of Research and Development's (ORD) research to incorporate ES benefits into community-scale decisions across the U.S.<br><br>You can learn how community-based studies have previously utilized ecosystem services to inform aspects of their decision making, to identify best practices that may be transferred to other communities, and to identify gaps in those practices.",
+    "url": "https://cfpub.epa.gov/si/si_public_record_report.cfm?dirEntryId=337461&Lab=NHEERL",
+    "image_file": "practical_strategies.png",
+    "related_steps": {
+      "1": [
+        "Risk Communication"
+      ],
+      "2": [
+        "Remedy Selection",
+        "Post-Construction Activities"
+      ],
+      "3": [
+        "Clarifying Decision Context",
+        "Defining Objectives",
+        "Developing Alternatives",
+        "Evaluating Trade-offs and Select",
+        "Implementing, Monitoring, and Reviewing"
+      ]
+    },
+    "detail": {
+      "Level of expertise needed:": [
+        "Low - No technical expertise is necessary to use the report."
+      ],
+      "Level of effort needed:": [
+        [
+          "<b>Approach</b>",
+          "<b>Effort Needed</b>"
+        ],
+        [
+          "Tool Orientation",
+          "5-10 minutes"
+        ],
+        [
+          "Read the full report",
+          "209 pages"
+        ]
+      ],
+      "Questions it might answer:": [
+        "What are some strategies for identifying potential ES objectives?",
+        "What are some strategies for evaluating ES tradeoffs?",
+        "What are some strategies for communicating ES risks and benefits?"
+      ],
+      "Tasks it can help with:": [],
+      "Resources:": [
+        "<a href=\"https://cfpub.epa.gov/si/si_public_record_report.cfm?dirEntryId=337461&Lab=NHEERL\" target=\"_blank\">Link to Practical Strategies report</a>"
+      ]
+    }
+  }
+]

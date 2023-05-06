@@ -1,0 +1,114 @@
+[
+  {
+    "id": 1,
+    "name": "Planning & Scoping",
+    "path_id": 1,
+    "rationale": "Initially, the risk assessor and manager (and the planning team) need to evaluate and select the kind of risk information, exposure scenarios and assessment issues that need to be covered. At this point, most EPA assessments focus on technical information related to the sources of contamination, toxic effects, wildlife populations, routes of exposure, and habitats.",
+    "color": "#327eb4"
+  },
+  {
+    "id": 2,
+    "name": "Problem Formulation",
+    "path_id": 1,
+    "rationale": "Problem formulation is a systematic approach that identifes all factors critical to a specifc risk assessment and considers the purpose of the assessment, scope and depth of the necessary analysis, analytical approach, available resources and outcomes, and overall risk management goal.",
+    "color": "#669ec7"
+  },
+  {
+    "id": 3,
+    "name": "Analysis",
+    "path_id": 1,
+    "rationale": "Two components of the analysis phase are exposure and effects assessments. In the exposure assessment, the risk assessor determines which plants and animals are or are likely to be exposed to each environmental stressor and to what degree. In the effects assessment, the risk assessor reviews available research on the relationship between exposure level and possible adverse effects on plants and animals. They may also review evidence of existing harmful ecological effects.",
+    "color": "#99bed9"
+  },
+  {
+    "id": 4,
+    "name": "Risk Characterization",
+    "path_id": 1,
+    "rationale": "Risk characterization includes two major components—risk estimation and risk description. \"Risk estimation\" compares: the estimated or measured exposure level for each stressor and plant or animal population, community, or ecosystem of concern; and the data on expected effects for that group for the exposure level. \"Risk description\" provides information important for interpreting the risk results. This includes: whether harmful effects are expected on the plants and animals of concern; relevant qualitative comparisons; and how uncertainties (data gaps and natural variation) might affect the assessment.",
+    "color": "#ccdeec"
+  },
+  {
+    "id": 5,
+    "name": "Risk Communication",
+    "path_id": 1,
+    "rationale": "Information from ecological risk assessments can be used by risk managers to: communicate with interested parties and the general public; limit exposure to the ecological stressor; negotiate remediation options with stakeholders; or develop monitoring plans to confrm risk reduction and ecosystem recovery. ",
+    "color": "#7faed0"
+  },
+  {
+    "id": 6,
+    "name": "Site Assessment",
+    "path_id": 2,
+    "rationale": "A site assessment focuses on evaluating the risk of a release of hazardous substances or threat to people and the environment. Preliminary determinations are made regarding need for immediate or further actions required.  Historical background information is collected, including information pertaining to past environmental investigations, as is information pertaining to the site's environmental setting and potentially impacted populations and habitats. The planned reuse of the site as well as proposed future zoning may also be relevant.",
+    "color": "#4d8055"
+  },
+  {
+    "id": 7,
+    "name": "Site Investigation and Alternatives Evaluation",
+    "path_id": 2,
+    "rationale": "More integrated and in-depth site characterizations, including risk assessments, are made (e.g., Remedial Investigation/Feasibility Study [<a target='_blank' href='https://www.epa.gov/laws-regulations/summary-comprehensive-environmental-response-compensation-and-liability-act'>CERCLA</a>], Phase II Environmental Site Assessments [Brownfield], Facility Investigations [<a target='_blank' href='https://www.epa.gov/laws-regulations/summary-resource-conservation-and-recovery-act'>RCRA</a>]. Remediation alternatives are evaluated. The planned reuse of the site, institutional controls, as well as proposed future zoning may also be relevant.",
+    "color": "#709976"
+  },
+  {
+    "id": 8,
+    "name": "Remedy Selection",
+    "path_id": 2,
+    "rationale": "Formal selection of remedies for cleanup are defined in this stage (e.g., Record of Decision [<a target='_blank' href='https://www.epa.gov/laws-regulations/summary-comprehensive-environmental-response-compensation-and-liability-act'>CERCLA</a>], Remedial Action Plan [Brownfeld], Statement of Basis [<a target='_blank' href='https://www.epa.gov/laws-regulations/summary-resource-conservation-and-recovery-act'>RCRA</a>]). Sites enrolled in State/Tribal programs will follow their rules and requirements.",
+    "color": "#94b299"
+  },
+  {
+    "id": 9,
+    "name": "Remedy Implementation",
+    "path_id": 2,
+    "rationale": "Formal implementation of remedies for cleanup are defined in this stage (e.g., Remedial Design/Remedial Action [<a target='_blank' href='https://www.epa.gov/laws-regulations/summary-comprehensive-environmental-response-compensation-and-liability-act'>CERCLA</a>], Cleanup and Development phase [Brownfeld], Corrective Measures Implementation [<a target='_blank' href='https://www.epa.gov/laws-regulations/summary-resource-conservation-and-recovery-act'>RCRA</a>]).",
+    "color": "#b7ccbb"
+  },
+  {
+    "id": 10,
+    "name": "Post-Construction Activities",
+    "path_id": 2,
+    "rationale": "Operation and Maintenance phase. Also includes monitoring, inspections, and assessment for remedy effectiveness determinations, and adaptive management needs (e.g., quarterly and/or annual reviews, Five-Year Reviews, Remedy Optimization [<a target='_blank' href='https://www.epa.gov/laws-regulations/summary-comprehensive-environmental-response-compensation-and-liability-act'>CERCLA</a>]).  For Brownfields, redevelopment activities may occur.",
+    "color": "#dbe5dd"
+  },
+  {
+    "id": 11,
+    "name": "Clarifying Decision Context",
+    "path_id": 3,
+    "rationale": "In this phase you should document the question or issue you are trying to address. This includes who you will involve in the decision making and types of options you will consider (but not details about those options).<br><br>For example, if the issue was finding a new place to live, you would identify those who would be living in the new place and if you will consider renting and/or buying as options.",
+    "color": "#4d8055"
+  },
+  {
+    "id": 12,
+    "name": "Defining Objectives",
+    "path_id": 3,
+    "rationale": "In this phase you should define what matters when making the decision. This includes identifying criteria for evaluating your options and metrics for those criteria.<br><br>For example, when finding a new place to live one criterion would be price and you could measure that in dollars or as a percentage of your monthly salary. Another criterion could be distance from work and you could measure it in minutes or miles.",
+    "color": "#709976"
+  },
+  {
+    "id": 13,
+    "name": "Developing Alternatives",
+    "path_id": 3,
+    "rationale": "In this phase you identify the set of options to evaluate. This includes looking at the full set of options that should be evaluated.<br><br>For example, identifying homes for both rent and sale in your desired neighborhood.",
+    "color": "#94b299"
+  },
+  {
+    "id": 14,
+    "name": "Estimating Consequences",
+    "path_id": 3,
+    "rationale": "In this phase you measure each identified criterion for your objective for each identified alternative or option. This includes measuring how well each option does on the criteria identified.<br><br>For example, identifying the rent or mortgage costs and distance to work for each home.",
+    "color": "#b7ccbb"
+  },
+  {
+    "id": 15,
+    "name": "Evaluating Trade-offs and Select",
+    "path_id": 3,
+    "rationale": "In this phase you pick the option that best meets your objectives. When you have multiple criteria you must first evaluate their relative importance.<br><br>For example, if both cost and distance to work are equally important, you may select a home that does well on both metrics. However, if distance to work is more important, you may select a much more expensive home to have the shortest possible distance to work.",
+    "color": "#dbe5dd"
+  },
+  {
+    "id": 16,
+    "name": "Implementing, Monitoring, and Reviewing",
+    "path_id": 3,
+    "rationale": "In this phase, you take action on the decision and evaluate the results. This includes reflecting on the process, the criteria, and the efficacy of the chosen option.<br><br>For example, after choosing an apartment to rent, you may realize the apartment is in a noisy area. Recognizing that new criteria, the next time you search for a place to live you might also consider noise in the area.",
+    "color": "#4d8055"
+  }
+]
