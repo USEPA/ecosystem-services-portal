@@ -8,7 +8,7 @@ import {ToolDetailComponent} from "./tool-detail/tool-detail.component";
 import {PathToolsComponent} from "./path-tools/path-tools.component";
 
 const routes: Routes = [
-  {path: '', redirectTo: '/paths', pathMatch: 'full'},
+  {path: '', redirectTo: 'paths', pathMatch: 'full'},
   {path: 'paths', component: PathsComponent},
   {path: 'paths/:slug/steps', component: StepsComponent},
   {path: 'paths/:slug/steps/tasks', component: TasksComponent},
