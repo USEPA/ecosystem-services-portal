@@ -21,7 +21,7 @@
                mdePopoverTriggerOn="click"
                #popoverTrigger="mdePopoverTrigger"
                (keyup.enter)="openAppPopover(i);">
-            <img alt="Additional Information" src="assets/images/info-circle.svg" tabindex="0">
+            <img alt="Additional Information" src="{{assetPath}}/images/info-circle.svg" tabindex="0">
             </a>
             <mde-popover #appPopover="mdePopover" [mdePopoverOverlapTrigger]="false">
               <mat-card style="max-width: 300px">
@@ -40,7 +40,7 @@
     <div class="grid-col-12" [innerHTML]="path.moreinfo"></div>
   </div>
   <div class="tablet:grid-col-6 {{path.slug}}">
-    <img src="assets/images/{{path.slug}}.jpg" alt='{{path.name}} process diagram - for a description visit {{path.moreinfourl}}'>
+    <img src="{{assetPath}}/images/{{path.slug}}.jpg" alt='{{path.name}} process diagram - for a description visit {{path.moreinfourl}}'>
   </div>
 </div>
 

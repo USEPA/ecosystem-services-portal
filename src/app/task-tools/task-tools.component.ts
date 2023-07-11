@@ -11,8 +11,7 @@ import {
 } from '@angular/core';
 import {Tool} from '../tool'
 import {Path} from "../path";
-import {Router} from "@angular/router";
-import {ToolService} from "../tool.service";
+import {ActivatedRoute, Router} from "@angular/router";
 import {MAT_DIALOG_DATA, MatDialog} from "@angular/material/dialog";
 
 
@@ -27,8 +26,6 @@ export class TaskToolsComponent implements OnChanges {
   @Output() selectToolEvent = new EventEmitter<Tool>();
 
   constructor(public dialog: MatDialog,
-              private router: Router,
-              private toolService: ToolService
   ) {
   }
 
@@ -54,20 +51,18 @@ export class TaskToolsComponent implements OnChanges {
 export class TaskToolsComponentDialog implements OnInit {
   tool: Tool;
   path: Path;
-  url: string[];
 
   constructor(public dialog: MatDialog,
               private router: Router,
+              private route: ActivatedRoute,
               @Optional() @Inject(MAT_DIALOG_DATA) public data: any
   ) {
     this.tool = data.dialogTool;
     this.path = data.path;
-    this.url = ['/tools', this.tool.matching_task.id.toString(), this.tool.slug];
   }
 
   selectTool(tool: Tool) {
-    const url = this.router.serializeUrl(this.router.createUrlTree(['/tools', tool.matching_task.id, tool.slug], {}));
-    window.open(url, '_blank');
+    window.open(location.href.replace(location.hash,"") + '#/tools/' + tool.matching_task.id + '/' + tool.slug, '_blank');
   }
 
   ngOnInit(): void {

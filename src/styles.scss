@@ -14,6 +14,9 @@ app-root {
 
 mat-card-content a {
   font-weight: bold !important;
+  &:focus {
+    outline: none !important;
+  }
 }
 
 mat-card, mat-dialog-container {

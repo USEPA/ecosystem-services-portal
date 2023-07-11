@@ -8,7 +8,7 @@
   <ng-container *ngFor="let path of paths">
     <div class="desktop:grid-col">
       <button mat-raised-button tabindex="0" id="{{path.slug}}-button"  [routerLink]="[path.slug, 'steps']">
-        <img src="assets/images/{{path.slug}}-icon.svg" alt="{{path.name}}"><br>
+        <img src="{{assetPath}}/images/{{path.slug}}-icon.svg" alt="{{path.name}}"><br>
         {{path.name}}
       </button>
 
@@ -17,9 +17,9 @@
               #popoverTrigger="mdePopoverTrigger"
               aria-label="Additional Information"
               (keyup.enter)="openAppPopover(path.id);">
-        <img src="../../assets/images/info-circle.svg" alt="Additional Information Icon" tabindex="0">
+        <img src="{{assetPath}}/images/info-circle.svg" alt="Additional Information Icon" tabindex="0">
       </a>
-      <mde-popover #appPopover="mdePopover" [mdePopoverOverlapTrigger]="false">
+      <mde-popover #appPopover="mdePopover" [mdePopoverOverlapTrigger]="false" (open)="onOpen($event)">
         <mat-card style="max-width: 300px">
           <mat-card-content [innerHTML]="path.description"></mat-card-content>
         </mat-card>
@@ -45,7 +45,5 @@
     <li>Tree cover that provides cooling shade around homes</li>
   </ul>
   <p>Learn more about <a href="https://www.epa.gov/eco-research/ecosystem-services-research" tabindex="0">Ecosystem Goods and Services</a></p>
-  <p><a href="https://www.epa.gov/eco-research/forms/contact-us-about-ecosystems-research" tabindex="0">Contact us</a> to ask a question, provide feedback, or report a
-    problem. This Portal includes a limited selection of curated tools. Please contact us to suggest including
-    additional tools for specific phases and tasks.</p>
+  <p>This Portal includes a limited selection of curated tools. Please contact us to suggest including additional tools for specific phases and tasks.</p>
 </div>

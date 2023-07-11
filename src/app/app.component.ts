@@ -6,5 +6,5 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'esat-portal';
+  title = 'Ecosystem Services Tool Selection Portal';
 }

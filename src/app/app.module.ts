@@ -22,6 +22,7 @@ import {MatExpansionModule} from "@angular/material/expansion";
 import {ProgressBarComponent} from "./progress-bar.component";
 import {MatDialogModule} from "@angular/material/dialog";
 import {DragDropModule} from "@angular/cdk/drag-drop";
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -65,10 +66,20 @@ import {DragDropModule} from "@angular/cdk/drag-drop";
           return null;
         },
         component: PathsComponent
-      }], {scrollPositionRestoration: 'enabled'}),
+      }], {
+        enableTracing: false,    /* <-- Set this to true to debug routing issues */
+        scrollPositionRestoration: 'enabled'}),
     MatExpansionModule
+
   ],
-  providers: [],
+  providers: [
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
+    // {
+    //   provide: APP_BASE_HREF,
+    //   useValue: '/eco-research/ecosystem-services-tool-selection-portal'
+    // }
+  ],
+
   bootstrap: [AppComponent]
 })
 

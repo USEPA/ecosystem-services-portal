@@ -5,8 +5,8 @@ import {PathService} from '../path.service';
 import {Step} from '../step';
 import {StepService} from '../step.service';
 import {UntypedFormGroup, UntypedFormBuilder, UntypedFormArray, UntypedFormControl, ValidatorFn} from '@angular/forms';
-import {Task} from "../task";
 import {MdePopoverTrigger} from "@material-extended/mde";
+import {environment} from "../../environments/environment";
 
 @Component({
   selector: 'app-steps',
@@ -20,6 +20,8 @@ export class StepsComponent implements OnInit {
   steps: Step[] = [];
   selectedStepIds: number[] = [];
   @ViewChildren(MdePopoverTrigger) trigger: QueryList<MdePopoverTrigger>;
+  assetPath = environment.assetPath;
+
 
   constructor(private router: Router,
               private route: ActivatedRoute,

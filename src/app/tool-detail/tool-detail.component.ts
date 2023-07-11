@@ -9,6 +9,7 @@ import {TaskService} from "../task.service";
 import {Step} from "../step";
 import {StepService} from "../step.service";
 import {of} from "rxjs";
+import {environment} from "../../environments/environment";
 
 @Component({
   selector: 'app-tool-detail',
@@ -22,6 +23,7 @@ export class ToolDetailComponent implements OnInit {
   path: Path;
   pathSteps: Path[] = []
   objectKeys = Object.keys;
+  assetPath = environment.assetPath;
 
   constructor(private router: Router,
               private route: ActivatedRoute,

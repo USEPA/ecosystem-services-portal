@@ -9,6 +9,7 @@ import {Path} from '../path';
 import {Step} from '../step';
 import {Task} from '../task';
 import {Tool} from "../tool";
+import {environment} from "../../environments/environment";
 
 
 @Component({
@@ -26,6 +27,7 @@ export class TasksComponent implements OnInit {
   selectedSteps: Step[] = [];
   selectedTasks: Task[] = [];
   selectedStepBreadcrumbLabel: String = '';
+  assetPath = environment.assetPath;
 
   constructor(private router: Router,
               private route: ActivatedRoute,
